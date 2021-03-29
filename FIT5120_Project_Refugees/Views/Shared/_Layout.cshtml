@@ -6,7 +6,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    
+    @Scripts.Render("~/bundles/d3")
+
 
 </head>
 <body>
@@ -19,15 +20,22 @@
                     <span class="icon-bar"></span>
                 </button>
 
-
-
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Application name", "Index", "Home", new { @class = "navbar-brand" })</li>*@
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { @style = "color:black;font-weight:bold;" })</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { @style = "color:black;font-weight:bold;font-size:35px;" })</li>
                     <li>@Html.ActionLink("About", "About", "Home", new { @style = "color:black;font-weight:bold;" })</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { @style = "color:black;font-weight:bold;" })</li>
+                    <div class="btn-group" style="padding:8.25px 6px 6px 4.5px;">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;background-color:#f2f2f2; ">
+                            <b style="color:black">Language</b>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li style="color:black;"><a href="#">English</a></li>
+                            <li style="color:black;"><a href="#">Chinese</a></li>
+                        </ul>
+                    </div>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -42,7 +50,7 @@
         @RenderBody()
         <hr />
         <footer class="container body-content">
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Monash Muggles </p>
         </footer>
     </div>
 

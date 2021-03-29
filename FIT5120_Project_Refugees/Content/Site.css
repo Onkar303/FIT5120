@@ -26,3 +26,42 @@ textarea {
 .navbar-default .navbar-brand {
     color: black;
 }
+
+#coverImageSection{
+    height:100vh;
+  
+}
+
+#importanceSection {
+    height: 100vh;
+    margin-top: 1%;
+}
+
+#impactSection {
+    height: 100vh;
+}
+
+#analyticsSection {
+    height: 100vh;
+}
+
+#image1 {
+    width: 60vh;
+    height: 35vh;
+}
+
+#image2{
+    width:60vh;
+    height:35vh;
+}
+
+
+.circularImageContainer {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
