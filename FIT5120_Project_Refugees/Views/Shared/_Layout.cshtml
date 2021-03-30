@@ -11,7 +11,17 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#f2f2f2; box-shadow:0px 5px 22px 1px">
+
+    <div class="topnavbar">
+        <a href="">Why Sports</a>
+        <a>Compare </a>       
+        <a>About Us</a>
+        <a>Language</a>
+    </div>
+
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#f2f2f2; border-color: white; box-shadow:0px 0px 3px 0px">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -19,17 +29,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @*<li>@Html.ActionLink("Application name", "Index", "Home", new { @class = "navbar-brand" })</li>*@
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { @style = "color:black;font-weight:bold;font-size:35px;" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { @style = "color:black;font-weight:bold;" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { @style = "color:black;font-weight:bold;" })</li>
+
+                    <li>@Html.ActionLink("Compare", "About", "Home", new { @style = "color:black;" })</li>
+                    <li>@Html.ActionLink("Why Sports ?", "About", "Home", new { @style = "color:black;" })</li>
+                    <li>@Html.ActionLink("About Us", "Contact", "Home", new { @style = "color:black;" })</li>
                     <div class="btn-group" style="padding:8.25px 6px 6px 4.5px;">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border:none;background-color:#f2f2f2; ">
-                            <b style="color:black">Language</b>
+                            <b style="color:black;font-weight:normal;">Language</b>
                         </button>
                         <ul class="dropdown-menu">
                             <li style="color:black;"><a href="#">English</a></li>
@@ -38,15 +47,11 @@
                     </div>
                 </ul>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li> @Html.ActionLink("Play With Refugees", "Index", "Home", new { @style = "color:black;font-weight:bold;" }) </li>
-                </ul>
-
-                @*@Html.Partial("_LoginPartial")*@
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
-    <div class="">
+    </div>*@
+    <div>
         @RenderBody()
         <hr />
         <footer class="container body-content">

@@ -1,6 +1,12 @@
-﻿body {
-    padding-top: 30px;
+﻿
+@font-face {
+    font-family: 'MyWebFont';
+    src: url("../fonts/Roboto/Roboto-Medium.ttf");
+}
+
+body {
     padding-bottom: 20px;
+    background-color:#f2f2f2;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,13 +29,45 @@ textarea {
     max-width: 280px;
 }
 
-.navbar-default .navbar-brand {
+
+.topnavbar {
+    position: fixed;
+    top: 0px;
+    width:100%;
+    box-shadow: 0px 0px 5px 1px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.topnavbar a {
+    float: left;
+    text-decoration: none;
     color: black;
+    padding: 20px;
+    transition: 0.2s ease;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.topnavbar a:hover{
+    background-color:black;
+    color:white;
+}
+
+.topnavbar a#logo{
+    background-image:url("../Images/logo.png");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding-left:20px;
 }
 
 #coverImageSection {
-    height: 100vh;
-    background-image: url("../Images/coverImage.jpg");
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Images/CoverImageCropped.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,29 +82,15 @@ textarea {
     font-weight:bold;
 }
 
-#importanceSection {
-    height: 100vh;
-    margin-top: 1%;
+.navbar-collapse {
+    height:10%;
 }
 
-#impactSection {
-    height: 90vh;
+#socialAtrributeImage {
+    background-image: url("../Images/socialAttribute.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-#analyticsSection {
-    height: 100vh;
-}
-
-#image1 {
-    width: 60vh;
-    height: 35vh;
-}
-
-#image2{
-    width:60vh;
-    height:35vh;
-}
-
 
 .circularImageContainer {
     border-radius: 50%;
@@ -76,4 +100,28 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.row{
+    display:flex;
+}
+
+.column {
+    overflow:hidden;
+    width:50%;
+    flex:1;
+}
+
+#MhContainer,#PhContainer{
+
+    padding:5% 5% 0 5%;
+    background-color:#f2f2f2;
+}
+
+#importanceSection {
+    text-align: center;
+    padding-top: 1.6%;
+    padding-bottom: 2.5%;
+    background-color: #CBA783;
+    color: white;
 }
