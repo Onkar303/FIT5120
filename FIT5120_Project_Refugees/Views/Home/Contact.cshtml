@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Compare";
 }
 <!DOCTYPE html>
 <br />
@@ -8,123 +8,130 @@
 <br />
 <br />
 <br />
-<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Examples</title>
-    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" />
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link href="" rel="stylesheet">
+    <title>
+        Show and Hide div elements using checkbox
+    </title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style type="text/css">
+        .selectt {
+            color: #fff;
+            padding: 30px;
+            display: none;
+            margin-top: 30px;
+            width: 60%;
+            background: green
+        }
+
+        label {
+            margin-right: 20px;
+        }
+    </style>
 </head>
-<style>
 
-    .checkbox {
-        position: relative;
-        height: 30px;
-    }
-
-        .checkbox input[type='checkbox'] {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            opacity: 0;
-        }
-
-        .checkbox label {
-            position: absolute;
-            left: 30px;
-            top: 0;
-            height: 20px;
-            line-height: 20px;
-        }
-
-            .checkbox label:before {
-                content: '';
-                position: absolute;
-                left: -30px;
-                top: 0;
-                width: 20px;
-                height: 20px;
-                border: 1px solid #ddd;
-                border-radius: 50%;
-                transition: all 0.3s ease;
-                -webkit-transition: all 0.3s ease;
-                -moz-transition: all 0.3s ease;
-            }
-
-            .checkbox label:after {
-                content: '';
-                position: absolute;
-                left: -22px;
-                top: 3px;
-                width: 6px;
-                height: 12px;
-                border: 0;
-                border-right: 1px solid #fff;
-                border-bottom: 1px solid #fff;
-                background: #fff;
-                transform: rotate(45deg);
-                -webkit-transform: rotate(45deg);
-                -moz-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transition: all 0.3s ease;
-                -webkit-transition: all 0.3s ease;
-                -moz-transition: all 0.3s ease;
-            }
-
-        .checkbox input[type='checkbox']:checked + label:before {
-            background: #4cd764;
-            border-color: #4cd764;
-        }
-
-        .checkbox input[type='checkbox']:checked + label:after {
-            background: #4cd764;
-        }
-</style>
 <body>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox1' name='checkboox[]'>
-        <label for='checkbox1'>Scoccer</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox2' name='checkboox[]'>
-        <label for='checkbox2'>Basketball</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox3' name='checkboox[]' checked>
-        <label for='checkbox3'>Swimming</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox4' name='checkboox[]' checked>
-        <label for='checkbox4'>Cricket</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox5' name='checkboox[]' checked>
-        <label for='checkbox5'>Golf</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox6' name='checkboox[]' checked>
-        <label for='checkbox6'>Valleyball</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox7' name='checkboox[]' checked>
-        <label for='checkbox7'>Badminton</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox8' name='checkboox[]' checked>
-        <label for='checkbox8'>Tennis</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox9' name='checkboox[]' checked>
-        <label for='checkbox9'>Boxing</label>
-    </div>
-    <div class='checkbox'>
-        <input type='checkbox' id='checkbox10' name='checkboox[]' checked>
-        <label for='checkbox10'>Baseball</label>
-    </div>
+    <center>
+        <h1 style="color:green;">
+            Compare Sports
+        </h1>
+        <h3>
+            Choose the sports you are interested(multiple choice)
+        </h3>
+        <br />
+        <div>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Scoccer"> Scoccer
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Basketball"> Basketball
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Swimming"> Swimming
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Cricket"> Crikcket
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Golf"> Golf
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Valleyball"> Valleyball
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Badminton"> Badminton
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Tennis"> Tennis
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Boxing"> Boxing
+            </label>
+            <label>
+                <input type="checkbox" name="colorCheckbox"
+                       value="Baseball"> Baseball
+            </label>
+        </div>
+        <div class="Scoccer selectt">
+            <strong>Scoccer</strong>
+            Scoccer content
+        </div>
+        <div class="Basketball selectt">
+            <strong>Basketball </strong>
+            is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball (approximately 9.4 inches (24 cm) in diameter) through the defender's hoop (a basket 18 inches (46 cm) in diameter mounted 10 feet (3.048 m) high to a backboard at each end of the court) while preventing the opposing team from shooting through their own hoop. A field goal is worth two points, unless made from behind the three-point line, when it is worth three. After a foul, timed play stops and the player fouled or designated to shoot a technical foul is given one, two or three one-point free throws. The team with the most points at the end of the game wins, but if regulation play expires with the score tied, an additional period of play (overtime) is mandated.
+
+            source: https://en.wikipedia.org/wiki/Basketball
+        </div>
+        <div class="Swimming selectt">
+            <strong>Swimming</strong>
+            Swimming content
+        </div>
+        <div class="Cricket selectt">
+            <strong>Cricket</strong>
+            Cricket content
+        </div>
+        <div class="Golf selectt">
+            <strong>Golf</strong>
+            Golf content
+        </div>
+        <div class="Valleyball selectt">
+            <strong>Valleyball</strong>
+            Valleyball content
+        </div>
+        <div class="Badminton selectt">
+            <strong>Badminton </strong>
+            is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are "singles" (with one player per side) and "doubles" (with two players per side). Badminton is often played as a casual outdoor activity in a yard or on a beach; formal games are played on a rectangular indoor court. Points are scored by striking the shuttlecock with the racquet and landing it within the opposing side's half of the court.
+
+            source:  https://en.wikipedia.org/wiki/Badminton
+        </div>
+        <div class="Tennis selectt">
+            <strong>Tennis</strong>
+            Tennis content
+        </div>
+        <div class="Boxing selectt">
+            <strong>Boxing</strong>
+            Boxing content
+        </div>
+        <div class="Baseball selectt">
+            <strong>Baseball</strong>
+            Baseball content
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('input[type="checkbox"]').click(function () {
+                    var inputValue = $(this).attr("value");
+                    $("." + inputValue).toggle();
+                });
+            });
+        </script>
+    </center>
 </body>
 </html>
