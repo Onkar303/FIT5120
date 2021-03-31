@@ -192,6 +192,9 @@
     <Content Include="Images\CoverImage2.jpg" />
     <Content Include="Images\CoverImageCropped.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\mapAnalysis\refugee_map 2.png" />
+    <Content Include="Images\mapAnalysis\refugee_map.png" />
+    <Content Include="Images\mapAnalysis\refugee_map3.png" />
     <Content Include="Images\mentalHealth.jpg" />
     <Content Include="Images\refugee.jpg" />
     <Content Include="Images\refugiats futbol portada cropped.jpeg" />

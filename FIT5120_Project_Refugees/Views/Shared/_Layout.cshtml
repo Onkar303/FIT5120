@@ -11,13 +11,30 @@
 
 </head>
 <body>
+ 
 
-    <div class="topnavbar">
-        <a href="">Why Sports</a>
-        <a>Compare </a>       
-        <a>About Us</a>
-        <a>Language</a>
-    </div>
+        <div class="topnavbar">
+            <img style="margin-left: 100px;float:left;" src="~/Images/logo.png" width="60px" />
+            <a href="">Why Sports</a>
+            <a href="">Compare</a>
+            <a href="@Url.Action("About", "Home")">About Us</a>
+            <div class="languageDropDown">
+                <button class="dropdownButton">
+                    Language
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropDownContent">
+                    <a> English</a>
+                    <a> Chinese </a>
+                    <a> Hindi </a>
+                </div>
+            </div>
+        </div>
+  
+
+    
+   
+   
 
 
 

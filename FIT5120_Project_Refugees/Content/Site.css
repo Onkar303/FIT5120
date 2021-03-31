@@ -5,8 +5,9 @@
 }
 
 body {
-    padding-bottom: 20px;
-    background-color:#f2f2f2;
+    padding-bottom: 10px;
+    background-color:white;
+    overflow-x:hidden;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -54,12 +55,48 @@ textarea {
     color:white;
 }
 
-.topnavbar a#logo{
-    background-image:url("../Images/logo.png");
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    padding-left:20px;
+.languageDropDown{
+    float:left;
+    outline:none;
+}
+
+.dropdownButton{
+    padding:20px;
+    border:none;
+    outline:none;
+    background-color:white;
+    font-weight:bold;
+}
+
+.dropDownContent{
+    display:none;
+    position:fixed;
+    background-color:white;
+    min-width:140px;
+    box-shadow:0 0 22px 5px;
+    z-index:1;
+}
+
+.dropDownContent a{
+    float:none;
+    display:block;
+}
+
+.languageDropDown:hover .dropDownContent{
+    display:block;
+}
+
+.dropdownButton:hover {
+    background-color: black;
+    color: white;
+}
+
+.topnavbar a#logo {
+    background-image: url("../Images/logo.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 20px;
 }
 
 #coverImageSection {
@@ -113,9 +150,7 @@ textarea {
 }
 
 #MhContainer,#PhContainer{
-
-    padding:5% 5% 0 5%;
-    background-color:#f2f2f2;
+    padding:1% 5% 3% 5%;
 }
 
 #importanceSection {
@@ -123,5 +158,6 @@ textarea {
     padding-top: 1.6%;
     padding-bottom: 2.5%;
     background-color: #CBA783;
+    /*4BB25B CBA783 */
     color: white;
 }
