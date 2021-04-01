@@ -181,3 +181,11 @@ let barChart = new Chart(barctx, {
         }
     }
 })
+
+
+var segueSportsAnalytics = document.getElementById('segueSportsAnalytics');
+segueSportsAnalytics.addEventListener('click', function () {
+
+    window.location.href = "/Home/Contact";
+
+})
