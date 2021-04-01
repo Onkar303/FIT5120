@@ -15,6 +15,9 @@ var mentalHealthContent = document.getElementById("mentalHealthContent");
 var socialAttributeTitle = document.getElementById("socialAttributeTitle");
 var socialAttributeContent = document.getElementById("socialAttributeContent");
 
+var weCare = document.getElementById('');
+/*weCare.innerHTML = "我们关心";*/
+
 
 var analyticsTitle = document.getElementById("analyticsTitle");
 var analyticsContent = document.getElementById("analyticsContent");
@@ -70,6 +73,12 @@ segueAnalytics.addEventListener("click", function () {
 var segueSports = document.getElementById('segueSports');
 segueSports.addEventListener("click", function () {
     window.location.href = '/Home/Contact';
+});
+
+
+var topLogo = document.getElementById('topLogo');
+topLogo.addEventListener("click", function () {
+    window.location.href = '/Home/Index';
 });
 
 

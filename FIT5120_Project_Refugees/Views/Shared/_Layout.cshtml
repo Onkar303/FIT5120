@@ -14,7 +14,8 @@
  
 
         <div class="topnavbar">
-            <img style="margin-left: 100px;float:left;" src="~/Images/logo.png" width="60px" />
+            <a href="@Url.Action("Index", "Home")" id="projectLogo"> Play with Refugees</a>
+            @*<img style="margin-left:100px;cursor:pointer;float:left;" src="~/Images/logo.png" width="60px" id="topLogo"/>*@
             <a id ="aboutUs" href="@Url.Action("About", "Home")">About Us</a>
             <a id="compare" href="@Url.Action("Contact","Home")">Compare</a>
           

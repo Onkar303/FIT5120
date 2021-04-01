@@ -8,9 +8,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
-<div id="analyticsSection" style="padding-top:5%;">
+<div style="text-align:center;margin-top:3%;padding:3% 3% 3% 3%";>
+    <h1><b> Some Facts </b></h1>
+</div>
+
+
+<div id="analyticsSection">
     <div class="row">
         <div class="column" style="padding:20px;width:80%;height:60vh;margin:auto;">
+            <div class="dropdown" style="float:right; padding-right:10%;">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Year
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a id="2015_16">2015 – 16</a></li>
+                    <li><a id="2016_17">2016 – 17</a></li>
+                    <li><a id="2017_18">2017 – 18</a></li>
+                    <li><a id="2018_19">2018 – 19</a></li>
+                    <li><a id="2019_20">2019 – 20</a></li>
+                    @*<li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>*@
+                </ul>
+            </div>
 
             <div>
                 <div class="chart-wrapper" style="width:100%;display:inline-block">
@@ -22,7 +42,7 @@
 
         <div class="column" style="padding:1% 5% 3% 5%;">
             <div style="text-align:center;">
-                <h2><b>The World</b></h2>
+                <h3><b>Refugees in Australia</b></h3>
             </div>
 
             <div style="margin-top:20px;">
@@ -41,14 +61,14 @@
 
         <div class="column" style="padding:1% 5% 3% 5%;">
             <div style="text-align:center;">
-                <h2><b>The World</b></h2>
+                <h2><b>Men And Women</b></h2>
             </div>
 
             <div style="margin-top:20px;">
                 <ul>
                     <li>
                         <h4 style="line-height:1.8;text-align:justify">
-                            According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.
+                            According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the highest male to female population that has come to Australia is from Iraq.
                         </h4>
                     </li>
                 </ul>
@@ -58,7 +78,22 @@
         <div class="column" style="padding:20px;width:80%;height:60vh;margin:auto;">
 
             <div>
-                <div class="chart-wrapper" style="width:100%;display:inline-block">
+                <div class="dropdown" style="float:left; padding-right:10%;">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Year
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a id="mf2015_16">2015 – 16</a></li>
+                        <li><a id="mf2016_17">2016 – 17</a></li>
+                        <li><a id="mf2017_18">2017 – 18</a></li>
+                        <li><a id="mf2018_19">2018 – 19</a></li>
+                        <li><a id="mf2019_20">2019 – 20</a></li>
+                        @*<li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>*@
+                    </ul>
+                </div>
+                <div class="chart-wrapper" style="width:100%;display:inline-block;padding:5%;">
                     <canvas id="barChart"></canvas>
                 </div>
             </div>

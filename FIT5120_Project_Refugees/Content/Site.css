@@ -50,10 +50,25 @@ textarea {
     cursor:pointer;
 }
 
-.topnavbar a:hover{
-    background-color:black;
-    color:white;
+#projectLogo {
+      background-image: url(../../Images/logo.png);
+      background-size: contain;
+      background-position: top;
+      background-repeat: no-repeat;
+      height: 100%;
+      color: white;
+ }
+
+
+#projectLogo:hover {
+        background-color: white;
+        color: white
 }
+
+    .topnavbar a:hover {
+        background-color: black;
+        color: white;
+    }
 
 .languageDropDown{
     float:left;
@@ -185,4 +200,8 @@ textarea {
     background-color: white;
     /*4BB25B CBA783 */
     color: black;
+}
+.dropdown-menu li a{
+    cursor:pointer;
+
 }
