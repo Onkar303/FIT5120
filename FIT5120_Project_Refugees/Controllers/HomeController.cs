@@ -26,5 +26,12 @@ namespace FIT5120_Project_Refugees.Controllers
 
             return View();
         }
+
+        public ActionResult Analytics()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

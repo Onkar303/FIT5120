@@ -121,6 +121,22 @@
     </div>*@
 
 
+<div id="helpYouSection">
+    <div>
+        <h1  style="text-align:center;">
+            <b>We care !!</b>
+        </h1>
+    </div>
+    
+    <div>
+        <h4>
+            We are here to Help you
+        </h4>
+    </div>
+   
+</div>
+
+
 @*  The Analytics Section *@
 <div id="analyticsSection" style="text-align:center;padding-top:20px;">
 
@@ -137,38 +153,44 @@
 
     </div>*@
 
-    <div class="row">
-        <div class="column" style="padding:20px;width:80%;height:60vh;margin:auto;">
-
-            <div>
-                <div class="chart-wrapper" style="width:100%;display:inline-block">
-                    <canvas id="myChart"></canvas>
+   
+    <div class="row" >
+        <div  class="column" style="padding:20px;margin:auto;text-align:center"; id="segueAnalytics">
+            <div class="card" href="@Url.Action("Analytics","Home")">
+                <div>
+                    <h3>Refugee Stats</h3>
                 </div>
+                
+                <div>
+                    <img src="~/Images/Symbols/pie-chart.png" style="height:55%;width:55%; padding:20px 0 20px 0;" />
+                </div>
+                
+                
+                <div>
+                    <span>Click to see more details</span>
+                </div>
+                
             </div>
+         </div>
 
-        </div>
-
-            <div class="column" style="padding:1% 5% 3% 5%;">
+        <div class="column" style="padding:20px" id="segueSports">
+            <div class="card">
                 <div style="text-align:center;">
-                    <h2><b>The World</b></h2>
+                    <h3><b>Find Sport</b></h3>
                 </div>
-
                 <div style="margin-top:20px;">
-                    <h4 style="line-height:1.8;text-align:justify">
-                        <ul>
-                            <li>
-                                According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.
-                            </li>
-                        </ul>
-                    </h4>
-
+                    <img src="~/Images/Symbols/sport.png" style="height:55%;width:55%; padding:20px 0 20px 0;" />
+                </div>
+                <div>
+                    <span>Click to see more details</span>
                 </div>
             </div>
+                
         </div>
+    </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
 <script src="~/Scripts/Index.js"></script>
 
 

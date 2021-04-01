@@ -160,3 +160,29 @@ textarea {
     /*4BB25B CBA783 */
     color: white;
 }
+
+.card {
+    box-shadow: 0px 0px 5px 1px;
+    background-color:white;
+    width:30%;
+    display:inline-block;
+    min-height:50%;
+    transition:0.2s ease;
+    border-radius:10px;
+    overflow:hidden;
+    padding-bottom:20px;
+    cursor:pointer;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 5px 4px;
+}
+
+#helpYouSection {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: white;
+    /*4BB25B CBA783 */
+    color: black;
+}

@@ -201,6 +201,9 @@
     <Content Include="Images\refugee.jpg" />
     <Content Include="Images\refugiats futbol portada cropped.jpeg" />
     <Content Include="Images\socialAttribute.jpg" />
+    <Content Include="Images\Symbols\pie-chart.png" />
+    <Content Include="Images\Symbols\sport.png" />
+    <Content Include="Scripts\analyticsScript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\d3\d3.js" />
@@ -268,6 +271,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Analytics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
