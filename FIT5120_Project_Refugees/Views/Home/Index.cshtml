@@ -13,6 +13,10 @@
     <div id="sloganSection">
         <h1 style="color:white;font-size:4em;" id="slogan"><b>New to Australia?  Find Your Sport !</b> </h1>
     </div>
+
+    <div style="position:absolute;top:55%;">
+        <a href="@Url.Action("Contact","Home")" class="btn-lg btn-default"> Find Sport </a>
+    </div>
     @*<img src="~/Images/coverImage.jpg" style="object-fit:cover" width="100%" height="100%" />*@
 </div>
 
@@ -49,7 +53,7 @@
     </div>
 
     <div style="width:50%;margin:auto;">
-        <h4 style="line-height:1.7;" id="importanceContent" >
+        <h4 style="line-height:1.7;" id="importanceContent">
             As a refugee, You will have a great chance to expand your social circle, get a group of friends, overcome language barrier and live a better life here in Australia, through sports.
             sprinkle your sweat,  and we move on together!
         </h4>
@@ -58,7 +62,7 @@
 
 
 
-<div >
+<div>
     <div class="row">
         <div class="column">
             <div id="PhContainer">
@@ -68,8 +72,10 @@
                 <div>
                     <h4 style="text-align:justify;line-height:1.7">
                         <ul>
-                            <li id="socialAttributeContent">Outside of physical health, relationships are the most important foundation of Happiness and sports can be your way making friends. Sports is necessarily social. Whether you play a team game or a solo game, you communicate, even with the competitor. If you want to expand social networkings , improve interpersonal skills, or even just have a small talk with someone,
-                            Sorts is one of the best tools to achieve this.</li>
+                            <li id="socialAttributeContent">
+                                Outside of physical health, relationships are the most important foundation of Happiness and sports can be your way making friends. Sports is necessarily social. Whether you play a team game or a solo game, you communicate, even with the competitor. If you want to expand social networkings , improve interpersonal skills, or even just have a small talk with someone,
+                                Sorts is one of the best tools to achieve this.
+                            </li>
                         </ul>
                     </h4>
                 </div>
@@ -118,47 +124,51 @@
 @*  The Analytics Section *@
 <div id="analyticsSection" style="text-align:center;padding-top:20px;">
 
-    <div style="width:50%;margin:auto;">
+    @*<div style="width:50%;margin:auto;">
         <h2 id="analyticsTitle"><b>The World</b></h2>
-        <h4 id="analyticsContent"style="line-height:1.8">
+        <h4 id="analyticsContent" style="line-height:1.8">
             According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.
 
         </h4>
     </div>
     
-    
+
     <div class="column" style="background-image:url('../../Images/mapAnalysis/refugee_map_latest.png'); background-size:cover;background-position:top; background-repeat:no-repeat;width:80%;height:60vh;margin:auto;">
 
-    </div>
-
-    @*<div class="row">
-        <div class="column" style="background-image:url('../../Images/mapAnalysis/refugee_map_latest.png'); background-size:contain; background-repeat:no-repeat;width:80%;height:60vh;margin:auto;">
-
-        </div>
-
-        <div class="column" style="padding:1% 5% 3% 5%;">
-            <div style="text-align:center;">
-                <h2><b>The World</b></h2>
-            </div>
-
-            <div style="margin-top:20px;">
-                <h4 style="line-height:1.8;text-align:justify">
-                    <ul>
-                        <li>
-                            According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.
-                        </li>
-                    </ul>
-                </h4>
-
-            </div>
-        </div>
     </div>*@
 
+    <div class="row">
+        <div class="column" style="padding:20px;width:80%;height:60vh;margin:auto;">
 
+            <div>
+                <div class="chart-wrapper" style="width:100%;display:inline-block">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
 
+        </div>
+
+            <div class="column" style="padding:1% 5% 3% 5%;">
+                <div style="text-align:center;">
+                    <h2><b>The World</b></h2>
+                </div>
+
+                <div style="margin-top:20px;">
+                    <h4 style="line-height:1.8;text-align:justify">
+                        <ul>
+                            <li>
+                                According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.
+                            </li>
+                        </ul>
+                    </h4>
+
+                </div>
+            </div>
+        </div>
 </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <script src="~/Scripts/Index.js"></script>
 
 
