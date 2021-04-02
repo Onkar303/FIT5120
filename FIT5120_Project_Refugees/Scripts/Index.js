@@ -1,6 +1,4 @@
 ﻿
-var isChinese = false;
-
 var language = document.getElementById("language");
 var analytics = document.getElementById("analytics");
 var home = document.getElementById("home");
@@ -25,6 +23,8 @@ var refugeeStats = document.getElementById('refugeeStats');
 var details = document.getElementById("details");
 var details1 = document.getElementById("details1");
 
+var compare = document.getElementById("compare");
+
 
 
 
@@ -48,6 +48,7 @@ chineseTranslate.addEventListener("click", function () {
     language.innerHTML = "语";
     home.innerHTML = "家";
     analytics.innerHTML = "谁是难民?";
+    compare.innerHTML = "相比";
 
     weCare.innerHTML = "我们关心";
     hereToHelpYou.innerHTML = "在这里为您提供帮助";
@@ -57,6 +58,8 @@ chineseTranslate.addEventListener("click", function () {
     refugeeStats.innerHTML = "难民统计";
     details.innerHTML = "点击查看更多详细信息";
     details1.innerHTML = "点击查看更多详细信息";
+
+    isChinese = true;
 
 
 })
@@ -78,6 +81,7 @@ englishTranslate.addEventListener("click", function () {
 
     language.innerHTML = "Language";
     home.innerHTML = "Home";
+    compare.innerHTML = "Compare";
     analytics.innerHTML = "Who are Refugees?";
 
 
@@ -86,9 +90,10 @@ englishTranslate.addEventListener("click", function () {
     helpContent.innerHTML = "New arrival in Australia feel overwhelmed from the culture shock and social isolation whilst settling into their new country. Fortunately, sports is the global language that helps people connect from different backgrounds. Our aim is to ensure you feel the need of a sense of belonging through local sport culture to assist you to integrate into the community.";
 
     findSport.innerHTML = "Find Sports";
-    refugeeStats.innerHTML = "refugee Stats";
+    refugeeStats.innerHTML = "Refugee Stats";
     details.innerHTML = "Click to see more details";
     details1.innerHTML = "Click to see more details";
+    isChinese = false;
 
 })
 

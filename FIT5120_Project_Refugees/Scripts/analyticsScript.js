@@ -9,6 +9,7 @@ let no2018_19 = [7095, 2114, 1836, 1995, 1323, 555,635,72,267,0,1120]
 let no2019_20 = [5785, 1165, 947, 796, 619, 434, 360, 333, 317, 204, 561]
 
 
+
 var a2015_16 = document.getElementById('2015_16');
 var a2016_17 = document.getElementById('2016_17');
 var a2017_18 = document.getElementById('2017_18');
@@ -206,6 +207,7 @@ segueSportsAnalytics.addEventListener('click', function () {
 var language = document.getElementById("language");
 var analytics = document.getElementById("analytics");
 var home = document.getElementById("home");
+var compare = document.getElementById("compare");
 
 var title = document.getElementById("title");
 var titleContent = document.getElementById("titleContent");
@@ -224,7 +226,10 @@ var details = document.getElementById("details");
 var chineseTranslate = document.getElementById("chineseTranslate");
 var englishTranslate = document.getElementById("englishTranslate");
 
-chineseTranslate.addEventListener("click", function () {
+chineseTranslate.addEventListener("click", translateToChineseforAnalytics);
+englishTranslate.addEventListener("click", translateToEnglishForAnalytics)
+
+function translateToChineseforAnalytics() {
     title.innerHTML = "谁是难民？"
     titleContent.innerHTML = "难民是普通人，他们没有任何过错，被迫离开家园寻求安全."
     comeFrom.innerHTML = "他们来自哪里？";
@@ -241,9 +246,13 @@ chineseTranslate.addEventListener("click", function () {
     language.innerHTML = "语";
     home.innerHTML = "家";
     analytics.innerHTML = "谁是难民?";
-})
+    compare.innerHTML = "相比";
 
-englishTranslate.addEventListener("click", function () {
+    isChinese = true;
+}
+
+
+function translateToEnglishForAnalytics() {
     title.innerHTML = "Who are Refugees?";
     titleContent.innerHTML = "Refugees are regular people who, through no fault of their own, have been forced to leave their homes in search of safety."
     comeFrom.innerHTML = "Where do they come from?";
@@ -260,4 +269,15 @@ englishTranslate.addEventListener("click", function () {
     language.innerHTML = "Language";
     home.innerHTML = "Home";
     analytics.innerHTML = "Who are Refugees?";
-})
+    compare.innerHTML = "compare";
+
+    isChinese = false;
+}
+
+if (isChinese) {
+    translateToChineseforAnalytics();
+} else {
+    translateToEnglishForAnalytics();
+}
+
+
