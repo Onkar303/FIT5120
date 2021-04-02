@@ -1,4 +1,4 @@
-﻿function openCity(evt, cityName) {
+﻿function ausSport(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -11,6 +11,14 @@
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function countrySport() {
+
+
+}
+
+
+
 
 
 // 触发 id="defaultOpen" click 事件
