@@ -158,6 +158,14 @@ let barChart = new Chart(barctx, {
     },
     options: {
         responsive: true,
+        scaleShowValues: true,
+        scales: {
+            xAxes: [{
+                ticks: {
+                    autoSkip: false
+                }
+            }]
+        },
         legend: {
             position: 'bottom'
         },
