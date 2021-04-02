@@ -4,18 +4,29 @@
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+    
     document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+   
 }
 
-function countrySport() {
+function countrySport(countryName) {
+    var countryContent = document.getElementsByClassName("countryContent");
+    var countryImage = document.getElementsByClassName("countryImage");
 
+    for (var i = 0; i < countryContent.length; i++) {
+        countryContent[i].style.display = "none";
+    }
 
+    for (var i = 0; i < countryImage.length; i++) {
+        countryImage[i].style.display = "none";
+    }
+
+    document.getElementById('country').innerHTML = countryName;
+    document.getElementById(countryName + 'Image').style.display = "block";
+    document.getElementById(countryName).style.display = "block";
 }
+
+countrySport("Iran");
 
 
 

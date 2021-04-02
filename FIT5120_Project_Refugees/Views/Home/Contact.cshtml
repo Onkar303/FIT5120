@@ -7,7 +7,6 @@
 <br />
 <br />
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <style type="text/css">
 
 
@@ -54,7 +53,7 @@
     <h1 style="color: #CBA783;">
         Compare Sports
     </h1>
-    <h3>
+    <h3 style="color: #CBA783;">
         Find your sport here in Australia  
     </h3>
     <br />
@@ -74,13 +73,12 @@
     <div class="row">
         <div class="box col-md-6">
 
-            <h2 style="text-align: center;
-                        color: #CBA783;">
+            <h2 style="text-align: center;">
                 Australia Popular Sports
             </h2>
 
-            <center>
-                <img src="~/Images/australia.png" />
+            <center style="padding:3%;">
+                <img style="width: 15vw; height: 24vh;" src="~/Images/countryFlag/Australia.png" />
             </center>
             <div class="left" style="
                                  padding: 14px;
@@ -182,25 +180,31 @@
 
 
         <div class="col-md-6">
-            <div class="right" style=" border: 1px solid #ccc !important; padding: 14px;
-                                        border-radius: 16px !important;">
-                <h2 style="text-align: center;
-                            color: #CBA783;">
+            <div class="right">
+                <h2 id="country" style="text-align: center;">
                     Country
                 </h2>
                 <div>
 
 
-                    <center>
-                        <img id="selectedCountry" src="~/Images/australia.png" />
+                    <center style="padding:3%;">
+                        <img id="SyriaImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Syria.png"/>
+                        <img id="IraqImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Iraq.png"/>
+                        <img id="DRCImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Congo.png"/>
+                        <img id="MyanmarImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Myanmar (1).png"/>
+                        <img id="AfganistanImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Afganistan.png"/>
+                        <img id="EritreaImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Eritrea.png"/>
+                        <img id="EthiopiaImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Ethiopia.png"/>
+                        <img id="CARImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/CAR.png"/>
+                        <img id="IranImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Iran.png"/>
                     </center>
 
                     <center>
                         <div class="btn-group" role="group" aria-label="...">
-                            <button type="button" class="btn btn-default" value="Iran"> Iran </button>
-                            <button type="button" class="btn btn-default" value="Iraq"> Iraq </button>
-                            <button type="button" class="btn btn-default" value="Myanmar"> Myanmar </button>
-                            <button type="button" class="btn btn-default" value="DRC"> Democratic Rupblic of Congo </button>
+                            <button type="button" class="btn btn-default" onclick="countrySport('Syria')" value="Syria"> Syria </button>
+                            <button type="button" class="btn btn-default" onclick="countrySport('Iran')" value="Iran"> Iran </button>
+                            <button type="button" class="btn btn-default" onclick="countrySport('Iraq')" value="Iraq"> Iraq </button>
+                            <button type="button" class="btn btn-default" onclick="countrySport('Myanmar')" value="Myanmar"> Myanmar </button>
 
 
 
@@ -211,16 +215,19 @@
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" value="Afganistan">Afghanistan</a></li>
-                                    <li><a href="#" value="Eritrea">Eritrea</a></li>
-                                    <li><a href="#" value="Ethiopia">Ethiopia</a></li>
-                                    <li><a href="#" value="CAR"> Central African Republic</a></li>
+
+
+                                    <li><a href="#" onclick="countrySport('DRC')" value="DRC">Democratic Republic of Congo</a></li>
+                                    <li><a href="#" onclick="countrySport('Afganistan')" value="Afganistan">Afghanistan</a></li>
+                                    <li><a href="#" onclick="countrySport('Eritrea')" value="Eritrea">Eritrea</a></li>
+                                    <li><a href="#" onclick="countrySport('Ethiopia')" value="Ethiopia">Ethiopia</a></li>
+                                    <li><a href="#" onclick="countrySport('CAR')" value="CAR"> Central African Republic</a></li>
                                 </ul>
                             </div>
                         </div>
                     </center>
 
-                    <center>
+                    <!--<center>
 
                         <label>
                             <input type="checkbox" name="colorCheckbox"
@@ -262,38 +269,64 @@
                         <label>
                             <input type="checkbox" name="colorCheckbox"
                                    value="Iran"> Iran
-                        </label>
+                        </label>-->
                         @*<label>
-                <input type="checkbox" name="colorCheckbox"
-                        value="Australia"> Australia
-            </label>*@
+                    <input type="checkbox" name="colorCheckbox"
+                            value="Australia"> Australia
+                </label>*@
 
-                    </center>
+                    <!--</center>-->
 
 
                 </div>
 
-                <div class="Syria selectt card">
+
+
+                <div id="Iran" class="selectt card countryContent">
+                    <h2>Iran</h2>
+                    <strong>Iran</strong>
+                    Iran content will be done in iteration2
+                </div>
+                
+                <div id="Eritrea" class="selectt card countryContent">
+                    <h2>Eritrea</h2>
+                    <strong>Eritrea</strong>
+                    Eritrea content will be done in iteration2
+                </div>
+                
+                <div id="Ethiopia" class="selectt card countryContent">
+                    <h2>Ethiopia</h2>
+                    <strong>Ethiopia</strong>
+                    Ethiopia content will be done in iteration2
+                </div>
+                
+                <div id="CAR" class="selectt card countryContent">
+                    <h2>Central African Republic</h2>
+                    <strong>Central African Republic</strong>
+                    Central African Republic content will be done in iteration2
+                </div>
+
+                <div id="Syria" class="selectt card countryContent">
                     <h2>Syria</h2>
                     <strong>Syria</strong>
                     Syria content will be done in iteration2
                 </div>
-                <div class="Iraq selectt card">
+                <div id="Iraq" class="selectt card countryContent">
                     <h2>Irap</h2>
                     <strong>Irap </strong>
                     Irap content will be done in iteration2
                 </div>
-                <div class="Myanmar selectt card">
+                <div id="Myanmar" class="selectt card countryContent">
                     <h2>Myanmar</h2>
                     <strong>Myanmar</strong>
                     Myanmar content will be done in iteration2
                 </div>
-                <div class="Congo selectt card">
+                <div id="DRC" class="selectt card countryContent">
                     <h2>Congo</h2>
                     <strong>Congo</strong>
                     Congo content will be done in iteration2
                 </div>
-                <div class="Congo selectt card">
+                <div id="Afganistan" class="selectt card countryContent">
                     <h2>Afghanistan</h2>
                     <strong>Afghanistan</strong>
                     Afghanistan content will be done in iteration2
@@ -336,14 +369,7 @@
         </div>
     </div>*@
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('input[type="checkbox"]').click(function () {
-            var inputValue = $(this).attr("value");
-            $("." + inputValue).toggle();
-        });
-    });
-</script>
+
 
 
 <link href="~/Content/comparePage.css" rel="stylesheet" />

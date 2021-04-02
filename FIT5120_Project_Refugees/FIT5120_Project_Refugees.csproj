@@ -191,6 +191,16 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\australia.png" />
     <Content Include="Images\compareSwimming.jpg" />
+    <Content Include="Images\countryFlag\Afganistan.png" />
+    <Content Include="Images\countryFlag\Australia.png" />
+    <Content Include="Images\countryFlag\CAR.png" />
+    <Content Include="Images\countryFlag\Congo.png" />
+    <Content Include="Images\countryFlag\Eritrea.png" />
+    <Content Include="Images\countryFlag\Ethiopia.png" />
+    <Content Include="Images\countryFlag\Iran.png" />
+    <Content Include="Images\countryFlag\Iraq.png" />
+    <Content Include="Images\countryFlag\Myanmar %281%29.png" />
+    <Content Include="Images\countryFlag\Syria.png" />
     <Content Include="Images\coverImage.jpg" />
     <Content Include="Images\CoverImage2.jpg" />
     <Content Include="Images\CoverImageCropped.jpg" />
