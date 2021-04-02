@@ -1,5 +1,4 @@
-﻿
-let ctx = document.getElementById('pieChart').getContext('2d');
+﻿let ctx = document.getElementById('pieChart').getContext('2d');
 let labels = ['Iraq ', 'Democratic Republic of Congo ', 'Syria ', 'Myanmar', 'Afghanistan', 'Eritrea', 'Ethiopia', 'Central African Republic', 'Iran', 'Stateless', 'Others'];
 let colorHex = ['#FB3640', '#EFCA08', '#43AA8B', '#253D5B', '#0A2244', '#E6E6E6', '#F3F3F3', '#FF0000', '#553B0A', '#1D550B', '#2B1555'];
 
@@ -200,26 +199,55 @@ whoIsRefugee.style.color = "#ffffff";
 
 var segueSportsAnalytics = document.getElementById('segueSportsAnalytics');
 segueSportsAnalytics.addEventListener('click', function () {
-
     window.location.href = "/Home/Contact";
-
 })
 
 
 
-var title = document.getElementById("");
 
-title.innerHTML = "谁是难民？"
-title.innerHTML = "Who are Refugees?";
+var title = document.getElementById("title");
+var titleContent = document.getElementById("titleContent");
+var comeFrom = document.getElementById("comeFrom");
+var comeFromContent = document.getElementById("comeFromContent")
+var menAndWomen = document.getElementById("menAndWomen");
+var menAndWomenContent = document.getElementById("menAndWomenContent");
+var year = document.getElementById("year");
+var year1 = document.getElementById("year1");
+var weBelieve = document.getElementById("weBelieve");
+var weBelieveContent = document.getElementById("weBelieveContent");
+var findSport = document.getElementById("findSport");
+var details = document.getElementById("details");
 
-var titleContent = document.getElementById("");
 
-titleContent.innerHTML = "Refugees are regular people who, through no fault of their own, have been forced to leave their homes in search of safety."
-titleContent.innerHTML = "难民是普通人，他们没有任何过错，被迫离开家园寻求安全."
+var chineseTranslate = document.getElementById("chineseTranslate");
+var englishTranslate = document.getElementById("englishTranslate");
 
-var comeFrom = document.getElementById("");
+chineseTranslate.addEventListener("click", function () {
+    title.innerHTML = "谁是难民？"
+    titleContent.innerHTML = "难民是普通人，他们没有任何过错，被迫离开家园寻求安全."
+    comeFrom.innerHTML = "他们来自哪里？";
+    comeFromContent.innerHTML = "根据澳大利亚政府内政部2016 - 2019年的难民统计数据，难民最多的9个国家是伊拉克、叙利亚、缅甸、阿富汗、刚果民主共和国、埃塞俄比亚、厄立特里亚、伊朗和中非共和国。来自这些地区的难民占澳大利亚难民总人数的76 %"
+    menAndWomen.innerHTML = "男女";
+    menAndWomenContent.innerHTML = "根据澳大利亚政府内政部2016年至2019年的难民统计数据，来到澳大利亚的男女人口比例最高，来自伊拉克";
+    year.innerHTML = "年";
+    year1.innerHTML = "年";
+    weBelieve.innerHTML = "我们相信";
+    weBelieveContent.innerHTML = "通过体育运动，我们可以帮助难民克服语言障碍，帮助他们结交新朋友，并在澳大利亚这里找到归属感和自我价值感";
+    findSport.innerHTML = "寻找运动";
+    details.innerHTML = "点击查看更多详细信息";
+})
 
-titleContent.innerHTML = "Where do they come from?";
-titleContent.innerHTML = "他们来自哪里？";
-
-
+englishTranslate.addEventListener("click", function () {
+    title.innerHTML = "Who are Refugees?";
+    titleContent.innerHTML = "Refugees are regular people who, through no fault of their own, have been forced to leave their homes in search of safety."
+    comeFrom.innerHTML = "Where do they come from?";
+    comeFromContent.innerHTML = "According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population."
+    menAndWomen.innerHTML = "Men and Women";
+    menAndWomenContent.innerHTML = "ing to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the highest male to female population that has come to Australia is from Iraq.";
+    year.innerHTML = "Year";
+    year1.innerHTML = "Year";
+    weBelieve.innerHTML = "We Believe";
+    weBelieveContent.innerHTML = "Through sports, we can help refugees overcome language barrier and help them make new friends and find a sense of belonging and self worth here in Australia";
+    findSport.innerHTML = "Find Sport";
+    details.innerHTML = "Click to see more details";
+})
