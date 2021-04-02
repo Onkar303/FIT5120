@@ -15,8 +15,18 @@ var mentalHealthContent = document.getElementById("mentalHealthContent");
 var socialAttributeTitle = document.getElementById("socialAttributeTitle");
 var socialAttributeContent = document.getElementById("socialAttributeContent");
 
-var weCare = document.getElementById('');
-/*weCare.innerHTML = "我们关心";*/
+var weCare = document.getElementById('weCare');
+
+var hereToHelpYou = document.getElementById('hereToHelpYou');
+
+
+var helpContent = document.getElementById('helpContent');
+
+
+
+
+
+
 
 
 var analyticsTitle = document.getElementById("analyticsTitle");
@@ -33,14 +43,16 @@ chineseTranslate.addEventListener("click", function () {
     mentalHealthTitle.innerHTML = "心理健康";
     mentalHealthContent.innerHTML = "根据相关研究，“就大脑的物理变化而言，运动时你的大脑将释放多巴胺和血清素。你患抑郁症的风险因此降低了30% 此外，由于运动所具有的独特的竞争性，你可以在运动中找到成就感和自我认同，从而同时提高你的幸福感和自信心。"
 
-    analyticsTitle.innerHTML = "世界";
-    analyticsContent.innerHTML = "根据澳大利亚政府内政部2016 - 2019年的难民统计数据，难民最多的9个国家是伊拉克、叙利亚、缅甸、阿富汗、刚果民主共和国、埃塞俄比亚、厄立特里亚、伊朗和中非共和国。来自这些地区的难民占澳大利亚难民总人数的76%";
+    //analyticsTitle.innerHTML = "世界";
+    //analyticsContent.innerHTML = "根据澳大利亚政府内政部2016 - 2019年的难民统计数据，难民最多的9个国家是伊拉克、叙利亚、缅甸、阿富汗、刚果民主共和国、埃塞俄比亚、厄立特里亚、伊朗和中非共和国。来自这些地区的难民占澳大利亚难民总人数的76%";
 
     language.innerHTML = "语";
-    aboutUs.innerHTML = "关于我们";
-    findSport.innerHTML = "寻找运动";
+    //aboutUs.innerHTML = "关于我们";
+    //findSport.innerHTML = "寻找运动";
 
-
+    weCare.innerHTML = "我们关心";
+    hereToHelpYou.innerHTML = "在这里为您提供帮助";
+    helpContent.innerHTML = "在来到新国家时，新来的澳大利亚人由于文化冲击和社会孤立而感到不知所措。幸运的是，体育是一种全球性的语言，可以帮助人们从不同的背景进行交流。我们的目标是通过本地体育文化确保您感受到归属感的需要，以帮助您融入社区。";
 })
 
 
@@ -55,12 +67,17 @@ englishTranslate.addEventListener("click", function () {
     mentalHealthContent.innerHTML = "According to relavent research, “in terms of physical changes in the brain, sport releases dopamine and serotonin. As a result, your risk of depression is reduced by up to 30%” Moreover, due to the competitive nature of sports, you can find a sense of achievement and self worth when playing sports, which therefore boost your well - being and confidence";
 
 
-    analyticsTitle.innerHTML = "The World";
-    analyticsContent.innerHTML = "According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.";
+    //analyticsTitle.innerHTML = "The World";
+    //analyticsContent.innerHTML = "According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.";
 
     language.innerHTML = "Language";
     aboutUs.innerHTML = "About Us";
     findSport.innerHTML = "Find Sport";
+
+    weCare.innerHTML = "We care !!";
+    hereToHelpYou.innerHTML = "We are here to Help you";
+    helpContent.innerHTML = "New arrival in Australia feel overwhelmed from the culture shock and social isolation whilst settling into their new country. Fortunately, sports is the global language that helps people connect from different backgrounds. Our aim is to ensure you feel the need of a sense of belonging through local sport culture to assist you to integrate into the community.";
+
 
 })
 
@@ -70,7 +87,7 @@ home.style.backgroundColor = "#CBA783";
 home.style.color = "#ffffff";
 
 
-var segueAnalytics = document.getElementById('segueAnalytics');
+var segueAnalytics = document.getElementById('segueStats');
 segueAnalytics.addEventListener("click", function () {
     window.location.href = '/Home/Analytics';
 });

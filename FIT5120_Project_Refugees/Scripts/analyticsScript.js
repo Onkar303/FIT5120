@@ -204,3 +204,22 @@ segueSportsAnalytics.addEventListener('click', function () {
     window.location.href = "/Home/Contact";
 
 })
+
+
+
+var title = document.getElementById("");
+
+title.innerHTML = "谁是难民？"
+title.innerHTML = "Who are Refugees?";
+
+var titleContent = document.getElementById("");
+
+titleContent.innerHTML = "Refugees are regular people who, through no fault of their own, have been forced to leave their homes in search of safety."
+titleContent.innerHTML = "难民是普通人，他们没有任何过错，被迫离开家园寻求安全."
+
+var comeFrom = document.getElementById("");
+
+titleContent.innerHTML = "Where do they come from?";
+titleContent.innerHTML = "他们来自哪里？";
+
+
