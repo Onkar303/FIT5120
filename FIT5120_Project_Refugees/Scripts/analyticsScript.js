@@ -145,11 +145,14 @@ let barChart = new Chart(barctx, {
     type: 'bar',
     data: {
         datasets: [{
+            label:'male',
             data: male2019_20,
-            backgroundColor: colorHex
+            backgroundColor:'#253D5B',
+            
         }, {
-            data: female2019_20,
-            backgroundColor: colorHex
+                label: 'female',
+                data: female2019_20,
+                backgroundColor: '#FB3640',
           }],
         labels: labels
     },
@@ -175,13 +178,17 @@ let barChart = new Chart(barctx, {
                     size: '10'
                 },
                 formatter: (value) => {
-                    return value + '  male';
-                }
+                    return value;
+                },
             }
         }
     }
 })
 
+
+var whoIsRefugee = document.getElementById('analytics');
+whoIsRefugee.style.backgroundColor = "#CBA783";
+whoIsRefugee.style.color = "#ffffff";
 
 var segueSportsAnalytics = document.getElementById('segueSportsAnalytics');
 segueSportsAnalytics.addEventListener('click', function () {

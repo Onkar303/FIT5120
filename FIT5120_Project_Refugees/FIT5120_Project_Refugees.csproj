@@ -204,7 +204,9 @@
     <Content Include="Images\refugee.jpg" />
     <Content Include="Images\refugiats futbol portada cropped.jpeg" />
     <Content Include="Images\socialAttribute.jpg" />
+    <Content Include="Images\Symbols\pie-chart %281%29.png" />
     <Content Include="Images\Symbols\pie-chart.png" />
+    <Content Include="Images\Symbols\sport %281%29.png" />
     <Content Include="Images\Symbols\sport.png" />
     <Content Include="Scripts\analyticsScript.js" />
     <Content Include="Scripts\bootstrap.js" />

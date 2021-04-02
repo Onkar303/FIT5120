@@ -64,10 +64,10 @@ textarea {
         color: white
 }
 
-    .topnavbar a:hover {
-        background-color: black;
-        color: white;
-    }
+.topnavbar a:hover {
+    background-color: #CBA783;
+    color: white;
+}
 
 .languageDropDown{
     float:left;

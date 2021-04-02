@@ -12,5 +12,10 @@
     evt.currentTarget.className += " active";
 }
 
+
 // 触发 id="defaultOpen" click 事件
 document.getElementById("defaultOpen").click();
+
+var compare = document.getElementById('compare');
+compare.style.backgroundColor = "#CBA783"
+compare.style.color = "#ffffff";

@@ -65,6 +65,11 @@ englishTranslate.addEventListener("click", function () {
 })
 
 
+var home = document.getElementById('home');
+home.style.backgroundColor = "#CBA783";
+home.style.color = "#ffffff";
+
+
 var segueAnalytics = document.getElementById('segueAnalytics');
 segueAnalytics.addEventListener("click", function () {
     window.location.href = '/Home/Analytics';
