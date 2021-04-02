@@ -269,7 +269,7 @@ function translateToEnglishForAnalytics() {
     language.innerHTML = "Language";
     home.innerHTML = "Home";
     analytics.innerHTML = "Who are Refugees?";
-    compare.innerHTML = "compare";
+    compare.innerHTML = "Compare";
 
     isChinese = false;
 }
