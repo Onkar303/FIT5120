@@ -2,8 +2,8 @@
 var isChinese = false;
 
 var language = document.getElementById("language");
-var aboutUs = document.getElementById("aboutUs");
-var findSport = document.getElementById("findSport");
+var analytics = document.getElementById("analytics");
+var home = document.getElementById("home");
 var englishTranslate = document.getElementById("englishTranslate");
 var chineseTranslate = document.getElementById("chineseTranslate");
 var slogan = document.getElementById("slogan");
@@ -16,15 +16,14 @@ var socialAttributeTitle = document.getElementById("socialAttributeTitle");
 var socialAttributeContent = document.getElementById("socialAttributeContent");
 
 var weCare = document.getElementById('weCare');
-
 var hereToHelpYou = document.getElementById('hereToHelpYou');
-
-
 var helpContent = document.getElementById('helpContent');
 
+var findSport = document.getElementById('findSports');
+var refugeeStats = document.getElementById('refugeeStats');
 
-
-
+var details = document.getElementById("details");
+var details1 = document.getElementById("details1");
 
 
 
@@ -47,12 +46,19 @@ chineseTranslate.addEventListener("click", function () {
     //analyticsContent.innerHTML = "根据澳大利亚政府内政部2016 - 2019年的难民统计数据，难民最多的9个国家是伊拉克、叙利亚、缅甸、阿富汗、刚果民主共和国、埃塞俄比亚、厄立特里亚、伊朗和中非共和国。来自这些地区的难民占澳大利亚难民总人数的76%";
 
     language.innerHTML = "语";
-    //aboutUs.innerHTML = "关于我们";
-    //findSport.innerHTML = "寻找运动";
+    home.innerHTML = "家";
+    analytics.innerHTML = "谁是难民?";
 
     weCare.innerHTML = "我们关心";
     hereToHelpYou.innerHTML = "在这里为您提供帮助";
     helpContent.innerHTML = "在来到新国家时，新来的澳大利亚人由于文化冲击和社会孤立而感到不知所措。幸运的是，体育是一种全球性的语言，可以帮助人们从不同的背景进行交流。我们的目标是通过本地体育文化确保您感受到归属感的需要，以帮助您融入社区。";
+
+    findSport.innerHTML = "寻找运动";
+    refugeeStats.innerHTML = "难民统计";
+    details.innerHTML = "点击查看更多详细信息";
+    details1.innerHTML = "点击查看更多详细信息";
+
+
 })
 
 
@@ -71,13 +77,18 @@ englishTranslate.addEventListener("click", function () {
     //analyticsContent.innerHTML = "According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.";
 
     language.innerHTML = "Language";
-    aboutUs.innerHTML = "About Us";
-    findSport.innerHTML = "Find Sport";
+    home.innerHTML = "Home";
+    analytics.innerHTML = "Who are Refugees?";
+
 
     weCare.innerHTML = "We care !!";
     hereToHelpYou.innerHTML = "We are here to Help you";
     helpContent.innerHTML = "New arrival in Australia feel overwhelmed from the culture shock and social isolation whilst settling into their new country. Fortunately, sports is the global language that helps people connect from different backgrounds. Our aim is to ensure you feel the need of a sense of belonging through local sport culture to assist you to integrate into the community.";
 
+    findSport.innerHTML = "Find Sports";
+    refugeeStats.innerHTML = "refugee Stats";
+    details.innerHTML = "Click to see more details";
+    details1.innerHTML = "Click to see more details";
 
 })
 

@@ -203,7 +203,9 @@ segueSportsAnalytics.addEventListener('click', function () {
 })
 
 
-
+var language = document.getElementById("language");
+var analytics = document.getElementById("analytics");
+var home = document.getElementById("home");
 
 var title = document.getElementById("title");
 var titleContent = document.getElementById("titleContent");
@@ -235,6 +237,10 @@ chineseTranslate.addEventListener("click", function () {
     weBelieveContent.innerHTML = "通过体育运动，我们可以帮助难民克服语言障碍，帮助他们结交新朋友，并在澳大利亚这里找到归属感和自我价值感";
     findSport.innerHTML = "寻找运动";
     details.innerHTML = "点击查看更多详细信息";
+
+    language.innerHTML = "语";
+    home.innerHTML = "家";
+    analytics.innerHTML = "谁是难民?";
 })
 
 englishTranslate.addEventListener("click", function () {
@@ -250,4 +256,8 @@ englishTranslate.addEventListener("click", function () {
     weBelieveContent.innerHTML = "Through sports, we can help refugees overcome language barrier and help them make new friends and find a sense of belonging and self worth here in Australia";
     findSport.innerHTML = "Find Sport";
     details.innerHTML = "Click to see more details";
+
+    language.innerHTML = "Language";
+    home.innerHTML = "Home";
+    analytics.innerHTML = "Who are Refugees?";
 })
