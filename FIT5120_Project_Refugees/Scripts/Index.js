@@ -114,6 +114,23 @@ segueSports.addEventListener("click", function () {
 });
 
 
+function sendApiCall() {
+    const Http = new XMLHttpRequest();
+    const url = 'http://34.70.121.80/forecast?locality=croydon';
+
+    Http.open("GET", url);
+    Http.setRequestHeader("Access-Control-Allow-Headers", "*");
+    Http.send();
+   
+
+    Http.onreadystatechange = (e) => {
+        console.log(Http.responseText)
+        console.log(e);
+    }
+}
+
+    sendApiCall();
+
 var topLogo = document.getElementById('topLogo');
 topLogo.addEventListener("click", function () {
     window.location.href = '/Home/Index';
