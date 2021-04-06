@@ -40,6 +40,12 @@ textarea {
     z-index : 5;
 }
 
+ .topnavbar a.hamBurger {
+        float: none;
+        display: none;
+ }
+
+
 .topnavbar a {
     float: left;
     text-decoration: none;
@@ -49,6 +55,7 @@ textarea {
     font-weight: bold;
     cursor:pointer;
 }
+
 
 #projectLogo {
       background-image: url(../../Images/logo.png);
@@ -216,9 +223,30 @@ textarea {
     .analyticsTitleSection {
         padding: 8.5% 4% 3% 4%;
     }
+
+    .topnavbar a.hamBurger {
+        float: right;
+        position:relative;
+        display: block;
+    }
+
+    .topnavbar a {
+        display:none;
+    }
+
 }
 
-.customPadding{
+@media screen and (max-width:800px){
+    .topnavbar.responsive a{
+        display:block;
+        position:relative;
+    }
+}
+
+
+
+
+.customPadding {
     padding:5%;
 }
 

@@ -6,6 +6,8 @@ using System.Web.Mvc;
 
 namespace FIT5120_Project_Refugees.Controllers
 {
+    
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()

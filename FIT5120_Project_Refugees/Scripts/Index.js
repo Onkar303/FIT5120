@@ -114,22 +114,34 @@ segueSports.addEventListener("click", function () {
 });
 
 
-function sendApiCall() {
-    const Http = new XMLHttpRequest();
-    const url = 'http://34.70.121.80/forecast?locality=croydon';
+//function sendApiCall() {
+//    const Http = new XMLHttpRequest();
+//    const url = 'http://34.70.121.80/forecast?locality=croydon';
 
-    Http.open("GET", url);
-    Http.setRequestHeader("Access-Control-Allow-Headers", "*");
-    Http.send();
+//    Http.open("GET", url);
+//    Http.setRequestHeader("Access-Control-Allow-Headers", "*");
+//    Http.send();
    
 
-    Http.onreadystatechange = (e) => {
-        console.log(Http.responseText)
-        console.log(e);
+//    Http.onreadystatechange = (e) => {
+//        console.log(Http.responseText)
+//        console.log(e);
+//    }
+//}
+
+ //   sendApiCall();
+
+
+
+function changeToCollapsableNavBar() {
+    var x = document.getElementById("Topnav");
+    if (x.className === "topnavbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnavbar";
     }
 }
 
-    sendApiCall();
 
 var topLogo = document.getElementById('topLogo');
 topLogo.addEventListener("click", function () {
