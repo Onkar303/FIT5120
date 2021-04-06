@@ -153,6 +153,21 @@ textarea {
     align-items: center;
 }
 
+
+.solganText {
+    font-size:3vw;
+}
+
+
+.textContent {
+    font-size:1.2vw;
+    text-align:justify;
+    line-height:1.7;
+}
+
+
+
+
 .row{
     display:flex;
 }
@@ -161,6 +176,20 @@ textarea {
     overflow:hidden;
     width:50%;
     flex:1;
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        display:block;
+    }
+    .column {
+        width: 100%;     
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+
+    .textContent {
+        font-size:20px;
+    }
 }
 
 #MhContainer,#PhContainer{
