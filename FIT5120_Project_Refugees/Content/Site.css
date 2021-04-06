@@ -192,7 +192,7 @@ textarea {
     flex:1;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     .row {
         display:block;
     }
