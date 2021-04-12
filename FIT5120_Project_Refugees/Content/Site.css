@@ -199,6 +199,11 @@ textarea {
     flex:1;
 }
 
+.importanceContentContainter {
+    width: 70%;
+    margin: auto;
+}
+
 @media screen and (max-width: 800px) {
     .row {
         display:block;
@@ -209,11 +214,12 @@ textarea {
     }
 
     .textContent {
-        font-size:2.5vw;
+        font-size:4.5vw;
+        padding:14px 16px;
     }
 
     .sloganText {
-        font-size:6vw;
+        font-size:8vw;
     }
 
     .sectionTextTitle{
@@ -233,6 +239,16 @@ textarea {
     .topnavbar a {
         display:none;
     }
+
+    .card {
+        width:35vw;
+        
+    }
+
+    .importanceContentContainter {
+        width: 100%;
+    }
+    
 
 }
 
@@ -266,7 +282,7 @@ textarea {
 .card {
     box-shadow: 0px 0px 5px 1px;
     background-color:white;
-    width:30%;
+    width:60%;
     display:inline-block;
     min-height:50%;
     transition:0.2s ease;
