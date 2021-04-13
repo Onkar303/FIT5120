@@ -52,7 +52,7 @@ let pieChart = new Chart(ctx, {
             labels: labels
         },
         options: {
-            responsive: true,
+            responsive:true,
             title: {
                 display: true,
                 text: 'Total Refugees'

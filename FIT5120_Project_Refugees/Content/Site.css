@@ -236,9 +236,14 @@ textarea {
         display: block;
     }
 
-    .topnavbar a {
-        display:none;
+    .topnavbar  a#projectLogo{
+        display:block;
     }
+
+    .topnavbar a {
+        display: none;
+    }
+
 
     .card {
         width:35vw;
