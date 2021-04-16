@@ -192,6 +192,9 @@
     <Content Include="fonts\Roboto\LICENSE.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\analyticsSymbols\baby-boy.png" />
+    <Content Include="Images\analyticsSymbols\man.png" />
+    <Content Include="Images\analyticsSymbols\woman.png" />
     <Content Include="Images\australia.png" />
     <Content Include="Images\compareSwimming.jpg" />
     <Content Include="Images\countryFlag\Afganistan.png" />
