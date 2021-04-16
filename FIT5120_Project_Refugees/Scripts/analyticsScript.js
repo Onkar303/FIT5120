@@ -16,9 +16,10 @@ am4core.ready(function () {
     chart.geodata = am4geodata_worldLow;
     chart.paddingTop = 20;
     chart.paddingBottom = 20;
+    chart.responsive.enabled = true;
     chart.chartContainer.wheelable = false;
     chart.seriesContainer.draggable = false;
-    chart.seriesContainer.resizable = false;
+    chart.seriesContainer.resizable = true;
     chart.maxZoomLevel = 1;
     chart.projection = new am4maps.projections.Miller();
 
@@ -79,6 +80,10 @@ am4core.ready(function () {
     series5.mapPolygons.template.tooltipText = "{name}";
     series5.mapPolygons.template.fill = am4core.color("#D99694");
     series5.fill = am4core.color("#D99694");
+
+
+
+   
 
 
 
@@ -152,6 +157,14 @@ am4core.ready(function () {
     chart.legend.position = "right";
     chart.legend.align = "right";
 
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 992) {
+            chart.legend.position = "bottom";
+            chart.legend.contentAlign = "bottom";
+        } else {
+            chart.legend.position = "right";
+        }
+    }, true);
 
 
     //chart.legend = new am4maps.Legend();

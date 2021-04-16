@@ -224,6 +224,7 @@
     <Content Include="Images\Symbols\pie-chart.png" />
     <Content Include="Images\Symbols\sport %281%29.png" />
     <Content Include="Images\Symbols\sport.png" />
+    <Content Include="Images\we care.jpeg" />
     <Content Include="Scripts\analyticsScript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
