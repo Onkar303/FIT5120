@@ -4,36 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/d3")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 
 
 </head>
 <body>
-    <div class="topnavbar">
+    <div class="topnavbar" id="myTopnav">
 
         <a href="@Url.Action("Index", "Home")" id="projectLogo"> Play with Refugees</a>
-        <a class="hamBurger" onclick=changeToCollapsableNavBar()>
-            <i class="fa fa-bars"> Menu </i>
-        </a>
-        @*<img style="margin-left:100px;cursor:pointer;float:left;" src="~/Images/logo.png" width="60px" id="topLogo"/>*@
+        <a id="hamBurger" onclick=changeToCollapsableNavBar()><i class="fa fa-bars"></i></a>
         <a id="home" href="@Url.Action("Index","Home")"> Home</a>
         <a id="analytics" href="@Url.Action("Analytics","Home")">Refugees in AU </a>
         <a id="" href="">Find Sport</a>
         <a id="compare" href="@Url.Action("Contact","Home")">Compare</a>
         @*<a id="aboutUs" href="@Url.Action("About", "Home")">About Us</a>*@
         @*<div class="languageDropDown">
-            <button id="language" class="dropdownButton">
-                Language
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropDownContent">
-                <a id="englishTranslate"> English</a>
-                <a id="chineseTranslate"> Chinese </a>
-            </div>
-        </div>*@
+                <button id="language" class="dropdownButton">
+                    Language
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropDownContent">
+                    <a id="englishTranslate"> English</a>
+                    <a id="chineseTranslate"> Chinese </a>
+                </div>
+            </div>*@
     </div>
 
 
@@ -70,6 +70,8 @@
                 </div>
             </div>
         </div>*@
+
+   
     <div>
         <script>
             var isChinese = false;
@@ -81,8 +83,8 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/_Layout.js"></script>
+
+
 </body>
 </html>

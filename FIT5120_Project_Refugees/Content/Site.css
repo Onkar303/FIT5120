@@ -1,5 +1,5 @@
 ﻿body{
-    box-sizing:border-box;
+    overflow-x:hidden;
 }
 
 @font-face {
@@ -50,7 +50,7 @@ textarea {
     z-index : 5;
 }
 
- .topnavbar a.hamBurger {
+ .topnavbar a#hamBurger {
         float: none;
         display: none;
  }
@@ -152,9 +152,10 @@ textarea {
 }
 
 .buttonSection button {
+    display:inline;
     margin: 20px;
-    height:10vh;
-    width:14vw;
+    height:8vh;
+    width:150px;
     background-color: var(--backgroundColor);
     color: white;
     border: none;
@@ -292,18 +293,36 @@ textarea {
         padding: 15.5% 4% 3% 4%;
     }
 
-    .topnavbar a.hamBurger {
+    .topnavbar a#hamBurger {
         float: right;
+        display:block;
         position:relative;
-        display: block;
     }
 
     .topnavbar  a#projectLogo{
-        display:block;
+        display:inline;
     }
 
-    .topnavbar a {
-        display: none;
+    .topnavbar a{
+        display:none;
+    }
+
+    topnavbar.responsive a#projectLogo{
+        display:inline;
+            }
+
+    .topnavbar.responsive a#hamBurger {
+        display:inline;
+        position:relative;
+        float:right;
+    }
+
+    .topnavbar.responsive a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: right;
+        position: relative;
     }
 
 
@@ -315,17 +334,16 @@ textarea {
     .importanceContentContainter {
         width: 100%;
     }
-    
-    
 
-}
-
-@media screen and (max-width:800px){
-    .topnavbar.responsive a{
+    .buttonSection button{
         display:block;
-        position:relative;
+        width:130px;
     }
+
+    
+
 }
+
 
 
 
@@ -415,23 +433,26 @@ textarea {
 
 .pop-up {
     height: auto;
-    width: 60%;
+    width: 30vw;
+    left:30%;
+    top:20%;
     margin: 10vh auto;
     background: #fff;
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    z-index: 2;
     border-radius: 5px;
     box-shadow: 0 0 20px #000;
 }
 
 .pop-up-container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    top:0;
+    left:0;
     background: #000;
     opacity: .5;
-    position: relative;
-    z-index: -1;
-    margin-top: -500px;
+    position: fixed;
+    z-index: 1;
 }
 
 span {
@@ -445,8 +466,9 @@ span {
 }
 
 .pop-up-text {
-    box-sizing: border-box;
     padding: 20px;
+    text-align:center;
+    
 }
 
     .pop-up-text h1 {
@@ -463,12 +485,5 @@ span {
 
     .pop-up-text a {
         color: #FF3D3D;
-        margin-bottom: 10px;
-    }
-
-    .pop-up-text img {
-        max-height: 250px;
-        width: 100%;
-        text-align: center;
         margin-bottom: 10px;
     }
