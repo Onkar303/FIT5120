@@ -24,9 +24,6 @@ $(document).ready(function () {
 
 
 
-
-
-
 function changeToCollapsableNavBar() {
     var x = document.getElementById("Topnav");
     if (x.className === "topnavbar") {
@@ -38,25 +35,13 @@ function changeToCollapsableNavBar() {
 
 
 
+function segueToSuggestion() {
+    window.location.href = "/Home/Suggestions";
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function segueToSportsInformation() {
+    window.location.href = "/Home/SportsInformation";
+}
 
 
 

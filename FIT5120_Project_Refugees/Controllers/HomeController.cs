@@ -31,8 +31,18 @@ namespace FIT5120_Project_Refugees.Controllers
 
         public ActionResult Analytics()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+
+        public ActionResult Suggestions()
+        {
+            return View();
+        }
+
+
+        public ActionResult SportsInformation()
+        {
             return View();
         }
     }
