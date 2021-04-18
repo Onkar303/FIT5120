@@ -435,8 +435,9 @@ textarea {
 .pop-up {
     height: auto;
     width: 30vw;
-    left:30%;
-    top:20%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
     margin: 10vh auto;
     background: #fff;
     position: fixed;
