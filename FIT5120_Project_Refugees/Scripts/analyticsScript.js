@@ -18,7 +18,7 @@
     chart.chartContainer.wheelable = false;
     chart.seriesContainer.draggable = false;
     chart.seriesContainer.resizable = true;
-    chart.maxZoomLevel = 1;
+    chart.maxZoomLevel = 1.0;
     chart.projection = new am4maps.projections.Miller();
 
     // Create map polygon series
@@ -40,7 +40,7 @@
     series1.name = "Iraq";
     series1.useGeodata = true;
     series1.include = ["IQ"];
-    series1.mapPolygons.template.tooltipText = "{name}";
+    series1.mapPolygons.template.tooltipText = "{name} : 5678";
     series1.mapPolygons.template.fill = am4core.color("#CD1725");
     series1.fill = am4core.color("#CD1725");
 
@@ -48,7 +48,7 @@
     series2.name = "Democratic Republic of Congo";
     series2.useGeodata = true;
     series2.include = ["CD"];
-    series2.mapPolygons.template.tooltipText = "{name}";
+    series2.mapPolygons.template.tooltipText = "{name} : 1165";
     series2.mapPolygons.template.fill = am4core.color("#2C88FE");
     series2.fill = am4core.color("#2C88FE");
 
@@ -57,16 +57,16 @@
     series3.name = "Syria";
     series3.useGeodata = true;
     series3.include = ["SY"];
-    series3.mapPolygons.template.tooltipText = "{name}";
+    series3.mapPolygons.template.tooltipText = "{name} : 947";
     series3.mapPolygons.template.fill = am4core.color("#010101");
     series3.fill = am4core.color("#010101");
 
-
+    
     var series4 = chart.series.push(new am4maps.MapPolygonSeries());
     series4.name = "Myanmar";
     series4.useGeodata = true;
     series4.include = ["MM"];
-    series4.mapPolygons.template.tooltipText = "{name}";
+    series4.mapPolygons.template.tooltipText = "{name} : 769";
     series4.mapPolygons.template.fill = am4core.color("#259159");
     series4.fill = am4core.color("#259159");
 
@@ -75,11 +75,16 @@
     series5.name = "Afganistan";
     series5.useGeodata = true;
     series5.include = ["AF"];
-    series5.mapPolygons.template.tooltipText = "{name}";
+    series5.mapPolygons.template.tooltipText = "{name} :619";
     series5.mapPolygons.template.fill = am4core.color("#D99694");
     series5.fill = am4core.color("#D99694");
 
+    polygonTemplate.propertyFields.fill = "fill";
 
+    chart.legend = new am4maps.Legend();
+    chart.legend.position = "right";
+    chart.legend.align = "right";
+    chart.legend.contentAlign = "bottom";
 
    
 
@@ -149,20 +154,15 @@
 
     //];
 
-    polygonTemplate.propertyFields.fill = "fill";
-
-    chart.legend = new am4maps.Legend();
-    chart.legend.position = "right";
-    chart.legend.align = "right";
-
-    window.addEventListener('resize', () => {
-        if (window.innerWidth < 992) {
-            chart.legend.position = "bottom";
-            chart.legend.contentAlign = "bottom";
-        } else {
-            chart.legend.position = "right";
-        }
-    }, true);
+    
+    //window.addEventListener('resize', () => {
+    //    if (window.innerWidth < 992) {
+    //        chart.legend.position = "bottom";
+    //        chart.legend.contentAlign = "bottom";
+    //    } else {
+    //        chart.legend.position = "right";
+    //    }
+    //}, true);
 
 
     //chart.legend = new am4maps.Legend();

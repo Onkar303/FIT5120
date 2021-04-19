@@ -300,32 +300,37 @@ textarea {
         position:relative;
     }
 
-    .topnavbar  a#projectLogo{
+    .topnavbar a#projectLogo{
         display:inline;
+        float:left;
+      
     }
 
     .topnavbar a{
         display:none;
     }
 
-    topnavbar.responsive a#projectLogo{
-        display:inline;
-            }
-
-    .topnavbar.responsive a#hamBurger {
-        display:inline;
-        position:relative;
-        float:right;
-    }
-
+    
 
     .topnavbar.responsive a {
-        float: none;
         display: block;
         width: 100%;
         text-align: right;
         position: relative;
     }
+
+    .topnavbar.responsive a#projectLogo {
+        display: inline;
+        position:relative;
+        float: left;
+    }
+
+    .topnavbar.responsive a#hamBurger {
+        display: inline;
+        float: right;
+        position: relative;
+    }
+
 
     .pop-up {
         width: 300px;
