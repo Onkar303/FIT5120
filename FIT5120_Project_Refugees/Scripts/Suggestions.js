@@ -14,6 +14,9 @@ var titles = [sportsTitle1, sportsTitle2, sportsTitle3, sportsTitle4];
 
 
 
+
+
+
 function retreveRandomVaribales() {
     const n = 4;
     const sample = items

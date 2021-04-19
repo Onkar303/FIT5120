@@ -318,6 +318,7 @@ textarea {
         float:right;
     }
 
+
     .topnavbar.responsive a {
         float: none;
         display: block;
@@ -325,6 +326,12 @@ textarea {
         text-align: right;
         position: relative;
     }
+
+    .pop-up {
+        width: 300px;
+        height: 500px;
+    }
+   
 
 
     .card {
@@ -341,8 +348,8 @@ textarea {
         width:130px;
     }
 
-    
 
+    
 }
 
 
@@ -434,7 +441,6 @@ textarea {
 
 .pop-up {
     height: auto;
-    width: 30vw;
     left: 50%;
     top: 40%;
     transform: translate(-50%,-50%);
@@ -468,9 +474,8 @@ span {
 }
 
 .pop-up-text {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     text-align:center;
-    
 }
 
     .pop-up-text h1 {
