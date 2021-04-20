@@ -34,6 +34,9 @@ function changeToCollapsableNavBar() {
 }
 
 
+function segueToCompare() {
+    window.location.href = "Home/Contact";
+}
 
 function segueToSuggestion() {
     window.location.href = "/Home/Suggestions";
