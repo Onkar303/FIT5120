@@ -387,7 +387,7 @@ textarea {
     transition:0.2s ease;
     border-radius:10px;
     overflow:hidden;
-    padding-bottom:20px;
+    padding-bottom:10px;
     cursor:pointer;
 }
 
@@ -476,6 +476,11 @@ span {
     font-size: 1.25em;
     padding: .4em .7em;
     cursor: pointer;
+}
+
+
+span#click{
+
 }
 
 .pop-up-text {

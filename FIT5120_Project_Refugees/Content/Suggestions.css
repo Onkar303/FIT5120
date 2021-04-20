@@ -54,7 +54,7 @@ p {
 }
 
 .button {
-    background: var(--backgroundColor);
+    background: #ff6a00;
     border-radius: 100px;
     padding: 20px 60px;
     color: #fff;
