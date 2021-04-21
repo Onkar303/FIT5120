@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
@@ -14,7 +15,7 @@
         <h1><b id="title"> Refugees in Australia </b></h1>
         <h4 id="titleContent" style="line-height:1.8;">
             Refugees in Australia are regular people who, through no fault of their own, have been forced to leave their homes in search of safety.
-            Australia has welcomed more than 900,000 refugees since 1947. In the past year, Australia has resettled and protected 18750 refugees. However, new arrivals to Australia often feel lonely and socially isolated. Refugees it difficult to find a sense of belonging in the local community due to cultural shock and language barriers.
+            Australia has welcomed more than 900,000 refugees since 1947. In the past year, Australia has resettled and protected 18750 refugees. However, new arrivals to Australia often feel lonely and socially isolated. Refugees find difficult to find a sense of belonging in the local community due to cultural shock and language barriers.
         </h4>
     </div>
 
@@ -23,7 +24,7 @@
 
 <div id="analyticsSection">
 
-    <div class="column" style="padding:20px;width:100%;height:100%;margin:auto;">
+    @*<div class="column" style="padding:20px;width:100%;height:100%;margin:auto;">
         <div class="dropdown" style="float:right; padding-right:10%;">
             <button id="year" class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Year
@@ -37,153 +38,185 @@
                 <li><a id="2019_20">2019 – 20</a></li>
                 <li role="separator" class="divider"></li>
             </ul>
-        </div>
+        </div>*@
 
 
-        <div id="chartdiv" class="map"></div>
+    <div id="chartdiv" class="map"></div>
 
 
 
-        @*<div class="row">
-                <div class="column" style="padding:20px;width:100%;height:100%;margin:auto;">
-                    <div class="dropdown" style="float:right; padding-right:10%;">
-                        <button id="year" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    @*<div class="row">
+            <div class="column" style="padding:20px;width:100%;height:100%;margin:auto;">
+                <div class="dropdown" style="float:right; padding-right:10%;">
+                    <button id="year" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Year
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a id="2015_16">2015 – 16</a></li>
+                        <li><a id="2016_17">2016 – 17</a></li>
+                        <li><a id="2017_18">2017 – 18</a></li>
+                        <li><a id="2018_19">2018 – 19</a></li>
+                        <li><a id="2019_20">2019 – 20</a></li>
+                        <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="chart-wrapper" style="width:100%;display:inline-block">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="column" style="text-align:center;margin:auto;margin-right:20px;">
+
+                    <h2><b id="comeFrom">Where do they come from?</b> </h2>
+                    <p id="comeFromContent" class="textContent customPadding">
+                        According to the Australian Department of Home Affairs of refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.
+                    </p>
+            </div>
+        </div>*@
+
+
+
+    @*<div class="row">
+
+            <div class="column" style="text-align:center;margin: auto; ">
+
+                <h2><b id="menAndWomen">Men And Women</b></h2>
+                <p class="textContent customPadding"  id ="menAndWomenContent">
+                    According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the highest male to female population that has come to Australia is from Iraq.
+                </p>
+
+            </div>
+
+            <div class="column" style="padding:20px;width:100%;height:100%;margin:auto;">
+
+                <div>
+                    <div class="dropdown" style="float:left; padding-right:10%;">
+                        <button id="year1" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Year
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a id="2015_16">2015 – 16</a></li>
-                            <li><a id="2016_17">2016 – 17</a></li>
-                            <li><a id="2017_18">2017 – 18</a></li>
-                            <li><a id="2018_19">2018 – 19</a></li>
-                            <li><a id="2019_20">2019 – 20</a></li>
+                            <li><a id="mf2015_16">2015 – 16</a></li>
+                            <li><a id="mf2016_17">2016 – 17</a></li>
+                            <li><a id="mf2017_18">2017 – 18</a></li>
+                            <li><a id="mf2018_19">2018 – 19</a></li>
+                            <li><a id="mf2019_20">2019 – 20</a></li>
                             <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                            <li><a href="#">Separated link</a></li>
                         </ul>
                     </div>
-
-                    <div>
-                        <div class="chart-wrapper" style="width:100%;display:inline-block">
-                            <canvas id="pieChart"></canvas>
-                        </div>
+                    <div class="chart-wrapper" style="width:100%;display:inline-block;padding:5%;">
+                        <canvas id="barChart"></canvas>
                     </div>
-
                 </div>
 
-                <div class="column" style="text-align:center;margin:auto;margin-right:20px;">
-
-                        <h2><b id="comeFrom">Where do they come from?</b> </h2>
-                        <p id="comeFromContent" class="textContent customPadding">
-                            According to the Australian Department of Home Affairs of refugees statistics from 2016 to 2019, the top 9 refugee-importing countries are Iraq, Syria, Myanmar, Afghanistan, Democratic Republic of Congo, Ethiopia, Eritrea, Iran, Central African Republic accounting for 76% of the total refugee population.
-                        </p>
-                </div>
-            </div>*@
+            </div>
+        </div>*@
 
 
+</div>
+<div class="totalSection">
+    <h1>Total Refugees</h1>
+    <p class="numberRepresentation">80,547</p>
+    <p class="textContent" style="text-align:center;">Refugees get visas during 2015-2019 over 20+ countries </p>
+</div>
 
-        @*<div class="row">
-
-                <div class="column" style="text-align:center;margin: auto; ">
-
-                    <h2><b id="menAndWomen">Men And Women</b></h2>
-                    <p class="textContent customPadding"  id ="menAndWomenContent">
-                        According to the Australian Government Department of Home Affairs refugees statistics from 2016 to 2019, the highest male to female population that has come to Australia is from Iraq.
-                    </p>
-
-                </div>
-
-                <div class="column" style="padding:20px;width:100%;height:100%;margin:auto;">
-
-                    <div>
-                        <div class="dropdown" style="float:left; padding-right:10%;">
-                            <button id="year1" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Year
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a id="mf2015_16">2015 – 16</a></li>
-                                <li><a id="mf2016_17">2016 – 17</a></li>
-                                <li><a id="mf2017_18">2017 – 18</a></li>
-                                <li><a id="mf2018_19">2018 – 19</a></li>
-                                <li><a id="mf2019_20">2019 – 20</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <div class="chart-wrapper" style="width:100%;display:inline-block;padding:5%;">
-                            <canvas id="barChart"></canvas>
-                        </div>
-                    </div>
-
-                </div>
-            </div>*@
-
-
-    </div>
-    <div class="totalSection">
-        <h1>Total</h1>
-        <p class="numberRepresentation"> 80547</p>
-        <p class="textContent" style="text-align:center;">Refugees get visas during 2015-2019 over 20+ countries </p>
+<div class="grid">
+    <div class="figuresColumn">
+        <h3><b>Males</b> </h3>
+        <img class="symbolMargin" src="~/Images/analyticsSymbols/man.png" />
+        <p class="numberRepresentation">38,987</p>
+        <p class="figuresText">Received asylum from 2015-2019</p>
     </div>
 
-    <div class="grid">
-        <div class="figuresColumn">
-            <img class="symbolMargin" src="~/Images/analyticsSymbols/man.png" />
-            <p class="numberRepresentation">38987</p>
-            <p class="figuresText">Makes get visas from 2015-2019</p>
-        </div>
-
-        <div class="figuresColumn">
-            <img class="symbolMargin" src="~/Images/analyticsSymbols/woman.png" />
-            <p class="numberRepresentation">40280</p>
-            <p class="figuresText">Makes get visas from 2015-2019</p>
-        </div>
-
-        <div class="figuresColumn">
-            <img class="symbolMargin" src="~/Images/analyticsSymbols/baby-boy.png" />
-            <p class="numberRepresentation">1280</p>
-            <p class="figuresText">Makes get visas from 2015-2019</p>
-        </div>
+    <div class="figuresColumn">
+        <h3><b> Females </b> </h3>
+        <img class="symbolMargin" src="~/Images/analyticsSymbols/woman.png" />
+        <p class="numberRepresentation">40,280</p>
+        <p class="figuresText">Received asylum from 2015-2019</p>
     </div>
 
-    <div style="text-align: center;
+    <div class="figuresColumn">
+        <h3><b>Children</b></h3>
+        <img class="symbolMargin" src="~/Images/analyticsSymbols/baby-boy.png" />
+        <p class="numberRepresentation">1,280</p>
+        <p class="figuresText">Received asylum from 2015-2019</p>
+    </div>
+</div>
+
+<div style="text-align: center;
     background-color: #CBA783;
     padding: 2% 3% 3% 4%;
     color: white">
-        <div class="container body-content">
-            <h2 id="weBelieve">We Believe</h2>
-            <h4 id="weBelieveContent" style="line-height: 1.8;">Through sports, we can help refugees overcome language barrier and help them make new friends and find a sense of belonging and self worth here in Australia</h4>
+    <div class="container body-content">
+        <h2 id="weBelieve">We Believe</h2>
+        <h4 id="weBelieveContent" style="line-height: 1.8;">Through sports, we can help refugees overcome language barrier and help them make new friends and find a sense of belonging and self worth here in Australia</h4>
+    </div>
+
+</div>
+
+
+<div class="row" style="text-align:center;">
+
+    <div class="column">
+        <div id="findSuggestion">
+            <div style="width:300px; margin:auto; text-align:center;">
+                <div class="card" style="margin-top:20px;">
+                    <div>
+                        <h3><b>Sports Suggestion</b></h3>
+                    </div>
+                    <div style="overflow:hidden;">
+                        <img src="~/Images/Symbols/sport (1).png" style="object-fit:scale-down; padding:5%;" />
+                    </div>
+                    <div>
+                        <p>Click to see more details</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
 
-
-    <div>
-
-        @*<div id="segueSportsAnalytics">
-                <div style="width:50%; margin:auto; text-align:center;">
-                    <div class="card" style="width:25%;">
-                        <div>
-                            <h3><b id="findSport">Find Sport</b></h3>
-                        </div>
-                        <div style="overflow:hidden;">
-                            <img src="~/Images/Symbols/sport (1).png" style="object-fit:scale-down; padding:5%;" />
-                        </div>
-                        <div>
-                            <span id="details">Click to see more details</span>
-                        </div>
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <h1>
+            <b> <i class="icon-arrow-left"></i> Start your sports journey here <i class="icon-arrow-right"></i> </b>
+        </h1>
+    </div>
+    
+    
+    
+    <div class="column">
+        <div id="sportsCompare">
+            <div style="width:300px; margin:auto; text-align:center;">
+                <div class="card" style="margin-top:20px;">
+                    <div>
+                        <h3><b>Compare Sports</b></h3>
+                    </div>
+                    <div style="overflow:hidden;">
+                        <img src="~/Images/Symbols/sport (1).png" style="object-fit:scale-down; padding:5%;" />
+                    </div>
+                    <div>
+                        <p>Click to see more details</p>
                     </div>
                 </div>
-
-            </div>*@
-
+            </div>
+        </div>
     </div>
 
+</div>
 
-    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/geodata/usaLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-    <script src="~/Scripts/analyticsScript.js"></script>
+
+
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/usaLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="~/Scripts/analyticsScript.js"></script>
 

@@ -1,4 +1,17 @@
-﻿am4core.ready(function () {
+﻿
+var segueSportsCompare = document.getElementById("sportsCompare");
+segueSportsCompare.addEventListener("click", function () {
+
+    window.location.href = "/Home/Contact";
+})
+
+var segueSuggestions = document.getElementById("findSuggestion");
+segueSuggestions.addEventListener("click", function () {
+
+    window.location.href = "/Home/Suggestions";
+})
+
+am4core.ready(function () {
 
     // Themes begin
     am4core.useTheme(am4themes_animated);
