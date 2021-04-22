@@ -10,31 +10,123 @@
 }
 
 function countrySport(countryName) {
-    var countryContent = document.getElementsByClassName("countryContent");
-    var countryImage = document.getElementsByClassName("countryImage");
+    
+    
 
+    // Get all elements with class="countryContent" and hide them
+    var countryContent = document.getElementsByClassName("countryContent");
     for (var i = 0; i < countryContent.length; i++) {
         countryContent[i].style.display = "none";
     }
 
+    //Get all elements with class="countryImage" and hide them
+    var countryImage = document.getElementsByClassName("countryImage");
     for (var i = 0; i < countryImage.length; i++) {
         countryImage[i].style.display = "none";
     }
 
+    
+
     document.getElementById('country').innerHTML = countryName;
     document.getElementById(countryName + 'Image').style.display = "block";
     document.getElementById(countryName).style.display = "block";
+
+    if (countryName = "Irap") {
+        var auSport = document.getElementsByClassName("auSport");
+        for (var i = 0; i < auSport.length; i++) {
+            auSport[i].style.display = "block";
+        }
+
+        document.getElementById('au1').style.display = "none";
+        document.getElementById('au3').style.display = "none";
+        //document.getElementById('au0').style.display = "block";
+        //document.getElementById('au2').style.display = "block";
+        //document.getElementById('au4').style.display = "block";
+    }
+
+
+
+
+
+    if (countryName = "Syria") {
+        var auSport = document.getElementsByClassName("auSport");
+        for (var i = 0; i < auSport.length; i++) {
+            auSport[i].style.display = "block";
+        }
+        document.getElementById('au1').style.display = "none";
+        document.getElementById('au3').style.display = "none";
+    }
+    
+    
+
+    
+    /*if (countryName = "Myanmar") {
+            document.getElementById('au0').style.display = "none";
+            document.getElementById('au1').style.display = "none";
+            document.getElementById('au3').style.display = "none";
+            document.getElementById('au4').style.display = "none";
+        }
+    
+
+    
+    if (countryName = "Afghanistan") {
+            document.getElementById('au0').style.display = "none";
+            document.getElementById('au1').style.display = "none";
+            document.getElementById('au3').style.display = "none";
+        }
+    
+
+    
+    if (countryName = "Democratic Republic of Congo") {
+            document.getElementById('au0').style.display = "none";
+            document.getElementById('au1').style.display = "none";
+            document.getElementById('au3').style.display = "none";
+        }
+    
+
+    
+    if (countryName = "Ethiopia") {
+            document.getElementById('au0').style.display = "none";
+            document.getElementById('au1').style.display = "none";
+            document.getElementById('au3').style.display = "none";
+        }
+    
+
+    
+    if (countryName = "Eritrea") {
+            document.getElementById('au0').style.display = "none";
+            document.getElementById('au3').style.display = "none";
+            document.getElementById('au4').style.display = "none";
+        }
+    
+
+    
+    if (countryName = "Iran") {
+            document.getElementById('au0').style.display = "none";
+            document.getElementById('au1').style.display = "none";
+            document.getElementById('au3').style.display = "none";
+        }
+    
+
+    
+    if (countryName = "Central African Republic") {
+            document.getElementById('au0').style.display = "none";
+            document.getElementById('au1').style.display = "none";
+            document.getElementById('au3').style.display = "none";
+        }*/
+    
+    
+    
 }
 
-countrySport("Iran");
-
-
+countrySport("Iraq");
 
 
 
 // 触发 id="defaultOpen" click 事件
-document.getElementById("defaultOpen").click();
+//document.getElementById("defaultOpen").click();
 
-var compare = document.getElementById('compare');
-compare.style.backgroundColor = "#CBA783"
-compare.style.color = "#ffffff";
+//var compare = document.getElementById('compare');
+//compare.style.backgroundColor = "#CBA783"
+//compare.style.color = "#ffffff";
+
