@@ -37,11 +37,11 @@ function countrySport(countryName) {
             auSport[i].style.display = "block";
         }
 
-        document.getElementById('au1').style.display = "none";
-        document.getElementById('au3').style.display = "none";
-        //document.getElementById('au0').style.display = "block";
-        //document.getElementById('au2').style.display = "block";
-        //document.getElementById('au4').style.display = "block";
+        //document.getElementById('au1').style.display = "none";
+        //document.getElementById('au3').style.display = "none";
+        document.getElementById('au0').style.display = "none";
+        document.getElementById('au2').style.display = "none";
+        document.getElementById('au4').style.display = "none";
     }
 
 
