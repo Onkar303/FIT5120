@@ -13,21 +13,45 @@
     overflow:hidden;
 }
 
+
+.sectionInformation{
+    word-wrap:break-word;
+    font-size:1.1vw;
+}
+
+.sectionTitle {
+    font-size: 2.2vw;
+    font-weight: bold;
+}
+
+
+.section{
+    margin-top:4%;
+}
+
+#sportsCatalogButton {
+    
+    display:none;
+
+}
+
 .listContainer{
     box-sizing:border-box;
     position:absolute;
     left:0;
     top:0;
-    width:25vw;
+    width:20vw;
     height:100vh;
+    padding-top:10vh;
+    overflow:auto;
     background-color:var(--backgroundColor);
 }
 
 .mainContainer{
    box-sizing:border-box;
    position:absolute;
-   left:25vw;
-   width:75vw;
+   left:20vw;
+   width:80vw;
    height:100vh;
    overflow:auto;
    text-align:justify;
@@ -35,6 +59,10 @@
 }
 
 /*Sports suggestions*/
+
+
+
+
 
 h1 {
     color: #fff;
@@ -48,8 +76,34 @@ li {
     position: relative;
     padding-left: 50px;
     line-height: 2;
-    font-size: 32px;
+    font-size: 25px;
     cursor:pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .sectionInformation{
+        font-size:20px;
+    }
+
+    .sectionTitle{
+        font-size:25px;
+    }
+   
+    .mainContainer{
+        padding-top:10%;
+        width:100vw;
+        left:0vw;
+    }
+
+    .listContainer{
+        width:0vw;
+    }
+
+    #sportsCatalogButton{
+        display:inline;
+        cursor:pointer;
+    }
+
 }
 
     li:before {

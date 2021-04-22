@@ -11,6 +11,11 @@ segueSuggestions.addEventListener("click", function () {
     window.location.href = "/Home/Suggestions";
 })
 
+
+var whoIsRefugee = document.getElementById('analytics');
+whoIsRefugee.style.backgroundColor = "#CBA783";
+whoIsRefugee.style.color = "#ffffff";
+
 am4core.ready(function () {
 
     // Themes begin
@@ -406,9 +411,7 @@ var a2019_20 = document.getElementById('2019_20');
 //})
 
 
-var whoIsRefugee = document.getElementById('analytics');
-whoIsRefugee.style.backgroundColor = "#CBA783";
-whoIsRefugee.style.color = "#ffffff";
+
 
 var segueSportsAnalytics = document.getElementById('segueSportsAnalytics');
 segueSportsAnalytics.addEventListener('click', function () {

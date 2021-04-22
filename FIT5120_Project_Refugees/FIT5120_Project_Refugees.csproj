@@ -54,6 +54,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -176,8 +178,33 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\COUNTRY.cs">
+      <DependentUpon>RefugeeDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomSportsInformationModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RefugeeDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefugeeDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RefugeeDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefugeeDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RefugeeDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefugeeDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SPORT.cs">
+      <DependentUpon>RefugeeDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TERM.cs">
+      <DependentUpon>RefugeeDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -233,6 +260,16 @@
     <Content Include="Images\Symbols\sport %281%29.png" />
     <Content Include="Images\Symbols\sport.png" />
     <Content Include="Images\we care.jpeg" />
+    <Content Include="Models\RefugeeDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RefugeeDataModel.edmx</DependentUpon>
+      <LastGenOutput>RefugeeDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\RefugeeDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RefugeeDataModel.edmx</DependentUpon>
+      <LastGenOutput>RefugeeDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\analyticsScript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -255,6 +292,13 @@
     <Content Include="fonts\Roboto\Roboto-Regular.ttf" />
     <Content Include="fonts\Roboto\Roboto-Thin.ttf" />
     <Content Include="fonts\Roboto\Roboto-ThinItalic.ttf" />
+    <EntityDeploy Include="Models\RefugeeDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RefugeeDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\RefugeeDataModel.edmx.diagram">
+      <DependentUpon>RefugeeDataModel.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\PlayWithRefugee - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\Index.js" />
@@ -268,6 +312,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\SportsInformation.js" />
     <Content Include="Scripts\Suggestions.js" />
     <Content Include="Scripts\_Layout.js" />
     <Content Include="Web.config" />
@@ -323,6 +368,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,6 @@
-﻿
+﻿@model  IEnumerable<FIT5120_Project_Refugees.Models.SPORT>
+
+
 @{
     ViewBag.Title = "Suggestions";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,22 +9,38 @@
 <link rel="stylesheet" href="~/Content/Suggestions.css" />
 
 <div style="margin-top:60px;">
-    <img src="~/Images/SuggestionPage/SuggestionLogo.png" style="width: 100vw; height: 50vh; object-fit: cover;"/>
+    <img src="~/Images/SuggestionPage/SuggestionLogo.png" style="width: 100vw; height: 50vh; object-fit: cover;" />
 </div>
 
 <div style="display:flex;justify-content:center;padding:5%;">
-    <a onclick="retreveRandomVaribales()" class="button">Recommend</a>
+
+    @Html.ActionLink("Recommend","Suggestions","Home", htmlAttributes:new { @class = "button" })
+
 </div>
 
 
 <div class="container body-content">
 
+
+
     <div class="suggestionGrid">
 
-        <div class="cardDimensions">
-            
+
+        @foreach (var item in Model)
+        {
+           <div class="cardDimensions" style="padding:5px;">
+
+                <h3 id="sportsTitle1">
+                    @Html.DisplayFor(modelitem => item.sport_name)
+                </h3>
+
+                <p style="font-size:1em;margin:0px;text-align:justify;padding:0;word-wrap :break-word;">@Html.DisplayFor(modelitem => item.sport_desc)</p>
+            </div>
+        }
+
+        @*<div class="cardDimensions">
+
             <h3 id="sportsTitle1">
-
             </h3>
 
             <p1>
@@ -34,7 +52,7 @@
 
 
         <div class="cardDimensions">
-            <h3 id="sportsTitle2">>
+            <h3 id="sportsTitle2">
             </h3>
 
             <p1>
@@ -43,7 +61,7 @@
         </div>
 
         <div class="cardDimensions">
-            <h3 id="sportsTitle3">>
+            <h3 id="sportsTitle3">
             </h3>
 
             <p1>
@@ -51,14 +69,14 @@
             </p1>
         </div>
 
-        <div class="cardDimensions" >
+        <div class="cardDimensions">
             <h3 id="sportsTitle4">
             </h3>
 
             <p1>
 
             </p1>
-        </div>
+        </div>*@
 
     </div>
 

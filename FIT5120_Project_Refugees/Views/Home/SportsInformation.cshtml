@@ -1,4 +1,5 @@
-﻿
+﻿@model FIT5120_Project_Refugees.Models.CustomSportsInformationModel
+
 @{
     ViewBag.Title = "SportsInformation";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,15 +7,38 @@
 
 <link rel="stylesheet" href="~/Content/SportsInformation.css" />
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="listContainer" style="display:flex;justify-content:center;align-items:center;">    
-       
+<div class="listContainer" id="sportsCatalog">
+
     <div>
+
+
         <h1>
             Sports
         </h1>
+        <hr />
 
-        <ul>
+
+        <p><i class="icon-arrow-right"></i></p>
+
+
+        <div style="display:flex;justify-content:center;align-items:center;">
+
+
+            <ul>
+                @for (var i = 0; i < Model.sports_id.Count; i++)
+                {
+                    <li class="one" style="word-wrap:break-word;">
+                        @Html.ActionLink(Model.sports_name[i], "SportsInformation", "Home", new { id = Model.sports_id[i] }, new { style = "text-decoration:none;color:white;" })
+                    </li>
+                }
+            </ul>
+        </div>
+
+
+
+        @*<ul>
             <li class="one">
                 Basketball
             </li>
@@ -33,53 +57,45 @@
             <li class="one">
                 Volleyball
             </li>
-        </ul>
+        </ul>*@
 
     </div>
-        
- 
+
+
 </div>
+
+
+
 <div class="mainContainer">
 
-    
-
-        <div>
-            <h1 style="color:black;">Basketball</h1>
-        </div>
 
 
-        <div>
-            <h2>Sports Image</h2>
-            <p>Do <strong>not</strong> push that big, red button in the corner. People will die. You have been warned. Do&hellip; not do it.</p>
-        </div>
+    <div>
+        <h1 style="color:black;">@Model.selectedSport.sport_name</h1>
+
+    </div>
 
 
-        <div>
-            <h2>Sports Description</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorem, ducimus laudantium, earum eos natus sint voluptatum dolores fuga quibusdam consectetur dicta. Laudantium enim inventore iusto ducimus est velit aperiam tempora quibusdam id dolore natus perferendis, debitis distinctio optio repellendus, repellat molestias delectus harum eius, reiciendis dicta ipsum architecto! Eligendi expedita in beatae, placeat unde voluptatibus voluptates consectetur explicabo laudantium, officiis ad nihil. Beatae similique voluptate sequi voluptatem delectus iure in omnis, fuga ipsam nulla ipsum architecto, iste debitis nisi labore quisquam odio accusantium corporis sint perspiciatis. Excepturi earum nobis soluta, doloremque nihil dolorum illum quaerat magnam nemo non sed!</p>
+    <hr />
+    <a id="sportsCatalogButton"><i class="fa fa-bars"></i></a>
 
-        </div>
+    <div class="section">
+        <p class="sectionTitle">Description</p>
+        <p class="sectionInformation">@Model.selectedSport.sport_desc</p>
+    </div>
 
-        <div>
-            <h2>Slang Section</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorem, ducimus laudantium, earum eos natus sint voluptatum dolores fuga quibusdam consectetur dicta. Laudantium enim inventore iusto ducimus est velit aperiam tempora quibusdam id dolore natus perferendis, debitis distinctio optio repellendus, repellat molestias delectus harum eius, reiciendis dicta ipsum architecto! Eligendi expedita in beatae, placeat unde voluptatibus voluptates consectetur explicabo laudantium, officiis ad nihil. Beatae similique voluptate sequi voluptatem delectus iure in omnis, fuga ipsam nulla ipsum architecto, iste debitis nisi labore quisquam odio accusantium corporis sint perspiciatis. Excepturi earum nobis soluta, doloremque nihil dolorum illum quaerat magnam nemo non sed!</p>
+    <div class="section">
+        <p class="sectionTitle">Benifit</p>
+        <p class="sectionInformation">@Model.selectedSport.sport_benifit</p>
+    </div>
 
-        </div>
-
-        <div>
-            <h2>Importance</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorem, ducimus laudantium, earum eos natus sint voluptatum dolores fuga quibusdam consectetur dicta. Laudantium enim inventore iusto ducimus est velit aperiam tempora quibusdam id dolore natus perferendis, debitis distinctio optio repellendus, repellat molestias delectus harum eius, reiciendis dicta ipsum architecto! Eligendi expedita in beatae, placeat unde voluptatibus voluptates consectetur explicabo laudantium, officiis ad nihil. Beatae similique voluptate sequi voluptatem delectus iure in omnis, fuga ipsam nulla ipsum architecto, iste debitis nisi labore quisquam odio accusantium corporis sint perspiciatis. Excepturi earum nobis soluta, doloremque nihil dolorum illum quaerat magnam nemo non sed!</p>
-        </div>
-
-
-        <div>
-            furthr websites
-        </div>
-
-  
+    <div class="section">
+        <p class="sectionTitle">Slangs</p>
+    </div>
 
 </div>
 
+<script src="~/Scripts/SportsInformation.js"></script>
 
 
 

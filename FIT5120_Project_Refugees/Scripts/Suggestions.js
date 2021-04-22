@@ -3,6 +3,12 @@
 // generating four random values
 
 
+var suggestions = document.getElementById('suggestions');
+suggestions.style.backgroundColor = "#CBA783"
+suggestions.style.color = "#ffffff";
+
+
+
 items = Array("Basketball","football","Cricket","Tennis","Badminton","Soccer");
 
 var sportsTitle1 = document.getElementById("sportsTitle1");
