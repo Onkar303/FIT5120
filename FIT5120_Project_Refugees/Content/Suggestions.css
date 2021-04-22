@@ -17,8 +17,23 @@ body {
 }
 
 
-@media screen and (max-width: 700px){
+.suggestionImg {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    background-image: url("../Images/SuggestionPage/SuggestionLogo.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:flex;
+    color:white;
+    justify-content:center;
+    align-items:center;
+}
 
+
+
+
+@media screen and (max-width: 700px) {
     .suggestionGrid {
         grid-gap: 5vh;
         grid-template-columns: 1fr;

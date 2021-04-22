@@ -8,18 +8,16 @@
 
 <link rel="stylesheet" href="~/Content/Suggestions.css" />
 
-<div style="margin-top:60px;">
-    <img src="~/Images/SuggestionPage/SuggestionLogo.png" style="width: 100vw; height: 50vh; object-fit: cover;" />
+<div style="margin-top:60px;" class= "suggestionImg">
+    <h1>Get A New Sport Recommended To You </h1>
 </div>
 
 <div style="display:flex;justify-content:center;padding:5%;">
-
     @Html.ActionLink("Recommend","Suggestions","Home", htmlAttributes:new { @class = "button" })
-
 </div>
 
 
-<div class="container body-content">
+<div>
 
 
 
@@ -28,13 +26,10 @@
 
         @foreach (var item in Model)
         {
-           <div class="cardDimensions" style="padding:5px;">
-
-                <h3 id="sportsTitle1">
-                    @Html.DisplayFor(modelitem => item.sport_name)
-                </h3>
-
-                <p style="font-size:1em;margin:0px;text-align:justify;padding:0;word-wrap :break-word;">@Html.DisplayFor(modelitem => item.sport_desc)</p>
+           <div style="padding: 50px; background-color: #CBA783; border:1px solid white;">
+               <h3 id="sportsTitle1">
+                   @Html.ActionLink(item.sport_name , "SportsInformation/" + item.sport_id, "Home",new { @style="text-decoration:none; color:white;" })
+               </h3>
             </div>
         }
 
