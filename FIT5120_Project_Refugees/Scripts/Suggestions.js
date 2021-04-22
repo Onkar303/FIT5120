@@ -2,6 +2,8 @@
 
 // generating four random values
 
+var token = 'ToV97ElNScFC5rpS723pMScqLJtw0oUP8K9qyqOc7ME';
+var site = 'https://api.unsplash.com/photos/?client_id=';
 
 var suggestions = document.getElementById('suggestions');
 suggestions.style.backgroundColor = "#CBA783"
