@@ -20,10 +20,10 @@ namespace FIT5120_Project_Refugees.Models
         {
         }
     
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    throw new UnintentionalCodeFirstException();
+        //}
     
         public virtual DbSet<COUNTRY> COUNTRies { get; set; }
         public virtual DbSet<SPORT> SPORTs { get; set; }

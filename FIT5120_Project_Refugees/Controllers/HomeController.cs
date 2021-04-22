@@ -67,21 +67,20 @@ namespace FIT5120_Project_Refugees.Controllers
             List<SPORT> sportList = db.SPORTs.ToList();
             List<TERM> termList = db.TERMs.ToList();
             CustomSportsInformationModel obj = new CustomSportsInformationModel();
-           
+
             obj.selectedSport = db.SPORTs.Find(id);
-            
+
             obj.sports_id = new List<int>();
             obj.sports_name = new List<string>();
 
-            var term = db.TERMs.Where(myterm => myterm.SPORTs.Any(r => r.sport_id == obj.selectedSport.sport_id));
-
+           
+           
             for (int i = 0; i < sportList.Count; i++)
             {
                 obj.sports_id.Add(sportList[i].sport_id);
                 obj.sports_name.Add(sportList[i].sport_name);
             }
-            
-
+           
             return obj;
         }
 

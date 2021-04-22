@@ -12,5 +12,7 @@ namespace FIT5120_Project_Refugees.Models
         public List<string> sports_name;
 
         public SPORT selectedSport;
+
+        public List<TERM> terms;
     }
 }

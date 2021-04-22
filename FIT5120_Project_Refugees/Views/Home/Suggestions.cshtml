@@ -23,16 +23,27 @@
 
         @foreach (var item in Model)
         {
-           <div style="padding: 50px; background-color: #CBA783; border:1px solid white;">
-               <h3 id="sportsTitle1">
-                   @Html.ActionLink(item.sport_name, "SportsInformation/" + item.sport_id.ToString(), "Home",null, new { @style = "text-decoration:none; color:white;" })
-               </h3>
+            <div class="card" style="display:flex; width:200px;height:200px; justify-content:center;align-items:center;  background-color : #CBA783; border:1px solid white;">
+                <h3 id="sportsTitle1">
+                    @Html.ActionLink(item.sport_name, "SportsInformation/" + item.sport_id.ToString(), "Home", null, new { @style = "text-decoration:none; color:white;" })
+                </h3>
             </div>
         }
 
     </div>
 
 </div>
+
+@*<div>
+
+   
+            <span class="circular-button">
+                <span class="outer"></span>
+                <span class="inner"></span>
+            </span>
+   
+
+</div>*@
 
 
 <script src="~/Scripts/Suggestions.js"></script>

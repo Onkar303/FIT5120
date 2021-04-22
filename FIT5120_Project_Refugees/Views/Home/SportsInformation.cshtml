@@ -32,6 +32,8 @@
                     <li class="one" style="word-wrap:break-word;">
                         @Html.ActionLink(Model.sports_name[i], "SportsInformation", "Home", new { id = Model.sports_id[i] }, new { style = "text-decoration:none;color:white;" })
                     </li>
+
+                    
                 }
             </ul>
         </div>
@@ -89,9 +91,14 @@
         <p class="sectionInformation">@Model.selectedSport.sport_benifit</p>
     </div>
 
-    <div class="section">
+    @*<div class="section">
         <p class="sectionTitle">Slangs</p>
-    </div>
+
+        @for (var i = 0; i < Model.selectedSport.TERMs.Count; i++)
+        {
+          
+        }
+    </div>*@
 
 </div>
 
