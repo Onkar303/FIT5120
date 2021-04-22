@@ -25,37 +25,47 @@ function countrySport(countryName) {
         countryImage[i].style.display = "none";
     }
 
-    
 
     document.getElementById('country').innerHTML = countryName;
     document.getElementById(countryName + 'Image').style.display = "block";
     document.getElementById(countryName).style.display = "block";
 
-    if (countryName = "Irap") {
-        var auSport = document.getElementsByClassName("auSport");
-        for (var i = 0; i < auSport.length; i++) {
-            auSport[i].style.display = "block";
-        }
+    //Get all elements with class="auSport" and hide them
+    var auSport = document.getElementsByClassName("auSport");
+    for (var i = 0; i < auSport.length; i++) {
+        auSport[i].style.display = "none";
+    }
 
-        //document.getElementById('au1').style.display = "none";
-        //document.getElementById('au3').style.display = "none";
-        document.getElementById('au0').style.display = "none";
-        document.getElementById('au2').style.display = "none";
-        document.getElementById('au4').style.display = "none";
+    //Get all elements with class="common" and hide them
+    var common = document.getElementsByClassName("common");
+    for (var i = 0; i < common.length; i++) {
+        common[i].style.display = "none";
+    }
+    
+
+
+    if (countryName == "Irap") {
+
+        document.getElementById('au1').style.display = "block";
+        document.getElementById('au3').style.display = "block";
+        //document.getElementById("au0").style.display = "none";
+        //document.getElementById("au2").style.display = "none";
+        //document.getElementById("au4").style.display = "none";
+        document.getElementById("commonSwimming").style.display = "block";
     }
 
 
 
 
 
-    if (countryName = "Syria") {
+    /*if (countryName = "Syria") {
         var auSport = document.getElementsByClassName("auSport");
         for (var i = 0; i < auSport.length; i++) {
             auSport[i].style.display = "block";
         }
         document.getElementById('au1').style.display = "none";
         document.getElementById('au3').style.display = "none";
-    }
+    }*/
     
     
 
