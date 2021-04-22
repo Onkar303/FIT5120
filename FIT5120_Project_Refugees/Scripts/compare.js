@@ -25,11 +25,6 @@ function countrySport(countryName) {
         countryImage[i].style.display = "none";
     }
 
-
-    document.getElementById('country').innerHTML = countryName;
-    document.getElementById(countryName + 'Image').style.display = "block";
-    document.getElementById(countryName).style.display = "block";
-
     //Get all elements with class="auSport" and hide them
     var auSport = document.getElementsByClassName("auSport");
     for (var i = 0; i < auSport.length; i++) {
@@ -41,28 +36,37 @@ function countrySport(countryName) {
     for (var i = 0; i < common.length; i++) {
         common[i].style.display = "none";
     }
-    
+
+    //Replace the content by the countryName you click on
+    document.getElementById('country').innerHTML = countryName;
+
+    //Display the icon of the country you click on
+    document.getElementById(countryName + 'Image').style.display = "block";
+
+    //Display the content of sports played in the country
+    document.getElementById(countryName).style.display = "block";
 
 
-    if (countryName == "Irap") {
+    document.getElementsByClassName("Irap").display = "block";
 
-        document.getElementById('au1').style.display = "block";
-        document.getElementById('au3').style.display = "block";
-        //document.getElementById("au0").style.display = "none";
-        //document.getElementById("au2").style.display = "none";
-        //document.getElementById("au4").style.display = "none";
+    /*if (  ) {
+
+        //document.getElementsByClassName('auSport')[0].style.display = "block";
+        document.getElementById("au1").style.display = "block";
+        document.getElementById("au3").style.display = "block";
+        //document.getElementById('au0').style.display = "none";
+        //document.getElementById('au2').style.display = "none";
+        //document.getElementById('au4').style.display = "none";
         document.getElementById("commonSwimming").style.display = "block";
-    }
+        document.getElementById("commonSoccer").style.display = "block";
+        document.getElementById("commonBasketball").style.display = "block";
+    }*/
 
 
 
 
 
     /*if (countryName = "Syria") {
-        var auSport = document.getElementsByClassName("auSport");
-        for (var i = 0; i < auSport.length; i++) {
-            auSport[i].style.display = "block";
-        }
         document.getElementById('au1').style.display = "none";
         document.getElementById('au3').style.display = "none";
     }*/
