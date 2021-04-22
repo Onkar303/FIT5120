@@ -35,15 +35,15 @@ function changeToCollapsableNavBar() {
 
 
 function segueToCompare() {
-    window.location.href = "Home/Contact";
+    window.location.href = "/Home/Contact";
 }
 
 function segueToSuggestion() {
     window.location.href = "/Home/Suggestions";
 }
 
-function segueToSportsInformation() {
-    window.location.href = "/Home/SportsInformation";
+function segueToSportsComparison() {
+    window.location.href = "/Home/Contact";
 }
 
 
