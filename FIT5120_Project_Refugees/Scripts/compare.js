@@ -1,4 +1,4 @@
-﻿function ausSport(evt, cityName) {
+﻿/*function ausSport(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -7,7 +7,7 @@
     
     document.getElementById(cityName).style.display = "block";
    
-}
+}*/
 
 function countrySport(countryName) {
     
