@@ -48,6 +48,12 @@ function countrySport(countryName) {
     //Display the content of sports played in the country
     document.getElementById(countryName).style.display = "block";
 
+    document.getElementById("au1").style.display = "block";
+    document.getElementById("au3").style.display = "block";
+    document.getElementById("commonSwimming").style.display = "block";
+    document.getElementById("commonSoccer").style.display = "block";
+    document.getElementById("commonBasketball").style.display = "block";
+
     
     /*var countryContent = document.getElementsByClassName("countryContent");
     for (var i = 0; i < countryContent.length; i++) {
