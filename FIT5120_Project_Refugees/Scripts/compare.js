@@ -25,17 +25,7 @@ function countrySport(countryName) {
         countryImage[i].style.display = "none";
     }
 
-    //Get all elements with class="auSport" and hide them
-    var auSport = document.getElementsByClassName("auSport");
-    for (var i = 0; i < auSport.length; i++) {
-        auSport[i].style.display = "none";
-    }
-
-    //Get all elements with class="common" and hide them
-    var common = document.getElementsByClassName("common");
-    for (var i = 0; i < common.length; i++) {
-        common[i].style.display = "none";
-    }
+    
 
     //Replace the content by the countryName you click on
     document.getElementById('country').innerHTML = countryName;
@@ -46,8 +36,216 @@ function countrySport(countryName) {
     //Display the content of sports played in the country
     document.getElementById(countryName).style.display = "block";
 
+    
+    /*var countryContent = document.getElementsByClassName("countryContent");
+    for (var i = 0; i < countryContent.length; i++) {
+        if (countryContent[i].id == countryName) {
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("commonSwimming").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            document.getElementById("commonBasketball").style.display = "block";
+        }
+    }*/
+    
 
-    document.getElementsByClassName("Irap").display = "block";
+    
+
+    switch (countryName) {
+        case "Irap":
+            //Get all elements with class="auSport" and hide them
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+                auSport[i].style.display = "none";
+
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("commonSwimming").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            document.getElementById("commonBasketball").style.display = "block";
+            break;
+
+        case "Syria":
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+
+                auSport[i].style.display = "none";
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("commonSwimming").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            document.getElementById("commonBasketball").style.display = "block";
+
+            break;
+
+        case "Myanmar":
+            //Get all elements with class="auSport" and hide them
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+                auSport[i].style.display = "none";
+
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au0").style.display = "block";
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("au4").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            break;
+
+        case "Afghanistan":
+            //Get all elements with class="auSport" and hide them
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+                auSport[i].style.display = "none";
+
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au0").style.display = "block";
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            document.getElementById("commonBasketball").style.display = "block";
+            break;
+
+        case "DRC":
+            //Get all elements with class="auSport" and hide them
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+                auSport[i].style.display = "none";
+
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au0").style.display = "block";
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            document.getElementById("commonBasketball").style.display = "block";
+            break;
+
+        case "Ethiopia":
+            //Get all elements with class="auSport" and hide them
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+                auSport[i].style.display = "none";
+
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au0").style.display = "block";
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            document.getElementById("commonBasketball").style.display = "block";
+            break;
+
+        case "Eritrea":
+            //Get all elements with class="auSport" and hide them
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+                auSport[i].style.display = "none";
+
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au0").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("au4").style.display = "block";
+            document.getElementById("commonCycling").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            break;
+
+        case "Iran":
+            //Get all elements with class="auSport" and hide them
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+                auSport[i].style.display = "none";
+
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au0").style.display = "block";
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            document.getElementById("commonBasketball").style.display = "block";
+            break;
+
+        case "CAR":
+            //Get all elements with class="auSport" and hide them
+            var auSport = document.getElementsByClassName("auSport");
+            for (var i = 0; i < auSport.length; i++) {
+                auSport[i].style.display = "none";
+
+            }
+
+            //Get all elements with class="common" and hide them
+            var common = document.getElementsByClassName("common");
+            for (var i = 0; i < common.length; i++) {
+                common[i].style.display = "none";
+            }
+
+            document.getElementById("au0").style.display = "block";
+            document.getElementById("au1").style.display = "block";
+            document.getElementById("au3").style.display = "block";
+            document.getElementById("commonSoccer").style.display = "block";
+            document.getElementById("commonBasketball").style.display = "block";
+            break; 
+
+    }
+
+    
+
+    //document.getElementsByClassName("Irap").display = "block";
 
     /*if (  ) {
 
