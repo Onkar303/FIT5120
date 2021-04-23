@@ -25,6 +25,18 @@ function countrySport(countryName) {
         countryImage[i].style.display = "none";
     }
 
+    //Get all elements with class="auSport" and hide them
+    var auSport = document.getElementsByClassName("auSport");
+    for (var i = 0; i < auSport.length; i++) {
+        auSport[i].style.display = "none";
+
+    }
+
+    //Get all elements with class="common" and hide them
+    var common = document.getElementsByClassName("common");
+    for (var i = 0; i < common.length; i++) {
+        common[i].style.display = "none";
+    }
     
 
     //Replace the content by the countryName you click on
