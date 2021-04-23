@@ -179,43 +179,39 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SportsController.cs" />
+    <Compile Include="Controllers\TermsController.cs" />
+    <Compile Include="DatabaseContext\DataContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\COUNTRY.cs">
-      <DependentUpon>RefugeeEntities.tt</DependentUpon>
+    <Compile Include="Migrations\202104231412389_First-Migration.cs" />
+    <Compile Include="Migrations\202104231412389_First-Migration.designer.cs">
+      <DependentUpon>202104231412389_First-Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\CustomSportsInformationModel.cs" />
+    <Compile Include="Migrations\202104231417440_Added Entites.cs" />
+    <Compile Include="Migrations\202104231417440_Added Entites.designer.cs">
+      <DependentUpon>202104231417440_Added Entites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231452341_establishedRelations.cs" />
+    <Compile Include="Migrations\202104231452341_establishedRelations.designer.cs">
+      <DependentUpon>202104231452341_establishedRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CustomModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\RefugeeEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RefugeeEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RefugeeEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RefugeeEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RefugeeEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RefugeeEntities.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SPORT.cs">
-      <DependentUpon>RefugeeEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TERM.cs">
-      <DependentUpon>RefugeeEntities.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\RefugeeDatabaseModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-FIT5120_Project_Refugees-20210321051730.mdf" />
+    <Content Include="App_Data\aspnet-FIT5120_Project_Refugees-20210321051730_log.ldf" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -267,16 +263,6 @@
     <Content Include="Images\Symbols\sport %281%29.png" />
     <Content Include="Images\Symbols\sport.png" />
     <Content Include="Images\we care.jpeg" />
-    <Content Include="Models\RefugeeEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RefugeeEntities.edmx</DependentUpon>
-      <LastGenOutput>RefugeeEntities.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\RefugeeEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RefugeeEntities.edmx</DependentUpon>
-      <LastGenOutput>RefugeeEntities.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\analyticsScript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -299,13 +285,6 @@
     <Content Include="fonts\Roboto\Roboto-Regular.ttf" />
     <Content Include="fonts\Roboto\Roboto-Thin.ttf" />
     <Content Include="fonts\Roboto\Roboto-ThinItalic.ttf" />
-    <EntityDeploy Include="Models\RefugeeEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RefugeeEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\RefugeeEntities.edmx.diagram">
-      <DependentUpon>RefugeeEntities.edmx</DependentUpon>
-    </Content>
     <None Include="Properties\PublishProfiles\PlayWithRefugee - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\Index.js" />
@@ -359,10 +338,24 @@
     <Content Include="Views\Home\Analytics.cshtml" />
     <Content Include="Views\Home\Suggestions.cshtml" />
     <Content Include="Views\Home\SportsInformation.cshtml" />
+    <Content Include="Views\Shared\__DatabaseShared.cshtml" />
+    <Content Include="Views\Countries\Create.cshtml" />
+    <Content Include="Views\Countries\Delete.cshtml" />
+    <Content Include="Views\Countries\Details.cshtml" />
+    <Content Include="Views\Countries\Edit.cshtml" />
+    <Content Include="Views\Countries\Index.cshtml" />
+    <Content Include="Views\Sports\Create.cshtml" />
+    <Content Include="Views\Sports\Delete.cshtml" />
+    <Content Include="Views\Sports\Details.cshtml" />
+    <Content Include="Views\Sports\Edit.cshtml" />
+    <Content Include="Views\Sports\Index.cshtml" />
+    <Content Include="Views\Terms\Create.cshtml" />
+    <Content Include="Views\Terms\Delete.cshtml" />
+    <Content Include="Views\Terms\Details.cshtml" />
+    <Content Include="Views\Terms\Edit.cshtml" />
+    <Content Include="Views\Terms\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -378,6 +371,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104231412389_First-Migration.resx">
+      <DependentUpon>202104231412389_First-Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231417440_Added Entites.resx">
+      <DependentUpon>202104231417440_Added Entites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231452341_establishedRelations.resx">
+      <DependentUpon>202104231452341_establishedRelations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

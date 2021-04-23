@@ -1,0 +1,35 @@
+﻿@model FIT5120_Project_Refugees.Models.Term
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/__DatabaseShared.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Term</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TERM_DESC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TERM_DESC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TERM_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

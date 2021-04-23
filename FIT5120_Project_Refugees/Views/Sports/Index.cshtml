@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FIT5120_Project_Refugees.Models.Sport>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/__DatabaseShared.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SPORT_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPORT_DESC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPORT_BENIFIT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPORT_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPORT_DESC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPORT_BENIFIT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SPORT_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SPORT_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SPORT_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,4 +1,4 @@
-﻿@model  IEnumerable<FIT5120_Project_Refugees.Models.SPORT>
+﻿@model  IEnumerable<FIT5120_Project_Refugees.Models.Sport>
 
 
 @{
@@ -20,12 +20,11 @@
 <div>
     <div class="suggestionGrid">
 
-
         @foreach (var item in Model)
         {
             <div class="card" style="display:flex; width:200px;height:200px; justify-content:center;align-items:center;  background-color : #CBA783; border:1px solid white;">
                 <h3 id="sportsTitle1">
-                    @Html.ActionLink(item.sport_name, "SportsInformation/" + item.sport_id.ToString(), "Home", null, new { @style = "text-decoration:none; color:white;" })
+                    @Html.ActionLink(item.SPORT_NAME, "SportsInformation/" + item.SPORT_ID.ToString(), "Home", null, new { @style = "text-decoration:none; color:white;" })
                 </h3>
             </div>
         }

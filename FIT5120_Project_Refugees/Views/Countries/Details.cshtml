@@ -1,0 +1,35 @@
+﻿@model FIT5120_Project_Refugees.Models.Country
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/__DatabaseShared.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Country</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COUNTRY_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COUNTRY_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REFUGEE_COUNT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REFUGEE_COUNT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COUNTRY_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

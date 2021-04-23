@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FIT5120_Project_Refugees.DatabaseContext;
 using FIT5120_Project_Refugees.Models;
 
 namespace FIT5120_Project_Refugees.Controllers
 {
-    
+
+
     [RequireHttps]
     public class HomeController : Controller
     {
-        private RefugeeDatabaseEntities db = new RefugeeDatabaseEntities();
+        private DataContext db = new DataContext();
+
         public ActionResult Index()
         {
             return View();
@@ -47,13 +50,13 @@ namespace FIT5120_Project_Refugees.Controllers
 
         public ActionResult SportsInformation(int? id)
         {
-            if(id == null)
+            if (id == null)
             {
                 id = 0;
             }
             CustomSportsInformationModel obj = getSportsInformation(id);
-            
-            if (obj.selectedSport == null)
+
+            if (obj.sport == null)
             {
                 return HttpNotFound();
             }
@@ -64,30 +67,30 @@ namespace FIT5120_Project_Refugees.Controllers
 
         public CustomSportsInformationModel getSportsInformation(int? id)
         {
-            List<SPORT> sportList = db.SPORTs.ToList();
-            List<TERM> termList = db.TERMs.ToList();
+            List<Sport> sportList = db.Sports.ToList();
+            List<Term> termList = db.Terms.ToList();
             CustomSportsInformationModel obj = new CustomSportsInformationModel();
 
-            obj.selectedSport = db.SPORTs.Find(id);
+            obj.sport = db.Sports.Find(id);
 
-            obj.sports_id = new List<int>();
-            obj.sports_name = new List<string>();
+            obj.sportsid = new List<int>();
+            obj.sportsName = new List<string>();
 
-           
-           
+
+
             for (int i = 0; i < sportList.Count; i++)
             {
-                obj.sports_id.Add(sportList[i].sport_id);
-                obj.sports_name.Add(sportList[i].sport_name);
+                obj.sportsid.Add(sportList[i].SPORT_ID);
+                obj.sportsName.Add(sportList[i].SPORT_NAME);
             }
-           
+
             return obj;
         }
 
 
-        public IEnumerable<SPORT> getRandomSports()
+        public IEnumerable<Sport> getRandomSports()
         {
-            List<SPORT> sportList = db.SPORTs.ToList();
+            List<Sport> sportList = db.Sports.ToList();
             //CustomSportsInformationModel obj = new CustomSportsInformationModel();
 
             //for (int i = 0; i < sportList.Count; i++)
@@ -100,10 +103,6 @@ namespace FIT5120_Project_Refugees.Controllers
             var fourRandomSports = randomList.Take(4);
 
 
-            foreach(var name in randomList)
-            {
-                name.sport_desc = System.Text.RegularExpressions.Regex.Replace(name.sport_desc, @"<[^>]+>|&nbsp;", "").Trim();
-            }
 
 
             return fourRandomSports;

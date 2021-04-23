@@ -7,12 +7,12 @@ namespace FIT5120_Project_Refugees.Models
 {
     public class CustomSportsInformationModel
     {
-        public List<int> sports_id;
+        public List<int> sportsid;
 
-        public List<string> sports_name;
+        public List<string> sportsName;
 
-        public SPORT selectedSport;
+        public Sport sport;
 
-        public List<TERM> terms;
+
     }
 }

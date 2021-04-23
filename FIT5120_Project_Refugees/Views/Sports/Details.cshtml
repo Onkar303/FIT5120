@@ -1,0 +1,43 @@
+﻿@model FIT5120_Project_Refugees.Models.Sport
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/__DatabaseShared.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sport</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SPORT_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPORT_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPORT_DESC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPORT_DESC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPORT_BENIFIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPORT_BENIFIT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SPORT_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
