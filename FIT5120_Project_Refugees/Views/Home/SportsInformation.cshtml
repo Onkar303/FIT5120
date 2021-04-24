@@ -74,12 +74,17 @@
 
 
     <div>
-        <h1 style="color:black;">@Model.sport.SPORT_NAME</h1>
+        <h1 style=" 
+        letter-spacing: 2px;
+        margin-bottom: 35px;
+        border-width: 0px 0px 1px 0px;
+        border-style: dotted;
+        margin-top: 45px;
+        color: rgba(0,0,0,1);
+">@Model.sport.SPORT_NAME</h1>
 
     </div>
 
-
-    <hr />
     <a id="sportsCatalogButton"><i class="fa fa-bars"></i></a>
 
     <div class="section">
@@ -104,16 +109,22 @@
         }
         else
         {
-            for (var i = 0; i < Model.termsList.Count; i++)
-            {
-                <h3>
-                    @Model.termsList[i].TERM_NAME
-                </h3>
+            <ol>
+                @for (var i = 0; i < Model.termsList.Count; i++)
+                {
+                    <li class="text">
+                        <h3>
+                            <b>@Model.termsList[i].TERM_NAME</b>
+                        </h3>
 
-                <p>
-                    @Model.termsList[i].TERM_DESC
-                </p>
-            }
+                        <p>
+                            @Model.termsList[i].TERM_DESC
+                        </p>
+
+                    </li>
+                }
+             </ol>
+           
         }
 
 
@@ -124,7 +135,8 @@
 
 </div>
 
-<script src="~/Scripts/SportsInformation.js"></script>
+
+        <script src="~/Scripts/SportsInformation.js"></script>
 
 
 

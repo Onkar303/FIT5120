@@ -70,14 +70,20 @@ h1 {
     font-size: 60px;
 }
 
-li {
+li.one {
     color: #fff;
     list-style: none;
     position: relative;
-    padding-left: 50px;
-    line-height: 2;
-    font-size: 25px;
+    padding-left: 35px;
+    line-height: 3;
+    font-size: 28px;
     cursor:pointer;
+}
+
+
+li.slangs{
+    color:black;
+
 }
 
 @media screen and (max-width: 800px) {
@@ -111,32 +117,13 @@ li {
         position: absolute;
         left: 0;
         color: #318ca0;
-        font-size: 32px;
+        font-size: 28px;
     }
 
     li.one:before {
         content: "\f111";
     }
 
-    li.two:before {
-        content: "\f00c";
-    }
-
-    li.three:before {
-        content: "\f10c";
-    }
-
-    li.four:before {
-        content: "\f004";
-    }
-
-    li.five:before {
-        content: "\f1e2";
-    }
-
-    li.six:before {
-        content: "\f0e7";
-    }
 
     li:hover:before {
         color: #fff;
