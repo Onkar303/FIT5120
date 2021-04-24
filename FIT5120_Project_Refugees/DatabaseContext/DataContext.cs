@@ -15,7 +15,6 @@ namespace FIT5120_Project_Refugees.DatabaseContext
 
         public DbSet<Term> Terms { get; set; }
 
-
         public DbSet<Sport> Sports { get; set; }
 
     }

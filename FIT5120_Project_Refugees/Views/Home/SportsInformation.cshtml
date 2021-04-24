@@ -29,11 +29,12 @@
             <ul>
                 @for (var i = 0; i < Model.sportsid.Count; i++)
                 {
+                   
                     <li class="one" style="word-wrap:break-word;">
                         @Html.ActionLink(Model.sportsName[i], "SportsInformation", "Home", new { id = Model.sportsid[i] }, new { style = "text-decoration:none;color:white;" })
                     </li>
 
-                    
+
                 }
             </ul>
         </div>
@@ -41,25 +42,25 @@
 
 
         @*<ul>
-            <li class="one">
-                Basketball
-            </li>
-            <li class="one">
-                Football (Soccer)
-            </li>
-            <li class="one">
-                Cricket
-            </li>
-            <li class="one">
-                Tennis
-            </li>
-            <li class="one">
-                Swimming
-            </li>
-            <li class="one">
-                Volleyball
-            </li>
-        </ul>*@
+                <li class="one">
+                    Basketball
+                </li>
+                <li class="one">
+                    Football (Soccer)
+                </li>
+                <li class="one">
+                    Cricket
+                </li>
+                <li class="one">
+                    Tennis
+                </li>
+                <li class="one">
+                    Swimming
+                </li>
+                <li class="one">
+                    Volleyball
+                </li>
+            </ul>*@
 
     </div>
 
@@ -94,17 +95,32 @@
 
     <div class="section">
         <p class="sectionTitle"> Slangs </p>
-        <p class="sectionInformation"></p>
-    </div>
+        <p class="sectionInformation">
 
-    @*<div class="section">
-        <p class="sectionTitle">Slangs</p>
-
-        @for (var i = 0; i < Model.selectedSport.TERMs.Count; i++)
+       @if (Model.termsList.Count == 0)
         {
-          
+
+            <p> No Slangs found</p>
         }
-    </div>*@
+        else
+        {
+            for (var i = 0; i < Model.termsList.Count; i++)
+            {
+                <h3>
+                    @Model.termsList[i].TERM_NAME
+                </h3>
+
+                <p>
+                    @Model.termsList[i].TERM_DESC
+                </p>
+            }
+        }
+
+
+
+
+        </div>
+
 
 </div>
 

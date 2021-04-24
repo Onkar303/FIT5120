@@ -7,13 +7,13 @@ namespace FIT5120_Project_Refugees.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class FirstMigration : IMigrationMetadata
+    public sealed partial class firstmigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(firstmigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104231412389_First-Migration"; }
+            get { return "202104240418458_firstmigration"; }
         }
         
         string IMigrationMetadata.Source

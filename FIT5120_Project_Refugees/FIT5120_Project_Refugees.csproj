@@ -188,17 +188,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104231412389_First-Migration.cs" />
-    <Compile Include="Migrations\202104231412389_First-Migration.designer.cs">
-      <DependentUpon>202104231412389_First-Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104231417440_Added Entites.cs" />
-    <Compile Include="Migrations\202104231417440_Added Entites.designer.cs">
-      <DependentUpon>202104231417440_Added Entites.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104231452341_establishedRelations.cs" />
-    <Compile Include="Migrations\202104231452341_establishedRelations.designer.cs">
-      <DependentUpon>202104231452341_establishedRelations.cs</DependentUpon>
+    <Compile Include="Migrations\202104240418458_firstmigration.cs" />
+    <Compile Include="Migrations\202104240418458_firstmigration.designer.cs">
+      <DependentUpon>202104240418458_firstmigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -210,8 +202,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-FIT5120_Project_Refugees-20210321051730.mdf" />
-    <Content Include="App_Data\aspnet-FIT5120_Project_Refugees-20210321051730_log.ldf" />
+    <Content Include="App_Data\aspnet-FIT5120_Project_Refugees-databse.mdf" />
+    <Content Include="App_Data\aspnet-FIT5120_Project_Refugees-databse_log.ldf" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -373,14 +365,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104231412389_First-Migration.resx">
-      <DependentUpon>202104231412389_First-Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104231417440_Added Entites.resx">
-      <DependentUpon>202104231417440_Added Entites.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104231452341_establishedRelations.resx">
-      <DependentUpon>202104231452341_establishedRelations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104240418458_firstmigration.resx">
+      <DependentUpon>202104240418458_firstmigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

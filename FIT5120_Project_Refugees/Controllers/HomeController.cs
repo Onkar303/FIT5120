@@ -71,12 +71,14 @@ namespace FIT5120_Project_Refugees.Controllers
             List<Term> termList = db.Terms.ToList();
             CustomSportsInformationModel obj = new CustomSportsInformationModel();
 
+            var terms = db.Terms.Where(t => t.Sports.Any(s => s.SPORT_ID == id)).ToList();
+
             obj.sport = db.Sports.Find(id);
 
             obj.sportsid = new List<int>();
             obj.sportsName = new List<string>();
-
-
+            obj.termsList = new List<Term>(terms);
+           
 
             for (int i = 0; i < sportList.Count; i++)
             {
