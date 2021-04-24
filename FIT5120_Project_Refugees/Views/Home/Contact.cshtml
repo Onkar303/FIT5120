@@ -7,27 +7,35 @@
 <br />
 <br />
 
-<center>
-    <h1 style="color: #CBA783;">
-        Compare Sports
-    </h1>
-    <br />
-    <h4 style="        color: #666666;">
-        Choose your interested country in the right and compare with sports in Australia.
-    </h4>
-    <h4 style="        color: #666666;">
-        The overlap popular sports will be shown in the middle.
-    </h4>
-    <h4 style="        color: #666666;">
-        The different sports of each country will be shown separately.
-    </h4>
-    <br />
-</center>
+@*  The Importance Section *@
+<h1 style="color: #CBA783;text-align:center;">
+    Compare Sports
+</h1>
+<br />
+<div id="importanceSection">
+    <div id="header">
+
+    </div>
+
+    <div class="importanceContentContainter">
+        <h4 class="textContent " style="text-align:center;" id="importanceContent">
+            Choose your interested country in the right and compare with sports in Australia.
+        </h4>
+        <h4 class="textContent " style="text-align:center;" id="importanceContent">
+            The overlap popular sports will be shown in the middle.
+        </h4>
+        <h4 class="textContent " style="text-align:center;" id="importanceContent">
+            The different sports of each country will be shown separately.
+        </h4>
+    </div>
+</div>
+
+<br />
 
 
 <div class="container body-content">
     <div class="row">
-        <div class="box col-md-6">
+        <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;">
 
             <h2 style="text-align: center;">
                 Australia
@@ -39,179 +47,110 @@
 
             <br />
             <br />
-            <div style="padding:25px;text-align:center;">
-                <div id="au0" class="auSport">
-                    <ul>
-                        <h3><a href="/Home/SportsInformation/0">Swimming</a></h3>
-                    </ul>
-                </div>
-
-                <div id="au1" class="auSport">
-                    <ul>
-                        <h3><a href="/Home/SportsInformation/1">Cycling</a></h3>
-                    </ul>
-                </div>
-
-                <div id="au2" class="auSport">
-                    <ul>
-                        <h3><a href="/Home/SportsInformation/2">Soccer</a></h3>
-                    </ul>
-                </div>
-
-                <div id="au3" class="auSport">
-                    <ul>
-                        <h3><a href="/Home/SportsInformation/3">Dancing</a></h3>
-                    </ul>
-                </div>
-
-                <div id="au4" class="auSport">
-                    <ul>
-                        <h3><a href="/Home/SportsInformation/4">Basketball</a></h3>
-                    </ul>
-                </div>
-            </div>
-            
-
-            <div class="left" style="
-                                 padding: 14px;
-                                 border-radius: 16px !important;">
-
 
 
             @*<center>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'Swimming')" id="defaultOpen">Swimming</button>
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'Cycling')">Cycling</button>
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'AFL')">Australian Rules Football</button>
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'Golf')">Golf</button>
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'Basketball')">Basketball</button>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button class="btn btn-default tab-links" onclick="ausSport(event, 'Swimming')" id="defaultOpen">Swimming</button>
+                        <button class="btn btn-default tab-links" onclick="ausSport(event, 'Cycling')">Cycling</button>
+                        <button class="btn btn-default tab-links" onclick="ausSport(event, 'AFL')">Australian Rules Football</button>
+                        <button class="btn btn-default tab-links" onclick="ausSport(event, 'Golf')">Golf</button>
+                        <button class="btn btn-default tab-links" onclick="ausSport(event, 'Basketball')">Basketball</button>
+                    </div>
+
+                </center>*@
+
+
+
+            @*<div id="Swimming" class="tabcontent">
+
+                    <h3>Swimming</h3>
+                    <ul>
+                        <li>
+                            Swimming is Australia’s most popular sport, with a HUGE 3.1 million people regularly involved in it.
+                        </li>
+
+                        <li>
+                            Regardless of age, it seems that Australians just love their swimming, which isn’t surprising given how hot it is in Australia for most of the year, and how amazing most of our beaches are.
+                        </li>
+
+                        <li>
+                            We would love to know which sport you play.
+                        </li>
+
+                        <li>
+                            Was it on this list? Where did it rank? Is it perhaps another sport that isn’t on this list, but that you think might make the top 10 in a few years’ time?
+                        </li>
+                    </ul>
+
+
                 </div>
 
-            </center>*@
-
-
-
-                @*<div id="Swimming" class="tabcontent">
-
-                <h3>Swimming</h3>
-                <ul>
-                    <li>
-                        Swimming is Australia’s most popular sport, with a HUGE 3.1 million people regularly involved in it.
-                    </li>
-
-                    <li>
-                        Regardless of age, it seems that Australians just love their swimming, which isn’t surprising given how hot it is in Australia for most of the year, and how amazing most of our beaches are.
-                    </li>
-
-                    <li>
-                        We would love to know which sport you play.
-                    </li>
-
-                    <li>
-                        Was it on this list? Where did it rank? Is it perhaps another sport that isn’t on this list, but that you think might make the top 10 in a few years’ time?
-                    </li>
-                </ul>
-
-
-            </div>
-
-            <div id="Cycling" class="tabcontent">
-                <h3>Cycling</h3>
-                <ul>
-                    <li>Cycling has two peak age periods for organised participation: the first at ages 9-11 then again at 45-54. As they say, it’s like riding a bike!</li>
-                    <li>Most children start to learn how to ride a bike at a very young age, usually a lot younger than most children first start participating in any social sports competitions. </li>
-                    <li>As a result of this, cycling has become one of our most popular sports, with over 2.4 million people participating in it. </li>
-                    <li>Whether it be competitively, or as a genuine way of travel, the popularity of cycling is continuing to increase as we speak.</li>
-                </ul>
-
-            </div>
-
-            <div id="AFL" class="tabcontent">
-                <h3>AFL</h3>
-                <ul>
-                    <li>
-                        Aussie Rules, officially known as Australian Rules Football (AFL) or Australian football, is the most popular sport in Australia. </h4>
-                    </li>
-
-                    <li>It is a contact sport played by eighteen players per team.
-                    <li>
-
-                    <li>The sport dates back to the 19th century, and it is deeply rooted in Australian traditions. </li>
-
-                    <li>AFL is played by 1,404,176 registered players in 25,770 registered clubs as of 2016.</li>
-
-                    <li>In 2017, the Grand finale of Australian Football was watched by over 8.4 million Australians making the AFL the most-watched sport in Australia.</li>
-
-                    <li>The popularity of the sport has been extended beyond Australia’s boundaries into other countries such as China.</li>
-                </ul>
-
-            </div>
-
-            <div id="Golf" class="tabcontent">
-                <h3>Golf</h3>
-                <ul>
-                    <li>Steadily seeing an increase in recent years, golf has been one of Australia’s most popular sports in recent years.</li>
-                    <li>Golf, which was first played in 1839, has since progressed to become one of Australia’s most favorite sports.</li>
-                    <li>The PGA Tour of Australasia, which happens to be one of Australia’s major golf events, attracts some of the world’s best golf players.</li>
-                    <li>The PGA Tour of Australasia also features a good number of Australians who have been successful at the tournament.</li>
-                </ul>
-
-            </div>
-
-            <div id="Basketball" class="tabcontent">
-                <h3>Basketball</h3>
-                <ul>
-                    <li>Being a fairly popular sport in Australia, basketball is rated as the second most popular team participation sport in the region.</li>
-                    <li>The sport also attracts about 1 million players in Australia.</li>
-                    <li>The NBA largely influences the rise in basketball participation in far-away America, including the domestic basketball league and the National Basketball League in Australia.</li>
-                    <li>The national basketball team also enjoys a good media following as well as support from Australians.</li>
-                    <li>Basketball, which was first played in Australia in February 1897, is popular in parts of Australia like Victoria.</li>
-                </ul>
-            </div>*@
-
-
-            </div>
-        </div>
-
-        <div class="box col-md-6">
-            
-
-            <center>
-                
-                <body>
+                <div id="Cycling" class="tabcontent">
+                    <h3>Cycling</h3>
                     <ul>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <h1 style="text-align:center; color:#FF0000; ">VS </h1>
-                        <br />
-                        <br />
-                        <br />
-                        <h3 id="commonSwimming" class="common"><a href="/Home/SportsInformation/0" style="color:#FF5511">Swimming </a></h3>
-                        <h3 id="commonCycling" class="common"><a href="/Home/SportsInformation/1" style="color:	#008800">Cycling </a></h3>
-                        <h3 id="commonSoccer" class="common"><a href="/Home/SportsInformation/2" style="color:#FFAA33">Soccer </a></h3>
-                        <h3 id="commonDancing" class="common"><a href="/Home/SportsInformation/3" style="color:#b200ff">Dancing </a></h3>
-                        <h3 id="commonBasketball" class="common"><a href="/Home/SportsInformation/4" style="color:#5500DD">Basketball </a></h3>
+                        <li>Cycling has two peak age periods for organised participation: the first at ages 9-11 then again at 45-54. As they say, it’s like riding a bike!</li>
+                        <li>Most children start to learn how to ride a bike at a very young age, usually a lot younger than most children first start participating in any social sports competitions. </li>
+                        <li>As a result of this, cycling has become one of our most popular sports, with over 2.4 million people participating in it. </li>
+                        <li>Whether it be competitively, or as a genuine way of travel, the popularity of cycling is continuing to increase as we speak.</li>
                     </ul>
-                </body>
-            </center>
 
+                </div>
+
+                <div id="AFL" class="tabcontent">
+                    <h3>AFL</h3>
+                    <ul>
+                        <li>
+                            Aussie Rules, officially known as Australian Rules Football (AFL) or Australian football, is the most popular sport in Australia. </h4>
+                        </li>
+
+                        <li>It is a contact sport played by eighteen players per team.
+                        <li>
+
+                        <li>The sport dates back to the 19th century, and it is deeply rooted in Australian traditions. </li>
+
+                        <li>AFL is played by 1,404,176 registered players in 25,770 registered clubs as of 2016.</li>
+
+                        <li>In 2017, the Grand finale of Australian Football was watched by over 8.4 million Australians making the AFL the most-watched sport in Australia.</li>
+
+                        <li>The popularity of the sport has been extended beyond Australia’s boundaries into other countries such as China.</li>
+                    </ul>
+
+                </div>
+
+                <div id="Golf" class="tabcontent">
+                    <h3>Golf</h3>
+                    <ul>
+                        <li>Steadily seeing an increase in recent years, golf has been one of Australia’s most popular sports in recent years.</li>
+                        <li>Golf, which was first played in 1839, has since progressed to become one of Australia’s most favorite sports.</li>
+                        <li>The PGA Tour of Australasia, which happens to be one of Australia’s major golf events, attracts some of the world’s best golf players.</li>
+                        <li>The PGA Tour of Australasia also features a good number of Australians who have been successful at the tournament.</li>
+                    </ul>
+
+                </div>
+
+                <div id="Basketball" class="tabcontent">
+                    <h3>Basketball</h3>
+                    <ul>
+                        <li>Being a fairly popular sport in Australia, basketball is rated as the second most popular team participation sport in the region.</li>
+                        <li>The sport also attracts about 1 million players in Australia.</li>
+                        <li>The NBA largely influences the rise in basketball participation in far-away America, including the domestic basketball league and the National Basketball League in Australia.</li>
+                        <li>The national basketball team also enjoys a good media following as well as support from Australians.</li>
+                        <li>Basketball, which was first played in Australia in February 1897, is popular in parts of Australia like Victoria.</li>
+                    </ul>
+                </div>*@
 
 
 
         </div>
 
 
-
-        <div class="col-md-6">
+        <div class="col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;">
             <div class="right">
                 <h2 id="country" style="text-align: center;">
                     Country
                 </h2>
-                
+
                 <div>
                     <center style="padding:3%;">
                         <img id="IraqImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Iraq.png" />
@@ -306,6 +245,76 @@
 
 
 
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;margin:50px">
+
+            <div>
+                <h2 style="text-align:center; ">Australian</h2>
+                <div id="au0" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/0">Swimming</a></h3>
+                    </ul>
+                </div>
+
+                <div id="au1" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/1">Cycling</a></h3>
+                    </ul>
+                </div>
+
+                <div id="au2" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/2">Soccer</a></h3>
+                    </ul>
+                </div>
+
+                <div id="au3" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/3">Dancing</a></h3>
+                    </ul>
+                </div>
+
+                <div id="au4" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/4">Basketball</a></h3>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;margin:50px">
+            <div class="box col-md-6">
+                <div>
+                    <ul>
+                        <h2 style="text-align:center; font-weight:bolder">Overlap</h2>
+
+                        <h3 id="commonSwimming" class="common"><a href="/Home/SportsInformation/0" style="color:#FF5511">Swimming </a></h3>
+                        <h3 id="commonCycling" class="common"><a href="/Home/SportsInformation/1" style="color:	#008800">Cycling </a></h3>
+                        <h3 id="commonSoccer" class="common"><a href="/Home/SportsInformation/2" style="color:#FFAA33">Soccer </a></h3>
+                        <h3 id="commonDancing" class="common"><a href="/Home/SportsInformation/3" style="color:#b200ff">Dancing </a></h3>
+                        <h3 id="commonBasketball" class="common"><a href="/Home/SportsInformation/4" style="color:#5500DD">Basketball </a></h3>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;margin:50px">
+            <h2 style="text-align:center;">Aim Country</h2>
+            
                 <div id="Iraq" class="selectt countryContent">
                     <ul>
                         <h3><a href="/Home/SportsInformation/11">Kickboxing</a></h3>
@@ -314,16 +323,13 @@
                 </div>
 
                 <div id="Syria" class="selectt countryContent">
-
                     <ul>
-
                         <h3><a href="/Home/SportsInformation/5">Tennis</a></h3>
                         <h3><a href="/Home/SportsInformation/14">Weightlifting</a></h3>
                     </ul>
                 </div>
 
                 <div id="Myanmar" class="selectt countryContent">
-
                     <ul>
                         <h3><a href="/Home/SportsInformation/15">Rugby</a></h3>
                         <h3><a href="/Home/SportsInformation/10">Golf</a></h3>
@@ -334,9 +340,6 @@
                 </div>
 
                 <div id="Afghanistan" class="selectt countryContent">
-
-
-
                     <ul>
                         <h3><a href="/Home/SportsInformation/15">Rugby</a></h3>
                         <h3><a href="/Home/SportsInformation/20">Boxing</a></h3>
@@ -345,30 +348,24 @@
                 </div>
 
                 <div id="DRC" class="selectt countryContent">
-
                     <ul>
                         <h3><a href="/Home/SportsInformation/15">Rugby</a></h3>
                     </ul>
-
-
                 </div>
 
                 <div id="Ethiopia" class="selectt countryContent">
-
                     <ul>
                         <h3><a href="/Home/SportsInformation/19">Track and Field</a></h3>
                     </ul>
                 </div>
 
                 <div id="Eritrea" class="selectt countryContent">
-
                     <ul>
                         <h3><a href="/Home/SportsInformation/18">Volleyball</a></h3>
                     </ul>
                 </div>
 
                 <div id="Iran" class="selectt countryContent">
-
                     <ul>
                         <h3><a href="/Home/SportsInformation/16">Futsal</a></h3>
                         <h3><a href="/Home/SportsInformation/12">Wrestling</a></h3>
@@ -377,57 +374,18 @@
                 </div>
 
                 <div id="CAR" class="selectt countryContent">
-
                     <ul>
                         <h3><a href="/Home/SportsInformation/15">Rugby</a></h3>
                     </ul>
 
                 </div>
-
-            </div>
+            
 
         </div>
-
     </div>
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-@*<div class="Australia selectt">
-        <h2>Australia</h2>
-        <strong>Australia</strong>
-        Australia content
-    </div>*@
-
-@*<div>
-        <h2>Tennis</h2>
-        <strong>Tennis</strong>
-        Tennis content
-    </div>
-    <div>
-        <ul>
-            <li class="select"> selection1</li>
-            <li>   selection2</li>
-        </ul>
-        <div id="main">
-            <div class="box">content of selection1</div>
-            <div class="hidden">content of selection2</div>
-        </div>
-    </div>*@
-
-
-
 
 <link href="~/Content/comparePage.css" rel="stylesheet" />
 <script src="~/Scripts/compare.js"></script>
+
+

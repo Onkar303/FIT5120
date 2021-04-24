@@ -225,6 +225,8 @@
     <Content Include="Images\analyticsSymbols\woman2.jpg" />
     <Content Include="Images\australia.png" />
     <Content Include="Images\compareSwimming.jpg" />
+    <Content Include="Images\compare\compareTop.jpg" />
+    <Content Include="Images\compare\running-track-1201014_1920.jpg" />
     <Content Include="Images\countryFlag\Afganistan.png" />
     <Content Include="Images\countryFlag\Australia.png" />
     <Content Include="Images\countryFlag\CAR.png" />
