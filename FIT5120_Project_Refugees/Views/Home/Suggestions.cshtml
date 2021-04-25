@@ -12,9 +12,7 @@
     <h1>Get A New Sport Recommended To You </h1>
 </div>
 
-<div style="display:flex;justify-content:center;padding:5%;">
-    @Html.ActionLink("Recommend","Suggestions","Home", htmlAttributes:new { @class = "button" })
-</div>
+
 
 
 <div>
@@ -22,15 +20,29 @@
 
         @foreach (var item in Model)
         {
-            <div class="card" style="display:flex; width:200px;height:200px; justify-content:center;align-items:center;  background-color : #CBA783; border:1px solid white;">
-                <h3 id="sportsTitle1">
-                    @Html.ActionLink(item.SPORT_NAME, "SportsInformation/" + item.SPORT_ID.ToString(), "Home", null, new { @style = "text-decoration:none; color:white;" })
-                </h3>
+
+
+        <div style=" background-image:url('../../Images/SportImages/@(item.SPORT_NAME).jpg');background-repeat:no-repeat;background-position:center;background-size:cover; width:100%;height:300px;">
+
+            <div style="display:flex;justify-content:center;align-items:center; width:100%; height:100%;margin:auto;background-color:black;opacity:0.6;">
+
+                <div>
+                    @Html.ActionLink(@item.SPORT_NAME, "SportsInformation/" + item.SPORT_ID.ToString(), "Home", null, new { @style = "text-decoration:none;font-size:50px;color:white;cursor:pointer;" })
+                </div>
+               
             </div>
+
+          
+
+        </div>
         }
 
     </div>
 
+</div>
+
+<div style="display:flex;justify-content:center;padding:3%;">
+    @Html.ActionLink("Recommend", "Suggestions", "Home", htmlAttributes: new { @class = "button" })
 </div>
 
 @*<div>

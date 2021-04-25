@@ -102,10 +102,7 @@ namespace FIT5120_Project_Refugees.Controllers
             //}
             Random rnd = new Random();
             var randomList = sportList.OrderBy(item => rnd.Next());
-            var fourRandomSports = randomList.Take(4);
-
-
-
+            var fourRandomSports = randomList.Take(3);
 
             return fourRandomSports;
         }
