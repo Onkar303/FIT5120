@@ -26,9 +26,13 @@
 
             <div style="display:flex;justify-content:center;align-items:center; width:100%; height:100%;margin:auto;background-color:black;opacity:0.6;">
 
-                <div>
-                    @Html.ActionLink(@item.SPORT_NAME, "SportsInformation/" + item.SPORT_ID.ToString(), "Home", null, new { @style = "text-decoration:none;font-size:50px;color:white;cursor:pointer;" })
+                <div style="text-align:center;color:white;">
+                    @Html.ActionLink(@item.SPORT_NAME, "SportsInformation/" + item.SPORT_ID.ToString(), "Home", null, new { @style = "text-decoration:none;font-size:50px;color:white;cursor:pointer;dsiplay:block;" })
+                    <h4>
+                        @Html.ActionLink("Learn more", "SportsInformation/" + item.SPORT_ID.ToString(), "Home", null, new { @style = "text-decoration:underline;color:white;cursor:pointer;dsiplay:block;" })
+                    </h4>
                 </div>
+
                
             </div>
         </div>
