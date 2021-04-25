@@ -29,12 +29,9 @@
             <ul>
                 @for (var i = 0; i < Model.sportsid.Count; i++)
                 {
-                   
                     <li class="one" style="word-wrap:break-word;">
                         @Html.ActionLink(Model.sportsName[i], "SportsInformation", "Home", new { id = Model.sportsid[i] }, new { style = "text-decoration:none;color:white;" })
                     </li>
-
-
                 }
             </ul>
         </div>
@@ -102,6 +99,7 @@
         <p class="sectionTitle"> Slangs </p>
         <p class="sectionInformation">
 
+
        @if (Model.termsList.Count == 0)
         {
 
@@ -112,7 +110,7 @@
             <ol>
                 @for (var i = 0; i < Model.termsList.Count; i++)
                 {
-                    <li class="text">
+                    <li class="two">
                         <h3>
                             <b>@Model.termsList[i].TERM_NAME</b>
                         </h3>
@@ -127,10 +125,7 @@
            
         }
 
-
-
-
-        </div>
+    </div>
 
 
 </div>

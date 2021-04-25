@@ -112,19 +112,27 @@ li.slangs{
 
 }
 
-    li:before {
-        font-family: FontAwesome;
-        position: absolute;
-        left: 0;
-        color: #318ca0;
-        font-size: 28px;
-    }
-
-    li.one:before {
-        content: "\f111";
-    }
+li.one:before {
+    font-family: fontawesome;
+    position: absolute;
+    left: 0;
+    color: #318ca0;
+    font-size: 28px;
+    content: "\f111";
+}
 
 
-    li:hover:before {
+li.two:before {
+    font-family: fontawesome;
+    position: absolute;
+    left:3.5vw;
+    margin-top:20px;
+    color: #318ca0;
+    font-size: 20px;
+    content: "\f111";
+}
+
+
+ li.one:hover:before {
         color: #fff;
-    }
+ }
