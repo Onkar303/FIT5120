@@ -1,4 +1,85 @@
-﻿.left {
+﻿.column {
+    width: 33%;
+    float: left;
+}
+
+
+#DIV_1 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(238, 238, 238);
+    float: left;
+    height: 400px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    column-rule-color: rgb(238, 238, 238);
+    background: rgb(39, 175, 251) none repeat scroll 0% 0% / auto padding-box border-box;
+    font: normal 14px / 21px Raleway, sans-serif;
+    padding: 60px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+/*#DIV_1*/
+
+
+#H3_3 {
+    text-transform: uppercase;
+    font: normal 600 normal 24px / 36px Lato, sans-serif;
+    margin: 20px 0px 10px;
+}
+/*#H3_3*/
+
+#P_4 {
+    height: 100px;
+    font: normal 14px / 25.2px Raleway, sans-serif;
+    margin: 0px 0px 30px;
+    overflow: hidden;
+}
+/*#P_4*/
+
+#A_5 {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    left: 0px;
+    letter-spacing: 1px;
+    position: relative;
+    right: 0px;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 0px;
+    border: 2px solid rgb(238, 238, 238);
+    border-radius: 3px 3px 3px 3px;
+    overflow: hidden;
+    padding: 0px 28px;
+}
+/*#A_5*/
+
+#readMore {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(238, 238, 238);
+    cursor: pointer;
+    display: inline-block;
+    height: 36px;
+    left: 0px;
+    letter-spacing: 1px;
+    position: relative;
+    right: 0px;
+    text-align: right;
+    text-transform: uppercase;
+    top: 0px;
+    border: 0px none rgb(238, 238, 238);
+    font: normal normal 600 normal 14px / 36px Raleway, sans-serif;
+}
+/*#SPAN_7*/
+/*-------------------------------------------*/
+.left {
    
     width: 100%;
     background-color: white;
@@ -6,10 +87,18 @@
     margin:auto;
 }
 
+.middle {
+    width: 100%;
+    background-color: white;
+    height: auto;
+    margin: auto;
+}
+
 .right {
     background-color: white;
     height: auto;
 }
+
 .selectt {
     color: black;
     padding: 12px 16px 12px 16px;
@@ -32,6 +121,8 @@ label {
 body {
     font-family: "Lato", sans-serif;
 }
+
+
 
 /* Style the tab */
 div.tab {
@@ -138,3 +229,4 @@ background-color: #ccc;
         order: 4;
     }
 }
+

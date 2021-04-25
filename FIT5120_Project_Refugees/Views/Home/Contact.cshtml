@@ -18,337 +18,126 @@
     </div>
 
     <div class="importanceContentContainter">
-        <h3 class="textContent " style="text-align:center;" id="importanceContent">
+        <p  style="text-align:center; font-size:medium" id="importanceContent">
             Choose your interested country in the right and compare with sports in Australia.
-        </h3>
-        <h3 class="textContent " style="text-align:center;" id="importanceContent">
+        </p>
+        <p  style="text-align:center;font-size:medium" id="importanceContent">
             The overlap popular sports will be shown in the middle.
-        </h3>
-        <h3 class="textContent " style="text-align:center;" id="importanceContent">
+        </p>
+        <p  style="text-align:center;font-size:medium" id="importanceContent">
             The different sports of each country will be shown separately.
-        </h3>
+        </p>
     </div>
 </div>
 
 <br />
 
-@* -------------------------------------------------------------------------------------------------------------------------------------- *@
+<div class="container body-content" style="height:500px">
+    <div class="column">
 
-<div class="container body-content" style="height:400px">
-    <div class="row" >
-        <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;">
+        <h2 style="text-align: center;">
+            Australia
+        </h2>
+        <center>
+            <img style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/compare/australia-flag.png" />
 
-            <h2 style="text-align: center;">
-                Australia
-            </h2>
-
-            <center style="padding:3%;">
-                <img style="width: 15vw; height: 24vh;" src="~/Images/countryFlag/Australia.png" />
-            </center>
+            <div style="margin-top:100px">
+                <div id="au0" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/0">Swimming</a></h3>
+                    </ul>
 
 
+                </div>
+
+                <div id="au1" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/1">Cycling</a></h3>
+                    </ul>
+                </div>
+
+                <div id="au2" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/2">Soccer</a></h3>
+                    </ul>
+                </div>
+
+                <div id="au3" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/3">Dancing</a></h3>
+                    </ul>
+                </div>
+
+                <div id="au4" class="auSport">
+                    <ul>
+                        <h3><a href="/Home/SportsInformation/4">Basketball</a></h3>
+                    </ul>
+                </div>
+
+            </div>
+        </center>
+
+
+    </div>
+
+    <div class="column" style="">
+        <center>
+            <img style="object-fit:contain; width:20vw;height:20vh; margin-top:50px" src="~/Images/compare/WeChat Image_20210426004822.png" />
+        </center>
+        <div style="text-align:center; border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;">
+            <h3 id="commonSwimming" class="common"><a href="/Home/SportsInformation/0" style="color:#FF5511">Swimming </a></h3>
+            <h3 id="commonCycling" class="common"><a href="/Home/SportsInformation/1" style="color:	#008800">Cycling </a></h3>
+            <h3 id="commonSoccer" class="common"><a href="/Home/SportsInformation/2" style="color:#FFAA33">Soccer </a></h3>
+            <h3 id="commonDancing" class="common"><a href="/Home/SportsInformation/3" style="color:#b200ff">Dancing </a></h3>
+            <h3 id="commonBasketball" class="common"><a href="/Home/SportsInformation/4" style="color:#5500DD">Basketball </a></h3>
 
         </div>
+    </div>
 
 
-        @*<center>
+    <div class="column">
+
+        <h2 id="country" style="text-align: center;">
+            Country
+        </h2>
+        <div>
+            <center>
+                <img id="IraqImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/Iraq.png" />
+                <img id="SyriaImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/Syria.png" />
+                <img id="MyanmarImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/Myanmar (1).png" />
+                <img id="AfghanistanImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/Afganistan.png" />
+                <img id="DRCImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/Congo.png" />
+                <img id="EthiopiaImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/Ethiopia.png" />
+                <img id="EritreaImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/Eritrea.png" />
+                <img id="IranImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/Iran.png" />
+                <img id="CARImage" class="countryImage" style="object-fit:contain; width:22vw;height:24vh;" src="~/Images/countryFlag/CAR.png" />
+
                 <div class="btn-group" role="group" aria-label="...">
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'Swimming')" id="defaultOpen">Swimming</button>
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'Cycling')">Cycling</button>
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'AFL')">Australian Rules Football</button>
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'Golf')">Golf</button>
-                    <button class="btn btn-default tab-links" onclick="ausSport(event, 'Basketball')">Basketball</button>
-                </div>
+                    <button type="button" class="btn btn-default" onclick="countrySport('Iraq')" value="Iraq"> Iraq </button>
+                    <button type="button" class="btn btn-default" onclick="countrySport('Syria')" value="Syria"> Syria </button>
+                    <button type="button" class="btn btn-default" onclick="countrySport('Myanmar')" value="Myanmar"> Myanmar </button>
+                    <button type="button" class="btn btn-default" onclick="countrySport('Afghanistan')" value="Afghanistan"> Afghanistan </button>
+                    <button type="button" class="btn btn-default" onclick="countrySport('DRC')" value="DRC"> Congo </button>
 
-            </center>*@
-
-
-
-        @*<div id="Swimming" class="tabcontent">
-
-                <h3>Swimming</h3>
-                <ul>
-                    <li>
-                        Swimming is Australia’s most popular sport, with a HUGE 3.1 million people regularly involved in it.
-                    </li>
-
-                    <li>
-                        Regardless of age, it seems that Australians just love their swimming, which isn’t surprising given how hot it is in Australia for most of the year, and how amazing most of our beaches are.
-                    </li>
-
-                    <li>
-                        We would love to know which sport you play.
-                    </li>
-
-                    <li>
-                        Was it on this list? Where did it rank? Is it perhaps another sport that isn’t on this list, but that you think might make the top 10 in a few years’ time?
-                    </li>
-                </ul>
-
-
-            </div>
-
-            <div id="Cycling" class="tabcontent">
-                <h3>Cycling</h3>
-                <ul>
-                    <li>Cycling has two peak age periods for organised participation: the first at ages 9-11 then again at 45-54. As they say, it’s like riding a bike!</li>
-                    <li>Most children start to learn how to ride a bike at a very young age, usually a lot younger than most children first start participating in any social sports competitions. </li>
-                    <li>As a result of this, cycling has become one of our most popular sports, with over 2.4 million people participating in it. </li>
-                    <li>Whether it be competitively, or as a genuine way of travel, the popularity of cycling is continuing to increase as we speak.</li>
-                </ul>
-
-            </div>
-
-            <div id="AFL" class="tabcontent">
-                <h3>AFL</h3>
-                <ul>
-                    <li>
-                        Aussie Rules, officially known as Australian Rules Football (AFL) or Australian football, is the most popular sport in Australia. </h4>
-                    </li>
-
-                    <li>It is a contact sport played by eighteen players per team.
-                    <li>
-
-                    <li>The sport dates back to the 19th century, and it is deeply rooted in Australian traditions. </li>
-
-                    <li>AFL is played by 1,404,176 registered players in 25,770 registered clubs as of 2016.</li>
-
-                    <li>In 2017, the Grand finale of Australian Football was watched by over 8.4 million Australians making the AFL the most-watched sport in Australia.</li>
-
-                    <li>The popularity of the sport has been extended beyond Australia’s boundaries into other countries such as China.</li>
-                </ul>
-
-            </div>
-
-            <div id="Golf" class="tabcontent">
-                <h3>Golf</h3>
-                <ul>
-                    <li>Steadily seeing an increase in recent years, golf has been one of Australia’s most popular sports in recent years.</li>
-                    <li>Golf, which was first played in 1839, has since progressed to become one of Australia’s most favorite sports.</li>
-                    <li>The PGA Tour of Australasia, which happens to be one of Australia’s major golf events, attracts some of the world’s best golf players.</li>
-                    <li>The PGA Tour of Australasia also features a good number of Australians who have been successful at the tournament.</li>
-                </ul>
-
-            </div>
-
-            <div id="Basketball" class="tabcontent">
-                <h3>Basketball</h3>
-                <ul>
-                    <li>Being a fairly popular sport in Australia, basketball is rated as the second most popular team participation sport in the region.</li>
-                    <li>The sport also attracts about 1 million players in Australia.</li>
-                    <li>The NBA largely influences the rise in basketball participation in far-away America, including the domestic basketball league and the National Basketball League in Australia.</li>
-                    <li>The national basketball team also enjoys a good media following as well as support from Australians.</li>
-                    <li>Basketball, which was first played in Australia in February 1897, is popular in parts of Australia like Victoria.</li>
-                </ul>
-            </div>*@
-
-
-
-
-
-        
-            <div class="box col-md-6" style="width:250px; height: 400px;">
-                <div style="text-align:center">
-                    <h1 style="color:red; padding-top:180px">VS</h1>
-                </div>
-
-            </div>
-        
-
-
-        <div class="col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;">
-            <div class="right">
-                <h2 id="country" style="text-align: center;">
-                    Country
-                </h2>
-
-                <div>
-                    <center style="padding:3%;">
-                        <img id="IraqImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Iraq.png" />
-                        <img id="SyriaImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Syria.png" />
-                        <img id="MyanmarImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Myanmar (1).png" />
-                        <img id="AfghanistanImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Afganistan.png" />
-                        <img id="DRCImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Congo.png" />
-                        <img id="EthiopiaImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Ethiopia.png" />
-                        <img id="EritreaImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Eritrea.png" />
-                        <img id="IranImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/Iran.png" />
-                        <img id="CARImage" class="countryImage" style="object-fit:contain; width:20vw;height:24vh;" src="~/Images/countryFlag/CAR.png" />
-                    </center>
-
-                    <center>
-                        <div class="btn-group" role="group" aria-label="...">
-                            <button type="button" class="btn btn-default" onclick="countrySport('Iraq')" value="Iraq"> Iraq </button>
-                            <button type="button" class="btn btn-default" onclick="countrySport('Syria')" value="Syria"> Syria </button>
-                            <button type="button" class="btn btn-default" onclick="countrySport('Myanmar')" value="Myanmar"> Myanmar </button>
-                            <button type="button" class="btn btn-default" onclick="countrySport('Afghanistan')" value="Afghanistan"> Afghanistan </button>
-                            <button type="button" class="btn btn-default" onclick="countrySport('DRC')" value="DRC"> Congo </button>
-
-                            @*
-                                  <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Others
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu"
-                                        <li><a href="#" onclick="countrySport('DRC')" value="DRC">Democratic Republic of Congo</a></li>
-                                        <li><a href="#" onclick="countrySport('Ethiopia')" value="Ethiopia">Ethiopia</a></li>
-                                        <li><a href="#" onclick="countrySport('Eritrea')" value="Eritrea">Eritrea</a></li>
-                                        <li><a href="#" onclick="countrySport('Iran')" value="Iran">Iran</a></li>
-                                        <li><a href="#" onclick="countrySport('CAR')" value="CAR"> Central African Republic</a></li>
-                                    </ul>
-                                </div>
-                            *@
-
+                    @*
+                          <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Others
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu"
+                                <li><a href="#" onclick="countrySport('DRC')" value="DRC">Democratic Republic of Congo</a></li>
+                                <li><a href="#" onclick="countrySport('Ethiopia')" value="Ethiopia">Ethiopia</a></li>
+                                <li><a href="#" onclick="countrySport('Eritrea')" value="Eritrea">Eritrea</a></li>
+                                <li><a href="#" onclick="countrySport('Iran')" value="Iran">Iran</a></li>
+                                <li><a href="#" onclick="countrySport('CAR')" value="CAR"> Central African Republic</a></li>
+                            </ul>
                         </div>
-                    </center>
-
-
-
-                    <!--<center>
-
-                    <label>
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Syria"> Syria
-                    </label>
-                    <label>
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Iraqs"> Iraq
-                    </label>
-                    <label>
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Myanmar"> Myanmar
-                    </label>
-                    <label>
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Congo"> Democratic Rubblic of Congo
-                    </label>
-                    <label>
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Afghanistan"> Afghanistan
-                    </label>
-
-                    <label>
-
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Eritrea"> Eritrea
-
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Ethiopia"> Ethiopia
-                    </label>
-                    <label>
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Central African Republic"> Central African Republic
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="colorCheckbox"
-                               value="Iran"> Iran
-                    </label>-->
-                    @*<label>
-                        <input type="checkbox" name="colorCheckbox"
-                                value="Australia"> Australia
-                        </label>*@
-
-                    <!--</center>-->
-
+                    *@
 
                 </div>
 
-
-
-
-
-
-
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-
-
-<div class="container body-content">
-    <div class="row">
-        <div class="box col-md-6" style="">
-        </div>
-
-
-
-        <div>
-            <div class="box col-md-6" style="width:250px;">
-                <div style="text-align:center;">
-                    <h3 id="commonSwimming" class="common"><a href="/Home/SportsInformation/0" style="color:#FF5511">Swimming </a></h3>
-                    <h3 id="commonCycling" class="common"><a href="/Home/SportsInformation/1" style="color:	#008800">Cycling </a></h3>
-                    <h3 id="commonSoccer" class="common"><a href="/Home/SportsInformation/2" style="color:#FFAA33">Soccer </a></h3>
-                    <h3 id="commonDancing" class="common"><a href="/Home/SportsInformation/3" style="color:#b200ff">Dancing </a></h3>
-                    <h3 id="commonBasketball" class="common"><a href="/Home/SportsInformation/4" style="color:#5500DD">Basketball </a></h3>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="box col-md-6" style="">
-        </div>
-    </div>
-</div>
-
-<div class="container body-content">
-    <div class="row">
-        <div class="box col-md-6" style="">
-            <center style="padding:3%;">
-                <div>
-                    <div id="au0" class="auSport">
-                        <ul>
-                            <h3><a href="/Home/SportsInformation/0">Swimming</a></h3>
-                        </ul>
-
-
-                    </div>
-
-                    <div id="au1" class="auSport">
-                        <ul>
-                            <h3><a href="/Home/SportsInformation/1">Cycling</a></h3>
-                        </ul>
-                    </div>
-
-                    <div id="au2" class="auSport">
-                        <ul>
-                            <h3><a href="/Home/SportsInformation/2">Soccer</a></h3>
-                        </ul>
-                    </div>
-
-                    <div id="au3" class="auSport">
-                        <ul>
-                            <h3><a href="/Home/SportsInformation/3">Dancing</a></h3>
-                        </ul>
-                    </div>
-
-                    <div id="au4" class="auSport">
-                        <ul>
-                            <h3><a href="/Home/SportsInformation/4">Basketball</a></h3>
-                        </ul>
-                    </div>
-
-                </div>
-            </center>
-
-        </div>
-
-
-
-        <div>
-            <div class="box col-md-6" style="width:250px;">
-            </div>
-        </div>
-
-        <div class="box col-md-6" style="">
-            <center style="padding:3%;">
-                <div>
+                <div style="margin-top:55px">
                     <div id="Iraq" class="countryContent">
                         <ul>
                             <h3>Kickboxing</a></h3>
@@ -422,4 +211,169 @@
 <link href="~/Content/comparePage.css" rel="stylesheet" />
 <script src="~/Scripts/compare.js"></script>
 
+@* -------------------------------------------------------------------------------------------------------------------------------------- *@
 
+
+@*<center>
+        <div class="btn-group" role="group" aria-label="...">
+            <button class="btn btn-default tab-links" onclick="ausSport(event, 'Swimming')" id="defaultOpen">Swimming</button>
+            <button class="btn btn-default tab-links" onclick="ausSport(event, 'Cycling')">Cycling</button>
+            <button class="btn btn-default tab-links" onclick="ausSport(event, 'AFL')">Australian Rules Football</button>
+            <button class="btn btn-default tab-links" onclick="ausSport(event, 'Golf')">Golf</button>
+            <button class="btn btn-default tab-links" onclick="ausSport(event, 'Basketball')">Basketball</button>
+        </div>
+
+    </center>*@
+
+
+
+@*<div id="Swimming" class="tabcontent">
+
+        <h3>Swimming</h3>
+        <ul>
+            <li>
+                Swimming is Australia’s most popular sport, with a HUGE 3.1 million people regularly involved in it.
+            </li>
+
+            <li>
+                Regardless of age, it seems that Australians just love their swimming, which isn’t surprising given how hot it is in Australia for most of the year, and how amazing most of our beaches are.
+            </li>
+
+            <li>
+                We would love to know which sport you play.
+            </li>
+
+            <li>
+                Was it on this list? Where did it rank? Is it perhaps another sport that isn’t on this list, but that you think might make the top 10 in a few years’ time?
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div id="Cycling" class="tabcontent">
+        <h3>Cycling</h3>
+        <ul>
+            <li>Cycling has two peak age periods for organised participation: the first at ages 9-11 then again at 45-54. As they say, it’s like riding a bike!</li>
+            <li>Most children start to learn how to ride a bike at a very young age, usually a lot younger than most children first start participating in any social sports competitions. </li>
+            <li>As a result of this, cycling has become one of our most popular sports, with over 2.4 million people participating in it. </li>
+            <li>Whether it be competitively, or as a genuine way of travel, the popularity of cycling is continuing to increase as we speak.</li>
+        </ul>
+
+    </div>
+
+    <div id="AFL" class="tabcontent">
+        <h3>AFL</h3>
+        <ul>
+            <li>
+                Aussie Rules, officially known as Australian Rules Football (AFL) or Australian football, is the most popular sport in Australia. </h4>
+            </li>
+
+            <li>It is a contact sport played by eighteen players per team.
+            <li>
+
+            <li>The sport dates back to the 19th century, and it is deeply rooted in Australian traditions. </li>
+
+            <li>AFL is played by 1,404,176 registered players in 25,770 registered clubs as of 2016.</li>
+
+            <li>In 2017, the Grand finale of Australian Football was watched by over 8.4 million Australians making the AFL the most-watched sport in Australia.</li>
+
+            <li>The popularity of the sport has been extended beyond Australia’s boundaries into other countries such as China.</li>
+        </ul>
+
+    </div>
+
+    <div id="Golf" class="tabcontent">
+        <h3>Golf</h3>
+        <ul>
+            <li>Steadily seeing an increase in recent years, golf has been one of Australia’s most popular sports in recent years.</li>
+            <li>Golf, which was first played in 1839, has since progressed to become one of Australia’s most favorite sports.</li>
+            <li>The PGA Tour of Australasia, which happens to be one of Australia’s major golf events, attracts some of the world’s best golf players.</li>
+            <li>The PGA Tour of Australasia also features a good number of Australians who have been successful at the tournament.</li>
+        </ul>
+
+    </div>
+
+    <div id="Basketball" class="tabcontent">
+        <h3>Basketball</h3>
+        <ul>
+            <li>Being a fairly popular sport in Australia, basketball is rated as the second most popular team participation sport in the region.</li>
+            <li>The sport also attracts about 1 million players in Australia.</li>
+            <li>The NBA largely influences the rise in basketball participation in far-away America, including the domestic basketball league and the National Basketball League in Australia.</li>
+            <li>The national basketball team also enjoys a good media following as well as support from Australians.</li>
+            <li>Basketball, which was first played in Australia in February 1897, is popular in parts of Australia like Victoria.</li>
+        </ul>
+    </div>*@
+
+
+
+
+@*
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Others
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu"
+            <li><a href="#" onclick="countrySport('DRC')" value="DRC">Democratic Republic of Congo</a></li>
+            <li><a href="#" onclick="countrySport('Ethiopia')" value="Ethiopia">Ethiopia</a></li>
+            <li><a href="#" onclick="countrySport('Eritrea')" value="Eritrea">Eritrea</a></li>
+            <li><a href="#" onclick="countrySport('Iran')" value="Iran">Iran</a></li>
+            <li><a href="#" onclick="countrySport('CAR')" value="CAR"> Central African Republic</a></li>
+        </ul>
+    </div>
+*@
+
+
+
+
+
+<!--<center>
+
+<label>
+    <input type="checkbox" name="colorCheckbox"
+           value="Syria"> Syria
+</label>
+<label>
+    <input type="checkbox" name="colorCheckbox"
+           value="Iraqs"> Iraq
+</label>
+<label>
+    <input type="checkbox" name="colorCheckbox"
+           value="Myanmar"> Myanmar
+</label>
+<label>
+    <input type="checkbox" name="colorCheckbox"
+           value="Congo"> Democratic Rubblic of Congo
+</label>
+<label>
+    <input type="checkbox" name="colorCheckbox"
+           value="Afghanistan"> Afghanistan
+</label>
+
+<label>
+
+    <input type="checkbox" name="colorCheckbox"
+           value="Eritrea"> Eritrea
+
+</label>
+
+<label>
+    <input type="checkbox" name="colorCheckbox"
+           value="Ethiopia"> Ethiopia
+</label>
+<label>
+    <input type="checkbox" name="colorCheckbox"
+           value="Central African Republic"> Central African Republic
+</label>
+
+<label>
+    <input type="checkbox" name="colorCheckbox"
+           value="Iran"> Iran
+</label>-->
+@*<label>
+    <input type="checkbox" name="colorCheckbox"
+            value="Australia"> Australia
+    </label>*@
+
+<!--</center>-->
