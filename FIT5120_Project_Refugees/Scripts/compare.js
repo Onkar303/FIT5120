@@ -9,6 +9,10 @@
    
 }*/
 
+var whoIsRefugee = document.getElementById('compare');
+whoIsRefugee.style.backgroundColor = "#CBA783";
+whoIsRefugee.style.color = "#ffffff";
+
 function countrySport(countryName) {
     
     
