@@ -29,7 +29,7 @@
             <ul>
                 @for (var i = 0; i < Model.sportsid.Count; i++)
                 {
-                    <li class="one" style="word-wrap:break-word;">
+                    <li class="one">
                         @Html.ActionLink(Model.sportsName[i], "SportsInformation", "Home", new { id = Model.sportsid[i] }, new { style = "text-decoration:none;color:white;" })
                     </li>
                 }
@@ -115,10 +115,9 @@
                             <b>@Model.termsList[i].TERM_NAME</b>
                         </h3>
 
-                        <p>
+                        <p class="sectionInformation">
                             @Model.termsList[i].TERM_DESC
                         </p>
-
                     </li>
                 }
              </ol>
