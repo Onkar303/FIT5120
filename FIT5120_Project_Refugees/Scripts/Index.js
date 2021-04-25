@@ -1,4 +1,7 @@
-﻿
+﻿var whoIsRefugee = document.getElementById('home');
+whoIsRefugee.style.backgroundColor = "#CBA783";
+whoIsRefugee.style.color = "#ffffff";
+
 $(document).ready(function () {
 
     $('.pop-up').hide(0);
