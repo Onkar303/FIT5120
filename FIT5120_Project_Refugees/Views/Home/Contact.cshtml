@@ -18,23 +18,24 @@
     </div>
 
     <div class="importanceContentContainter">
-        <h4 class="textContent " style="text-align:center;" id="importanceContent">
+        <h3 class="textContent " style="text-align:center;" id="importanceContent">
             Choose your interested country in the right and compare with sports in Australia.
-        </h4>
-        <h4 class="textContent " style="text-align:center;" id="importanceContent">
+        </h3>
+        <h3 class="textContent " style="text-align:center;" id="importanceContent">
             The overlap popular sports will be shown in the middle.
-        </h4>
-        <h4 class="textContent " style="text-align:center;" id="importanceContent">
+        </h3>
+        <h3 class="textContent " style="text-align:center;" id="importanceContent">
             The different sports of each country will be shown separately.
-        </h4>
+        </h3>
     </div>
 </div>
 
 <br />
 
+@* -------------------------------------------------------------------------------------------------------------------------------------- *@
 
-<div class="container body-content">
-    <div class="row">
+<div class="container body-content" style="height:400px">
+    <div class="row" >
         <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;">
 
             <h2 style="text-align: center;">
@@ -45,11 +46,12 @@
                 <img style="width: 15vw; height: 24vh;" src="~/Images/countryFlag/Australia.png" />
             </center>
 
-            <br />
-            <br />
 
 
-            @*<center>
+        </div>
+
+
+        @*<center>
                 <div class="btn-group" role="group" aria-label="...">
                     <button class="btn btn-default tab-links" onclick="ausSport(event, 'Swimming')" id="defaultOpen">Swimming</button>
                     <button class="btn btn-default tab-links" onclick="ausSport(event, 'Cycling')">Cycling</button>
@@ -62,7 +64,7 @@
 
 
 
-            @*<div id="Swimming" class="tabcontent">
+        @*<div id="Swimming" class="tabcontent">
 
                 <h3>Swimming</h3>
                 <ul>
@@ -142,23 +144,16 @@
 
 
 
-        </div>
 
-        <div>
-            <div class="box col-md-6" style="width:100px;">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                
-                <center><h1 style="color:red;vertical-align:middle;display: table-cell" ;>VS</h1></center>
-                
+
+        
+            <div class="box col-md-6" style="width:250px; height: 400px;">
+                <div style="text-align:center">
+                    <h1 style="color:red; padding-top:180px">VS</h1>
+                </div>
+
             </div>
-        </div>
+        
 
 
         <div class="col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;">
@@ -186,71 +181,76 @@
                             <button type="button" class="btn btn-default" onclick="countrySport('Syria')" value="Syria"> Syria </button>
                             <button type="button" class="btn btn-default" onclick="countrySport('Myanmar')" value="Myanmar"> Myanmar </button>
                             <button type="button" class="btn btn-default" onclick="countrySport('Afghanistan')" value="Afghanistan"> Afghanistan </button>
+                            <button type="button" class="btn btn-default" onclick="countrySport('DRC')" value="DRC"> Congo </button>
 
+                            @*
+                                  <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Others
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu"
+                                        <li><a href="#" onclick="countrySport('DRC')" value="DRC">Democratic Republic of Congo</a></li>
+                                        <li><a href="#" onclick="countrySport('Ethiopia')" value="Ethiopia">Ethiopia</a></li>
+                                        <li><a href="#" onclick="countrySport('Eritrea')" value="Eritrea">Eritrea</a></li>
+                                        <li><a href="#" onclick="countrySport('Iran')" value="Iran">Iran</a></li>
+                                        <li><a href="#" onclick="countrySport('CAR')" value="CAR"> Central African Republic</a></li>
+                                    </ul>
+                                </div>
+                            *@
 
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Others
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu"
-                                    <li><a href="#" onclick="countrySport('DRC')" value="DRC">Democratic Republic of Congo</a></li>
-                                    <li><a href="#" onclick="countrySport('Ethiopia')" value="Ethiopia">Ethiopia</a></li>
-                                    <li><a href="#" onclick="countrySport('Eritrea')" value="Eritrea">Eritrea</a></li>
-                                    <li><a href="#" onclick="countrySport('Iran')" value="Iran">Iran</a></li>
-                                    <li><a href="#" onclick="countrySport('CAR')" value="CAR"> Central African Republic</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </center>
 
+
+
                     <!--<center>
 
-                <label>
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Syria"> Syria
-                </label>
-                <label>
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Iraqs"> Iraq
-                </label>
-                <label>
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Myanmar"> Myanmar
-                </label>
-                <label>
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Congo"> Democratic Rubblic of Congo
-                </label>
-                <label>
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Afghanistan"> Afghanistan
-                </label>
+                    <label>
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Syria"> Syria
+                    </label>
+                    <label>
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Iraqs"> Iraq
+                    </label>
+                    <label>
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Myanmar"> Myanmar
+                    </label>
+                    <label>
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Congo"> Democratic Rubblic of Congo
+                    </label>
+                    <label>
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Afghanistan"> Afghanistan
+                    </label>
 
-                <label>
+                    <label>
 
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Eritrea"> Eritrea
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Eritrea"> Eritrea
 
-                </label>
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Ethiopia"> Ethiopia
-                </label>
-                <label>
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Central African Republic"> Central African Republic
-                </label>
+                    <label>
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Ethiopia"> Ethiopia
+                    </label>
+                    <label>
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Central African Republic"> Central African Republic
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="colorCheckbox"
-                           value="Iran"> Iran
-                </label>-->
+                    <label>
+                        <input type="checkbox" name="colorCheckbox"
+                               value="Iran"> Iran
+                    </label>-->
                     @*<label>
-                    <input type="checkbox" name="colorCheckbox"
-                            value="Australia"> Australia
-                    </label>*@
+                        <input type="checkbox" name="colorCheckbox"
+                                value="Australia"> Australia
+                        </label>*@
 
                     <!--</center>-->
 
@@ -271,19 +271,42 @@
 </div>
 
 
-<div class="container">
-    <div class="row">
-        <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;margin:50px">
-            
-            <div>
-                <h2 style="text-align:center; ">Australian</h2>
-                
 
+<div class="container body-content">
+    <div class="row">
+        <div class="box col-md-6" style="">
+        </div>
+
+
+
+        <div>
+            <div class="box col-md-6" style="width:250px;">
+                <div style="text-align:center;">
+                    <h3 id="commonSwimming" class="common"><a href="/Home/SportsInformation/0" style="color:#FF5511">Swimming </a></h3>
+                    <h3 id="commonCycling" class="common"><a href="/Home/SportsInformation/1" style="color:	#008800">Cycling </a></h3>
+                    <h3 id="commonSoccer" class="common"><a href="/Home/SportsInformation/2" style="color:#FFAA33">Soccer </a></h3>
+                    <h3 id="commonDancing" class="common"><a href="/Home/SportsInformation/3" style="color:#b200ff">Dancing </a></h3>
+                    <h3 id="commonBasketball" class="common"><a href="/Home/SportsInformation/4" style="color:#5500DD">Basketball </a></h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="box col-md-6" style="">
+        </div>
+    </div>
+</div>
+
+<div class="container body-content">
+    <div class="row">
+        <div class="box col-md-6" style="">
+            <center style="padding:3%;">
+                <div>
                     <div id="au0" class="auSport">
                         <ul>
                             <h3><a href="/Home/SportsInformation/0">Swimming</a></h3>
                         </ul>
-                        
+
 
                     </div>
 
@@ -310,53 +333,41 @@
                             <h3><a href="/Home/SportsInformation/4">Basketball</a></h3>
                         </ul>
                     </div>
-                
-            </div>
-
-            </div>
-            
-
-
-            <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;margin:50px">
-                <div class="box col-md-6">
-                    <div>
-                        <ul>
-                            <h2 style="text-align:center; font-weight:bolder">Overlap</h2>
-
-                            <h3 id="commonSwimming" class="common"><a href="/Home/SportsInformation/0" style="color:#FF5511">Swimming </a></h3>
-                            <h3 id="commonCycling" class="common"><a href="/Home/SportsInformation/1" style="color:	#008800">Cycling </a></h3>
-                            <h3 id="commonSoccer" class="common"><a href="/Home/SportsInformation/2" style="color:#FFAA33">Soccer </a></h3>
-                            <h3 id="commonDancing" class="common"><a href="/Home/SportsInformation/3" style="color:#b200ff">Dancing </a></h3>
-                            <h3 id="commonBasketball" class="common"><a href="/Home/SportsInformation/4" style="color:#5500DD">Basketball </a></h3>
-                        </ul>
-                    </div>
 
                 </div>
+            </center>
 
+        </div>
+
+
+
+        <div>
+            <div class="box col-md-6" style="width:250px;">
             </div>
+        </div>
 
-            <div class="box col-md-6" style="border: 2px solid #a1a1a1; padding: 10px 40px; border-radius: 25px;margin:50px;">
+        <div class="box col-md-6" style="">
+            <center style="padding:3%;">
                 <div>
-                    <h2 style="text-align:center;">Aim Country</h2>
                     <div id="Iraq" class="countryContent">
                         <ul>
-                            <h3><a href="/Home/SportsInformation/11">Kickboxing</a></h3>
-                            <h3><a href="/Home/SportsInformation/14">Weightlifting</a></h3>
+                            <h3>Kickboxing</a></h3>
+                            <h3>Weightlifting</a></h3>
                         </ul>
                     </div>
 
                     <div id="Syria" class="countryContent">
                         <ul>
                             <h3><a href="/Home/SportsInformation/5">Tennis</a></h3>
-                            <h3><a href="/Home/SportsInformation/14">Weightlifting</a></h3>
+                            <h3>Weightlifting</a></h3>
                         </ul>
                     </div>
 
                     <div id="Myanmar" class="countryContent">
                         <ul>
-                            <h3><a href="/Home/SportsInformation/15">Rugby</a></h3>
+                            <h3>Rugby</a></h3>
                             <h3><a href="/Home/SportsInformation/10">Golf</a></h3>
-                            <h3><a href="/Home/SportsInformation/13">Sepak Takraw</a></h3>
+                            <h3>Sepak Takraw</a></h3>
                             <h3><a href="/Home/SportsInformation/6">Cricket</a></h3>
 
                         </ul>
@@ -364,15 +375,15 @@
 
                     <div id="Afghanistan" class="countryContent">
                         <ul>
-                            <h3><a href="/Home/SportsInformation/15">Rugby</a></h3>
-                            <h3><a href="/Home/SportsInformation/20">Boxing</a></h3>
+                            <h3>Rugby</a></h3>
+                            <h3>Boxing</a></h3>
                             <h3><a href="/Home/SportsInformation/6">Criket</a></h3>
                         </ul>
                     </div>
 
                     <div id="DRC" class="countryContent">
                         <ul>
-                            <h3><a href="/Home/SportsInformation/15">Rugby</a></h3>
+                            <h3>Rugby</a></h3>
                         </ul>
                     </div>
 
@@ -403,11 +414,9 @@
 
                     </div>
                 </div>
-
-
-
-            </div>
+            </center>
         </div>
+    </div>
 </div>
 
 <link href="~/Content/comparePage.css" rel="stylesheet" />
