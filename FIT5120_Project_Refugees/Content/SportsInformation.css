@@ -80,6 +80,16 @@ li.one {
     cursor:pointer;
 }
 
+li.tr {
+    color: #fff;
+    list-style: none;
+    position: relative;
+    padding-left: 35px;
+    line-height: 3;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 
 li.slangs{
     color:black;
@@ -122,6 +132,17 @@ li.one:before {
 }
 
 
+li.three:before {
+    font-family: fontawesome;
+    position: absolute;
+    left: 0vw;
+    margin-top: 0px;
+    color: #fff;
+    font-size: 28px;
+    content: "\f111";
+}
+
+
 li.two:before {
     font-family: fontawesome;
     position: absolute;
@@ -131,6 +152,8 @@ li.two:before {
     font-size: 20px;
     content: "\f111";
 }
+
+
 
 
  li.one:hover:before {
