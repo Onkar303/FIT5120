@@ -44,7 +44,7 @@ function countrySport(countryName) {
     
 
     //Replace the content by the countryName you click on
-    document.getElementById('country').innerHTML = countryName;
+    //document.getElementById('country').innerHTML = countryName;
 
     //Display the icon of the country you click on
     document.getElementById(countryName + 'Image').style.display = "block";
