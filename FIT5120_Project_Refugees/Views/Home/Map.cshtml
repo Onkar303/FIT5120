@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "Map";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<link href="~/Content/Map.css" rel="stylesheet" />
+
+
+@*<div id="map" style="left:15vw;width:85vw; height:100vh;position:absolute;">
+
+
+
+    </div>
+
+
+    <div style="position:absolute;left:0px;width:15vw; height:100vh;z-index:2;box-shadow:0px 0px 4px 1px rgba(0,0,0,0.2);">
+
+    </div>*@
+
+
+
+
+<div id="map" style="width:100vw;height:94vh;margin-top:60px;">
+
+
+
+
+
+</div>
+
+
+<div>
+
+
+
+
+</div>
+
+
+<div class="container">
+    @*<div class="control-group">
+            <h1>Sports</h1>
+            <label class="control control--checkbox">
+                Soccer Ground
+                <input type="checkbox" checked="checked" />
+                <div class="control__indicator"></div>
+            </label>
+            <label class="control control--checkbox">
+                Tennis Courts
+                <input type="checkbox" />
+                <div class="control__indicator"></div>
+            </label>
+            <label class="control control--checkbox">
+                BasketBall Courts
+                <input type="checkbox" disabled="disabled" />
+                <div class="control__indicator"></div>
+            </label>
+            <label class="control control--checkbox">
+                Disabled & checked
+                <input type="checkbox" disabled="disabled" checked="checked" />
+                <div class="control__indicator"></div>
+            </label>
+        </div>*@
+
+     
+   
+
+    <div class="control-group">
+
+        <input id="pac-input"
+               class="controls"
+               type="text"
+               placeholder="Search Box" style="margin-bottom:30px" />
+
+        <label class="control control--radio">
+            Soccer Courts
+            <input id="Soccer" type="radio" name="radio" value="Soccer Courts" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">
+            Basket Ball Courts
+            <input id="Basketball" type="radio" name="radio" value="Basketball Courts" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">
+            Tennis courts
+            <input id="Tennis" type="radio" name="radio" value="Tennis Courts" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">
+            Cricket
+            <input id="Cricket" type="radio" name="radio" value="Cricket Courts" />
+            <div class="control__indicator"></div>
+        </label>
+
+        <label class="control control--radio">
+            Badminton
+            <input id="Badminton" type="radio" name="radio" value="Badminton Courts" />
+            <div class="control__indicator"></div>
+        </label>
+    </div>
+    @*<div class="control-group">
+            <h1>Select boxes</h1>
+            <div class="select">
+                <select>
+                    <option>First select</option>
+                    <option>Option</option>
+                    <option>Option</option>
+                </select>
+                <div class="select__arrow"></div>
+            </div>
+            <div class="select">
+                <select>
+                    <option>Second select</option>
+                    <option>Option</option>
+                    <option>Option</option>
+                </select>
+                <div class="select__arrow"></div>
+            </div>
+            <div class="select">
+                <select disabled="disabled">
+                    <option>Disabled</option>
+                    <option>Option</option>
+                    <option>Option</option>
+                </select>
+                <div class="select__arrow"></div>
+            </div>
+        </div>*@
+</div>
+
+
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5oaXSCANn1f92aS6Ohd-qtX7pLXWsBKM&callback=initAutocomplete&libraries=places&v=weekly"
+        async></script>
+
+
+
+@*<div style="position:absolute; margin-top:100px; z-index:3;">
+        <label for="sports">select</label>
+        <select name="sports">
+            <option>option 1</option>
+            <option>option 2</option>
+            <option>option 3</option>
+        </select>
+    </div>*@
+
+
+
+
+<script src="~/Scripts/MapScript.js"></script>

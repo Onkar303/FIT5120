@@ -268,7 +268,7 @@ textarea {
     margin: auto;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .row {
         display:block;
     }
@@ -467,7 +467,7 @@ textarea {
     z-index: 1;
 }
 
-span {
+/*span {
     border-radius: 3em;
     margin-left: 95%;
     background: #212121;
@@ -476,7 +476,7 @@ span {
     padding: .4em .7em;
     cursor: pointer;
 }
-
+*/
 
 span#click{
 

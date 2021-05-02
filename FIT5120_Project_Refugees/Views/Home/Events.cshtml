@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Events";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+<div class="container body-content" style="border:2px solid black; margin-top:10vh">
+
+    <p>Start Date: <input type="text" id="datepickerStart"></p>
+
+    <p>End Date: <input type="text" id="datepickerEnd"></p>
+
+    <p> Radius <input type="number" id="radius"> </p>
+    
+    <p>Search  <input type="text" id="searchText"></p>
+
+    <button onclick="loadEvents()">Click</button>
+
+
+    <div id="list events">
+
+
+
+    </div>
+
+
+    
+
+</div>
+
+
+
+
+<script src="~/Scripts/Event.js"></script>
+

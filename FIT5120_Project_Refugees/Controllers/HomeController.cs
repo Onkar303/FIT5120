@@ -48,6 +48,20 @@ namespace FIT5120_Project_Refugees.Controllers
         }
 
 
+        public ActionResult Map()
+        {
+
+            return View();
+        }
+
+
+
+        public ActionResult Events()
+        {
+            return View();
+        }
+
+
         public ActionResult SportsInformation(int? id)
         {
             if (id == null)
