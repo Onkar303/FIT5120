@@ -58,4 +58,30 @@ namespace FIT5120_Project_Refugees.Models
         public virtual ICollection<Sport> Sports { get; set; }
 
     }
+
+
+
+   public class Event
+    {
+        [Key]
+        public int event_id { get; set; }
+
+        public string event_name { get; set; }
+        
+        public string event_kind { get; set; }
+
+        public string event_description { get; set; }
+
+        public string event_address { get; set; }
+
+        public int event_vacancy { get; set; }
+
+        public int event_duration { get; set; }
+
+        public DateTime event_startDate { get; set; }
+
+        public DateTime event_endDate { get; set; }
+
+        public TimeSpan event_startTime { get; set; }
+    }
 }

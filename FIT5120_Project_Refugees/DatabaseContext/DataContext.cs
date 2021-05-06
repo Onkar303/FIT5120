@@ -17,5 +17,6 @@ namespace FIT5120_Project_Refugees.DatabaseContext
 
         public DbSet<Sport> Sports { get; set; }
 
+        public DbSet<Event> Events { get; set; }
     }
 }

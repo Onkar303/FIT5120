@@ -1,0 +1,91 @@
+﻿@model FIT5120_Project_Refugees.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/__DatabaseShared.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.event_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.event_kind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_kind)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.event_description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.event_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.event_vacancy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_vacancy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.event_duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.event_startDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_startDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.event_endDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_endDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.event_startTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.event_startTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.event_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

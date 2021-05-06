@@ -58,7 +58,9 @@ namespace FIT5120_Project_Refugees.Controllers
 
         public ActionResult Events()
         {
-            return View();
+
+            List<Event> eventList = db.Events.ToList();
+            return View(eventList);
         }
 
 
@@ -77,7 +79,6 @@ namespace FIT5120_Project_Refugees.Controllers
 
             return View(obj);
         }
-
 
         public CustomSportsInformationModel getSportsInformation(int? id)
         {
