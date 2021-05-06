@@ -263,6 +263,7 @@
     <Content Include="Images\coverImage.jpg" />
     <Content Include="Images\CoverImage2.jpg" />
     <Content Include="Images\CoverImageCropped.jpg" />
+    <Content Include="Images\Events\SportsEvents.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\mapAnalysis\refugee_map 2.png" />
     <Content Include="Images\mapAnalysis\refugee_map.png" />
