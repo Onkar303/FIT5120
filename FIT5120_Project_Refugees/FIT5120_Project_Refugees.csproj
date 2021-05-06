@@ -212,7 +212,6 @@
     <Content Include="Content\comparePage.css" />
     <Content Include="Content\Map.css" />
     <Content Include="Content\nicepage.css" />
-    <Content Include="Content\Page-1.css" />
     <Content Include="Content\SportsInformation.css" />
     <Content Include="Content\Suggestions.css" />
     <Content Include="favicon.ico" />
