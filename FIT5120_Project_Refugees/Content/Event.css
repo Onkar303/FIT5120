@@ -44,6 +44,31 @@ html, body {
 
 
 
+/*sada*/
+
+
+.filterContainer{
+
+    /*display:grid;
+    grid-template-columns:1fr 1fr;*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:5vh;
+}
+
+.select-btn-streaming {
+    width: 37%;
+    border: 1px solid #969090;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+select {
+    padding: 0.8em 0.5em;
+    width: 100%;
+}
+
 
 /*
     Animay

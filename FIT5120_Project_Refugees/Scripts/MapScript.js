@@ -96,20 +96,25 @@ function getSearchCoordinates(sportSearch) {
 
 function getCoors(sportSearch) {
 
-    $.get(url + searchText + sportSearch + radius + "30" + userLocation + coordinates.latitude + "," + coordinates.longitude + key, function (data, status) {
-        console.log(data);
-
-
-    })
-
     $.ajax({
-        url: url + searchText + sportSearch + radius + "30" + userLocation + coordinates.latitude + "," + coordinates.longitude + key, type: 'GET', crossDomain: true, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }, success: function (result) {
+        url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=Basket+ball+courts&radius=30&location=-37.8159,144.9669&key=AIzaSyA5oaXSCANn1f92aS6Ohd-qtX7pLXWsBKM', type: 'GET', dataType: 'jsonp', crossDomain: true, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }, success: function (result) {
             console.log(result);
+
+            alert(result);
             //output = result.feed.entry[0].link[1].href
         }, error: function (error) {
 
         }
     })
+
+    //$.ajax({
+    //    url: url + searchText + sportSearch + radius + "30" + userLocation + coordinates.latitude + "," + coordinates.longitude + key, type: 'GET', crossDomain: true, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }, success: function (result) {
+    //        console.log(result);
+    //        //output = result.feed.entry[0].link[1].href
+    //    }, error: function (error) {
+
+    //    }
+    //})
 }
 
 
