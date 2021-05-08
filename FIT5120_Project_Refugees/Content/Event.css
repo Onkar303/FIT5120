@@ -352,3 +352,10 @@ select {
         }
 
 
+
+
+@media screen and (max-width: 900px) {
+    .eventgrid{
+      display:block;
+    }
+}

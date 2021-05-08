@@ -56,10 +56,34 @@ namespace FIT5120_Project_Refugees.Controllers
 
 
 
-        public ActionResult Events()
+        public ActionResult Events(string id)
         {
+            List<Event> eventList = null;
+            if (String.IsNullOrEmpty(id))
+            {
+                id = "All";
+            }
 
-            List<Event> eventList = db.Events.ToList();
+            if (id == "All")
+            {
+                eventList = db.Events.ToList();
+            } else if(id == "Soccer"){
+                eventList = db.Events.Where(s => s.event_kind.Equals("Soccer")).ToList();
+            } else if(id == "Swimming")
+            {
+                eventList = db.Events.Where(s => s.event_kind.Equals("Swimming")).ToList();
+            } else if(id == "Basketball")
+            {
+                eventList = db.Events.Where(s => s.event_kind.Equals("Basketball")).ToList();
+            }
+            else if (id == "Cycling")
+            {
+                eventList = db.Events.Where(s => s.event_kind.Equals("Cycling")).ToList();
+            }else if (id == "Dancing")
+            {
+                eventList = db.Events.Where(s => s.event_kind.Equals("Dancing")).ToList();
+            }
+
             return View(eventList);
         }
 
