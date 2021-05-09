@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FIT5120_Project_Refugees.Models.Event>
+﻿@model FIT5120_Project_Refugees.Models.CustomEventsModel
 
 @{
     ViewBag.Title = "Events";
@@ -57,12 +57,25 @@
 
         <div class="select-btn-streaming">
             <select id="streaming">
-                <option selected="selected" value="https://www.netflix.com/">All</option>
-                <option  value="Swimming">Swimming</option>
-                <option  value="Soccer">Soccer</option>
-                <option  value="Basketball">Basketball</option>
-                <option  value="Cycling">Cycling</option>
-                <option  value="Dancing">Dancing</option>
+                @*<option selected="selected" value="https://www.netflix.com/">All</option>*@
+
+                @foreach(var s in Model.sportsName)
+                {
+                    if(s.Equals(Model.selected))
+                    {
+                        <option selected="selected" value=@s> @s </option> 
+                    } else
+                    {
+                       <option value=@s> @s</option>
+                    }
+                }
+                
+
+                @*<option value="Swimming">Swimming</option>
+                <option value="Soccer">Soccer</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Dancing">Dancing</option>*@
             </select>
          </div>
 
@@ -71,7 +84,7 @@
 
 
         <div class="eventgrid">
-            @foreach (var item in Model)
+            @foreach (var item in @Model.events)
             {
 
                 <div class="customcard">

@@ -14,6 +14,16 @@ namespace FIT5120_Project_Refugees.Models
         public List<Term> termsList;
 
         public Sport sport;
+    }
+
+    public class CustomEventsModel
+    {
+
+        public List<Event> events;
+
+        public List<string> sportsName = new List<string>(new string[] { "Soccer", "Basketball","Swimming","Cycling","Dancing","All"});
+
+        public string selected;
 
 
     }

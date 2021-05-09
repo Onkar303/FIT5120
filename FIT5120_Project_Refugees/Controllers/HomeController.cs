@@ -58,7 +58,8 @@ namespace FIT5120_Project_Refugees.Controllers
 
         public ActionResult Events(string id)
         {
-            List<Event> eventList = null;
+           
+            CustomEventsModel eventsModel = new CustomEventsModel();
             if (String.IsNullOrEmpty(id))
             {
                 id = "All";
@@ -66,25 +67,34 @@ namespace FIT5120_Project_Refugees.Controllers
 
             if (id == "All")
             {
-                eventList = db.Events.ToList();
+                eventsModel.events =  db.Events.ToList();
+                eventsModel.selected = "All";
+
             } else if(id == "Soccer"){
-                eventList = db.Events.Where(s => s.event_kind.Equals("Soccer")).ToList();
+                eventsModel.events = db.Events.Where(s => s.event_kind.Equals("Soccer")).ToList();
+                eventsModel.selected = "Soccer";
             } else if(id == "Swimming")
             {
-                eventList = db.Events.Where(s => s.event_kind.Equals("Swimming")).ToList();
+                eventsModel.events = db.Events.Where(s => s.event_kind.Equals("Swimming")).ToList();
+                eventsModel.selected = "Swimming";
             } else if(id == "Basketball")
             {
-                eventList = db.Events.Where(s => s.event_kind.Equals("Basketball")).ToList();
+                eventsModel.events = db.Events.Where(s => s.event_kind.Equals("Basketball")).ToList();
+                eventsModel.selected = "Basketball";
             }
             else if (id == "Cycling")
             {
-                eventList = db.Events.Where(s => s.event_kind.Equals("Cycling")).ToList();
-            }else if (id == "Dancing")
+                eventsModel.events = db.Events.Where(s => s.event_kind.Equals("Cycling")).ToList();
+                eventsModel.selected = "Cycling";
+
+            }
+            else if (id == "Dancing")
             {
-                eventList = db.Events.Where(s => s.event_kind.Equals("Dancing")).ToList();
+                eventsModel.events = db.Events.Where(s => s.event_kind.Equals("Dancing")).ToList();
+                eventsModel.selected = "Dancing";
             }
 
-            return View(eventList);
+            return View(eventsModel);
         }
 
 

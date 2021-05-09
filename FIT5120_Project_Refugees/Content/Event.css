@@ -67,6 +67,11 @@ html, body {
 select {
     padding: 0.8em 0.5em;
     width: 100%;
+    cursor:pointer;
+}
+
+option{
+    cursor:pointer;
 }
 
 

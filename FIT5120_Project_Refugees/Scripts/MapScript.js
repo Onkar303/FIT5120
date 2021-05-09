@@ -58,7 +58,7 @@ var coordinates = {
 var retrivedMap = null;
 //mapboxgl.accessToken = 'pk.eyJ1Ijoib25rYXIxMyIsImEiOiJja24waGZva2QwbnVoMnBsbmZxczA1djViIn0.37nLTsHwcsM6Nwrq_XhrTA';
 
-getLocation();
+//getLocation();
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -80,18 +80,18 @@ function getLocation() {
 }
 
 
-function getSearchCoordinates(sportSearch) {
-    const Http = new XMLHttpRequest();
-    const searchQuery = url + searchText + sportSearch + radius + "30" + userLocation + coordinates.latitude + "," + coordinates.longitude + key;
+//function getSearchCoordinates(sportSearch) {
+//    const Http = new XMLHttpRequest();
+//    const searchQuery = url + searchText + sportSearch + radius + "30" + userLocation + coordinates.latitude + "," + coordinates.longitude + key;
 
-    Http.setRequestHeader('Access-Control-Allow-Headers', '*');
-    Http.open("GET", searchQuery);
-    Http.send();
+//    Http.setRequestHeader('Access-Control-Allow-Headers', '*');
+//    Http.open("GET", searchQuery);
+//    Http.send();
 
-    Http.onreadystatechange = (e) => {
-        console.log(Http.responseText)
-    }
-}
+//    Http.onreadystatechange = (e) => {
+//        console.log(Http.responseText)
+//    }
+//}
 
 
 function getCoors(sportSearch) {
@@ -139,27 +139,38 @@ function getCoors(sportSearch) {
 
 
 
-function loadMap(coordinates) {
-    var map = new google.maps.Map(document.getElementById("map"), {
-        center: {
-            lat: coordinates.latitude,
-            lng: coordinates.longitude
-        },
-        zoom: 13,
-        mapTypeId: "roadmap"
-    });
+//function loadMap(coordinates) {
+//    var map = new google.maps.Map(document.getElementById("map"), {
+//        center: {
+//            lat: coordinates.latitude,
+//            lng: coordinates.longitude
+//        },
+//        zoom: 13,
+//        mapTypeId: "roadmap"
+//    });
 
-    return map;
-}
-
-
-
+//    return map;
+//}
 
 
 function initAutocomplete() {
-    getLocation();
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+
+            coordinates.latitude = position.coords.latitude;
+            coordinates.longitude = position.coords.longitude;
+
+        }, function () {
+
+        });
+    }
+   else {
+        alert("geo location is not supported");
+   }
+            
     const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: coordinates.latitude, lng: coordinates.longitude },
+        center: { lat: coordinates.latitude, lng: coordinates.longitude},
         zoom: 13,
         mapTypeId: "roadmap",
     });
@@ -200,22 +211,22 @@ function initAutocomplete() {
                 scaledSize: new google.maps.Size(25, 25),
             };
 
-            //const svgmarker = {
-            //    path:
-            //        "m10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zm12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
-            //    fillcolor: "#cf8c4a",
-            //    fillopacity: 1,
-            //    strokeweight: 0,
-            //    rotation: 0,
-            //    scale: 2,
-            //    anchor: new google.maps.point(15, 30),
-            //};
+            const svgMarker = {
+                path:
+                    "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+                fillColor: "#cf8c4a",
+                fillOpacity: 1,
+                strokeWeight: 0,
+                rotation: 0,
+                scale: 2,
+                anchor: new google.maps.Point(15, 30),
+            };
 
             // Create a marker for each place.
             markers.push(
                 new google.maps.Marker({
                     map,
-                    icon,
+                    icon: svgMarker,
                     title: place.name,
                     position: place.geometry.location,
                 })
@@ -231,6 +242,86 @@ function initAutocomplete() {
         map.fitBounds(bounds);
     });
 }
+
+
+
+
+
+//function initAutocomplete() {
+//    getLocation();
+//    const map = new google.maps.Map(document.getElementById("map"), {
+//        center: { lat: coordinates.latitude, lng: coordinates.longitude },
+//        zoom: 13,
+//        mapTypeId: "roadmap",
+//    });
+//    // Create the search box and link it to the UI element.
+//    const input = document.getElementById("pac-input");
+//    const searchBox = new google.maps.places.SearchBox(input);
+//    //map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+//    // Bias the SearchBox results towards current map's viewport.
+//    map.addListener("bounds_changed", () => {
+//        searchBox.setBounds(map.getBounds());
+//    });
+//    let markers = [];
+//    // Listen for the event fired when the user selects a prediction and retrieve
+//    // more details for that place.
+//    searchBox.addListener("places_changed", () => {
+//        const places = searchBox.getPlaces();
+
+//        if (places.length == 0) {
+//            return;
+//        }
+//        // Clear out the old markers.
+//        markers.forEach((marker) => {
+//            marker.setMap(null);
+//        });
+//        markers = [];
+//        // For each place, get the icon, name and location.
+//        const bounds = new google.maps.LatLngBounds();
+//        places.forEach((place) => {
+//            if (!place.geometry || !place.geometry.location) {
+//                console.log("Returned place contains no geometry");
+//                return;
+//            }
+//            const icon = {
+//                url: place.icon,
+//                size: new google.maps.Size(71, 71),
+//                origin: new google.maps.Point(0, 0),
+//                anchor: new google.maps.Point(17, 34),
+//                scaledSize: new google.maps.Size(25, 25),
+//            };
+
+//            //const svgmarker = {
+//            //    path:
+//            //        "m10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zm12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+//            //    fillcolor: "#cf8c4a",
+//            //    fillopacity: 1,
+//            //    strokeweight: 0,
+//            //    rotation: 0,
+//            //    scale: 2,
+//            //    anchor: new google.maps.point(15, 30),
+//            //};
+
+//            // Create a marker for each place.
+//            markers.push(
+//                new google.maps.Marker({
+//                    map,
+//                    icon,
+//                    title: place.name,
+//                    position: place.geometry.location,
+//                })
+//            );
+
+//            if (place.geometry.viewport) {
+//                // Only geocodes have viewport.
+//                bounds.union(place.geometry.viewport);
+//            } else {
+//                bounds.extend(place.geometry.location);
+//            }
+//        });
+//        map.fitBounds(bounds);
+//    });
+//}
 
 
 
