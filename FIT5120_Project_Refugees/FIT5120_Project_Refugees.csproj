@@ -290,8 +290,10 @@
     <Content Include="Images\SportImages\Tennis.jpg" />
     <Content Include="Images\SportImages\Weightlifting.jpg" />
     <Content Include="Images\SportImages\Wrestling.jpg" />
+    <Content Include="Images\SuggestionPage\SugeestionLogo4.jpg" />
     <Content Include="Images\SuggestionPage\SuggestionLogo.png" />
     <Content Include="Images\SuggestionPage\SuggestionLogo1.jpg" />
+    <Content Include="Images\SuggestionPage\suggestionsHearphoto.jpg" />
     <Content Include="Images\Symbols\pie-chart %281%29.png" />
     <Content Include="Images\Symbols\pie-chart.png" />
     <Content Include="Images\Symbols\sport %281%29.png" />

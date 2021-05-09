@@ -19,9 +19,9 @@ body {
 
 .suggestionImg {
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     object-fit: cover;
-    background-image: url("../Images/SuggestionPage/SuggestionLogo.png");
+    background-image: url("../Images/SuggestionPage/SugeestionLogo4.jpg");
     background-size:cover;
     background-repeat:no-repeat;
     display:flex;
@@ -564,5 +564,108 @@ body {
         margin-left:0;
         background-color:white;
     }
+
+
+
+.headertitle {
+    position: relative;
+    perspective: 400;
+    padding-left: 17px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 52px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+    .headertitle:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 6px;
+        background: #CBA783;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateX(-150px);
+        -webkit-animation: title-border-slide-in 0.35s ease-out forwards;
+        animation: title-border-slide-in 0.35s ease-out forwards;
+    }
+
+    .headertitle .title-word {
+        opacity: 0;
+        transform-origin: bottom center;
+        transform: rotateX(-90deg);
+    }
+
+        .headertitle .title-word:nth-child(1) {
+            -webkit-animation: roll-in 0.15s 0s ease-out forwards;
+            animation: roll-in 0.15s 0s ease-out forwards;
+        }
+
+        .headertitle .title-word:nth-child(2) {
+            -webkit-animation: roll-in 0.15s 0.175s ease-out forwards;
+            animation: roll-in 0.15s 0.175s ease-out forwards;
+        }
+
+        .headertitle .title-word:nth-child(3) {
+            -webkit-animation: roll-in 0.15s 0.35s ease-out forwards;
+            animation: roll-in 0.15s 0.35s ease-out forwards;
+        }
+
+        .headertitle .title-word:nth-child(4) {
+            -webkit-animation: roll-in 0.15s 0.525s ease-out forwards;
+            animation: roll-in 0.15s 0.525s ease-out forwards;
+        }
+
+@-webkit-keyframes title-border-slide-in {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes title-border-slide-in {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes roll-in {
+    0% {
+        transform: rotateX(-90deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes roll-in {
+    0% {
+        transform: rotateX(-90deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
 
 
