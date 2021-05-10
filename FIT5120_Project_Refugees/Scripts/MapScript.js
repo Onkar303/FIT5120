@@ -98,7 +98,63 @@ function getLocation() {
 //}
 
 
+function getCoors(sportSearch) {
 
+    $.ajax({
+        url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=Basket+ball+courts&radius=30&location=-37.8159,144.9669&key=AIzaSyA5oaXSCANn1f92aS6Ohd-qtX7pLXWsBKM', type: 'GET', dataType: 'jsonp', crossDomain: true, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }, success: function (result) {
+            console.log(result);
+
+            alert(result);
+            //output = result.feed.entry[0].link[1].href
+        }, error: function (error) {
+
+        }
+    })
+
+    //$.ajax({
+    //    url: url + searchText + sportSearch + radius + "30" + userLocation + coordinates.latitude + "," + coordinates.longitude + key, type: 'GET', crossDomain: true, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }, success: function (result) {
+    //        console.log(result);
+    //        //output = result.feed.entry[0].link[1].href
+    //    }, error: function (error) {
+
+    //    }
+    //})
+}
+
+
+
+//function loadMap(coordinates) {
+//    var map = new mapboxgl.Map({
+//        container: 'map',
+//        style: 'mapbox://styles/mapbox/streets-v11', // Map style to use
+//        center: [coordinates.latitude, coordinates.longitude],
+//        zoom: 10
+//    });
+
+//    var marker = new mapboxgl.Marker() // initialize a new marker
+//        .setLngLat([coordinates.latitude, coordinates.longitude]) // Marker [lng, lat] coordinates
+//        .addTo(map);
+
+
+//    return map;
+//}
+
+
+
+
+
+//function loadMap(coordinates) {
+//    var map = new google.maps.Map(document.getElementById("map"), {
+//        center: {
+//            lat: coordinates.latitude,
+//            lng: coordinates.longitude
+//        },
+//        zoom: 13,
+//        mapTypeId: "roadmap"
+//    });
+
+//    return map;
+//}
 
 function initialize(searchText) {
     var pyrmont = new google.maps.LatLng(coordinates.latitude
@@ -111,14 +167,12 @@ function initialize(searchText) {
 
     var request = {
         location: pyrmont,
-        radius: '1000',
+        radius: '100',
         query: searchText
     };
 
     service = new google.maps.places.PlacesService(map);
     service.textSearch(request, callback);
-
-
 }
 
 function callback(results, status) {
@@ -129,14 +183,7 @@ function callback(results, status) {
         }
     }
 
-    var bounds = google.maps.LatLngBounds();
-
-    if (results[i].geometry.viewport) {
-        // Only geocodes have viewport.
-        bounds.union(place.geometry.viewport);
-    } else {
-        bounds.extend(place.geometry.location);
-    }
+   
 }
 
 
@@ -148,12 +195,14 @@ function createMarker(markers) {
         title: markers.name,
     });
 
+
 }
 
 function initAutocomplete() {
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
+
             coordinates.latitude = position.coords.latitude;
             coordinates.longitude = position.coords.longitude;
 
@@ -222,7 +271,6 @@ function initAutocomplete() {
             markers.push(
                 new google.maps.Marker({
                     map,
-                    icon: svgMarker,
                     title: place.name,
                     position: place.geometry.location,
                 })
