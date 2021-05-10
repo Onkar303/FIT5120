@@ -241,6 +241,7 @@
     <Content Include="Images\compare\australia-flag.png" />
     <Content Include="Images\compare\australia.png" />
     <Content Include="Images\compare\bottomCampare.jpg" />
+    <Content Include="Images\compare\compareIcon.png" />
     <Content Include="Images\compare\compareTop.jpg" />
     <Content Include="Images\compare\iraq.png" />
     <Content Include="Images\compare\myanmar.png" />
