@@ -12,3 +12,17 @@ sportsCatalogButton.addEventListener("click", function () {
 })
 
 
+var informationLocate = document.getElementById("informationLocate");
+informationLocate.addEventListener("click", function () {
+
+    window.location.href = "/Home/Map";
+})
+
+var informationEvent = document.getElementById("informationEvent");
+informationEvent.addEventListener("click", function () {
+
+    window.location.href = "/Home/Events";
+})
+
+
+

@@ -207,7 +207,7 @@ function initAutocomplete() {
             coordinates.longitude = position.coords.longitude;
 
         }, function () {
-
+                alert("the default location is melbourne");
         });
     }
    else {
