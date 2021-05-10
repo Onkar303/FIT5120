@@ -13,6 +13,15 @@ var whoIsRefugee = document.getElementById('compare');
 whoIsRefugee.style.backgroundColor = "#CBA783";
 whoIsRefugee.style.color = "#ffffff";
 
+function changeToCollapsableNavBar() {
+    var x = document.getElementById("Topnav");
+    if (x.className === "topnavbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnavbar";
+    }
+}
+
 function countrySport(countryName) {
     
     

@@ -44,6 +44,7 @@ body {
     overflow: hidden;
     background-color: white;
     z-index : 5;
+    
 }
 
  .topnavbar a#hamBurger {
@@ -60,6 +61,7 @@ body {
     transition: 0.2s ease;
     font-weight: bold;
     cursor:pointer;
+    font-size:14px;
 }
 
 
