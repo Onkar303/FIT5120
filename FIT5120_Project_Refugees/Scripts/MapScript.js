@@ -26,24 +26,28 @@ whoIsRefugee.style.color = "#ffffff";
 
 
 basketCourt.addEventListener("click", function () {
-    searchBox.value = "Basketball+Courts";
-
-    getCoors("Basket+ball+courts");
+    searchBox.value = "Basketball Courts";
+    initialize("Basketball Courts");
+   
 
 });
 
 soccerCourt.addEventListener("click", function () {
-    searchBox.value = "Soccer Court";
+    searchBox.value = "Soccer Courts";
+    initialize("Soccer Courts");
 });
 
 tennisCourt.addEventListener("click", function () {
-    searchBox.value = "Tennis Court";
+    searchBox.value = "Tennis Courts";
+    initialize("Tennis Courts");
 });
 cricketCourt.addEventListener("click", function () {
-    searchBox.value = "Cricket Court";
+    searchBox.value = "Cricket Courts";
+    initialize("Cricket Courts");
 });
 badmintonCourt.addEventListener("click", function () {
     searchBox.value = "Badminton Court";
+    initialize("Badminton Courts");
 });
 
 
@@ -94,70 +98,62 @@ function getLocation() {
 //}
 
 
-function getCoors(sportSearch) {
 
-    $.ajax({
-        url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=Basket+ball+courts&radius=30&location=-37.8159,144.9669&key=AIzaSyA5oaXSCANn1f92aS6Ohd-qtX7pLXWsBKM', type: 'GET', dataType: 'jsonp', crossDomain: true, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }, success: function (result) {
-            console.log(result);
 
-            alert(result);
-            //output = result.feed.entry[0].link[1].href
-        }, error: function (error) {
+function initialize(searchText) {
+    var pyrmont = new google.maps.LatLng(coordinates.latitude
+        , coordinates.longitude);
 
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: pyrmont,
+        zoom: 13
+    });
+
+    var request = {
+        location: pyrmont,
+        radius: '1000',
+        query: searchText
+    };
+
+    service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
+
+
+}
+
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            createMarker(results[i]);
         }
-    })
+    }
 
-    //$.ajax({
-    //    url: url + searchText + sportSearch + radius + "30" + userLocation + coordinates.latitude + "," + coordinates.longitude + key, type: 'GET', crossDomain: true, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' }, success: function (result) {
-    //        console.log(result);
-    //        //output = result.feed.entry[0].link[1].href
-    //    }, error: function (error) {
+    var bounds = google.maps.LatLngBounds();
 
-    //    }
-    //})
+    if (results[i].geometry.viewport) {
+        // Only geocodes have viewport.
+        bounds.union(place.geometry.viewport);
+    } else {
+        bounds.extend(place.geometry.location);
+    }
 }
 
 
+function createMarker(markers) {
 
-//function loadMap(coordinates) {
-//    var map = new mapboxgl.Map({
-//        container: 'map',
-//        style: 'mapbox://styles/mapbox/streets-v11', // Map style to use
-//        center: [coordinates.latitude, coordinates.longitude],
-//        zoom: 10
-//    });
+    new google.maps.Marker({
+        position: markers.geometry.location,
+        map,
+        title: markers.name,
+    });
 
-//    var marker = new mapboxgl.Marker() // initialize a new marker
-//        .setLngLat([coordinates.latitude, coordinates.longitude]) // Marker [lng, lat] coordinates
-//        .addTo(map);
-
-
-//    return map;
-//}
-
-
-
-
-
-//function loadMap(coordinates) {
-//    var map = new google.maps.Map(document.getElementById("map"), {
-//        center: {
-//            lat: coordinates.latitude,
-//            lng: coordinates.longitude
-//        },
-//        zoom: 13,
-//        mapTypeId: "roadmap"
-//    });
-
-//    return map;
-//}
-
+}
 
 function initAutocomplete() {
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-
             coordinates.latitude = position.coords.latitude;
             coordinates.longitude = position.coords.longitude;
 
@@ -169,7 +165,7 @@ function initAutocomplete() {
         alert("geo location is not supported");
    }
             
-    const map = new google.maps.Map(document.getElementById("map"), {
+     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: coordinates.latitude, lng: coordinates.longitude},
         zoom: 13,
         mapTypeId: "roadmap",
