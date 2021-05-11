@@ -244,8 +244,10 @@
     <Content Include="Images\compare\compareIcon.png" />
     <Content Include="Images\compare\compareTop.jpg" />
     <Content Include="Images\compare\iraq.png" />
+    <Content Include="Images\compare\left.jpg" />
     <Content Include="Images\compare\myanmar.png" />
     <Content Include="Images\compare\republic-of-the-congo.png" />
+    <Content Include="Images\compare\right.jpg" />
     <Content Include="Images\compare\running-track-1201014_1920.jpg" />
     <Content Include="Images\compare\syria.png" />
     <Content Include="Images\compare\tyuuu.jpg" />
