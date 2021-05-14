@@ -270,6 +270,7 @@
     <Content Include="Images\CoverImageCropped.jpg" />
     <Content Include="Images\Events\SportsEvents.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\logonew.jpg" />
     <Content Include="Images\mapAnalysis\refugee_map 2.png" />
     <Content Include="Images\mapAnalysis\refugee_map.png" />
     <Content Include="Images\mapAnalysis\refugee_map3.png" />
