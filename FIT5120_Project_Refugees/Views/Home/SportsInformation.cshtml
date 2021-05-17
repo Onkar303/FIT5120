@@ -5,9 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="~/Content/SportsInformation.css" />
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
 <div class="listContainer" id="sportsCatalog">
 
@@ -30,7 +34,7 @@
                 @for (var i = 0; i < Model.sportsid.Count; i++)
                 {
 
-                    if (Model.sport.SPORT_NAME == Model.sportsName[i] )
+                    if (Model.sport.SPORT_NAME == Model.sportsName[i])
                     {
                         <li class="three" style=" color: #fff; list-style: none; position: relative; padding-left: 35px; line-height: 3; font-size: 28px; cursor: pointer;">
                             @Html.ActionLink(Model.sportsName[i], "SportsInformation", "Home", new { id = Model.sportsid[i] }, new { style = "text-decoration:none;color:white;" })
@@ -83,14 +87,16 @@
 
 
     <div>
-        <h1 style=" 
+        <h1 style="
         letter-spacing: 2px;
         margin-bottom: 35px;
         border-width: 0px 0px 1px 0px;
         border-style: dotted;
         margin-top: 45px;
         color: rgba(0,0,0,1);
-">@Model.sport.SPORT_NAME</h1>
+">
+            @Model.sport.SPORT_NAME
+        </h1>
 
     </div>
 
@@ -112,8 +118,8 @@
         <p class="sectionInformation">
 
 
-       @if (Model.termsList.Count == 0)
-        {
+            @if (Model.termsList.Count == 0)
+            {
 
             <p> No Slangs found</p>
         }
@@ -132,68 +138,68 @@
                         </p>
                     </li>
                 }
-             </ol>
-           
+            </ol>
+
         }
 
-    </div>
+        </div>
 
-    <hr />
+        <hr />
 
 
-    <div class="row" style="text-align:center;">
+        <div class="row" style="text-align:center;">
 
-        <div class="column">
-            <div>
-                <div style="width:300px; margin:auto; text-align:center;">
-                    <div class="card" id="informationLocate" style="margin-top:20px;">
-                        <div>
-                            <h3><b>Locate Sport Field</b></h3>
-                        </div>
-                        <div style="overflow:hidden;">
-                            <img src="~/Images/Symbols/pointer.png" style="object-fit:scale-down; padding:5%;" />
-                        </div>
-                        <div>
-                            <p>Click to see more details</p>
+            <div class="column">
+                <div>
+                    <div style="width:300px; margin:auto; text-align:center;">
+                        <div class="card" id="informationLocate" style="margin-top:20px;">
+                            <div>
+                                <h3><b>Locate Sport Field</b></h3>
+                            </div>
+                            <div style="overflow:hidden;">
+                                <img src="~/Images/Symbols/pointer.png" style="object-fit:scale-down; padding:5%;" />
+                            </div>
+                            <div>
+                                <p>Click to see more details</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div style="display:flex;justify-content:center;align-items:center;">
-            <h2 style="color:black;">
-                <b> <i style="color:black;" class="icon-arrow-left"></i> Start your sports journey here <i class="icon-arrow-right"></i> </b>
-            </h2>
-        </div>
-
+            <div style="display:flex;justify-content:center;align-items:center;">
+                <h2 style="color:black;">
+                    <b> <i style="color:black;" class="icon-arrow-left"></i> Start your sports journey now <i class="icon-arrow-right"></i> </b>
+                </h2>
+            </div>
 
 
-        <div class="column">
-            <div >
-                <div style="width:300px; margin:auto; text-align:center;">
-                    <div class="card" id="informationEvent" style="margin-top:20px;">
-                        <div>
-                            <h3><b>Find Sport Event</b></h3>
-                        </div>
-                        <div style="overflow:hidden;">
-                            <img src="~/Images/Symbols/event.png" style="object-fit:scale-down; padding:5%;" />
-                        </div>
-                        <div>
-                            <p>Click to see more details</p>
+
+            <div class="column">
+                <div>
+                    <div style="width:300px; margin:auto; text-align:center;">
+                        <div class="card" id="informationEvent" style="margin-top:20px;">
+                            <div>
+                                <h3><b>Find Sport Event</b></h3>
+                            </div>
+                            <div style="overflow:hidden;">
+                                <img src="~/Images/Symbols/event.png" style="object-fit:scale-down; padding:5%;" />
+                            </div>
+                            <div>
+                                <p>Click to see more details</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
 
     </div>
 
 
-</div>
-
-
-<script src="~/Scripts/SportsInformation.js"></script>
+    <script src="~/Scripts/SportsInformation.js"></script>
 
 
 

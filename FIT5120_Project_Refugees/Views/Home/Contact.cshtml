@@ -2,7 +2,8 @@
     ViewBag.Title = "Compare";
 }
 
-
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <br />
 <br />
 
@@ -328,27 +329,81 @@
                 </div>
             </div>
         </section>*@
-    <section class="u-clearfix u-white u-section-3" id="sec-ec1f">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-                <div class="u-gutter-0 u-layout">
-                    <div class="u-layout-row">
-                        <div class="u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="150" data-image-height="99">
-                            <div class="u-container-layout u-container-layout-1">
-                                <h2 class="u-text u-text-body-alt-color u-text-1">Locate Sports</h2>
-                                <p class="u-text u-text-body-alt-color u-text-2">Click "LOCATION" to locate sports.</p>
-                                <a href="/Home/Map" class="u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-5-light-1 u-btn-1">LOCATION</a>
+
+    @*
+        <section class="u-clearfix u-white u-section-3" id="sec-ec1f">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-gutter-0 u-layout">
+                        <div class="u-layout-row">
+                            <div class="u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="150" data-image-height="99">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <h2 class="u-text u-text-body-alt-color u-text-1">Locate Sports</h2>
+                                    <p class="u-text u-text-body-alt-color u-text-2">Click "LOCATION" to locate sports.</p>
+                                    <a href="/Home/Map" class="u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-5-light-1 u-btn-1">LOCATION</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="u-container-style u-image u-layout-cell u-size-30 u-image-2" data-image-width="150" data-image-height="78">
-                            <div class="u-container-layout u-valign-top u-container-layout-2">
-                                <h2 class="u-align-left u-text u-text-body-alt-color u-text-3">Find Events</h2>
-                                <p class="u-text u-text-body-alt-color u-text-4">Click "EVENTS" to find more related events.</p>
-                                <a href="/Home/Events" class="u-border-0 u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-5-light-1 u-btn-2">events</a>
+                            <div class="u-container-style u-image u-layout-cell u-size-30 u-image-2" data-image-width="150" data-image-height="78">
+                                <div class="u-container-layout u-valign-top u-container-layout-2">
+                                    <h2 class="u-align-left u-text u-text-body-alt-color u-text-3">Find Events</h2>
+                                    <p class="u-text u-text-body-alt-color u-text-4">Click "EVENTS" to find more related events.</p>
+                                    <a href="/Home/Events" class="u-border-0 u-border-none u-btn u-button-style u-custom-color-2 u-hover-palette-5-light-1 u-btn-2">events</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>*@
+
+    <section class="u-clearfix u-white u-section-3" id="sec-ec1f">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <div class="row" style="text-align:center;">
+
+                <div class="column">
+                    <div>
+                        <div style="width:300px; margin:auto; text-align:center;">
+                            <div class="card" id="findLocation" style="margin-top:20px;">
+                                <div>
+                                    <h3><b>Locate Sport Field</b></h3>
+                                </div>
+                                <div style="overflow:hidden;">
+                                    <img src="~/Images/Symbols/pointer.png" style="object-fit:scale-down; padding:5%;" />
+                                </div>
+                                <div>
+                                    <p>Click to see more details</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display:flex;justify-content:center;align-items:center;">
+                    <h2 style="color:black;">
+                        <b> <i style="color:black;" class="icon-arrow-left"></i> Start your sports journey now <i class="icon-arrow-right"></i> </b>
+                    </h2>
+                </div>
+
+
+
+                <div class="column">
+                    <div>
+                        <div style="width:300px; margin:auto; text-align:center;">
+                            <div class="card" id="findEvents" style="margin-top:20px;">
+                                <div>
+                                    <h3><b>Find Sport Event</b></h3>
+                                </div>
+                                <div style="overflow:hidden;">
+                                    <img src="~/Images/Symbols/event.png" style="object-fit:scale-down; padding:5%;" />
+                                </div>
+                                <div>
+                                    <p>Click to see more details</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -364,7 +419,8 @@
 <script src="~/Scripts/compare.js"></script>
 <link href="~/Content/nicepage.css" rel="stylesheet" />
 <link href="~/Content/Compare.css" rel="stylesheet" />
-<script src="~/Scripts/analyticsScript.js"></script>
+<script src="~/Scripts/SportsInformation.js"></script>
+
 
 @* -------------------------------------------------------------------------------------------------------------------------------------- *@
 

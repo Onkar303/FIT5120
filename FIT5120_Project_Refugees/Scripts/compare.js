@@ -364,12 +364,18 @@ function countrySport(countryName) {
 
 countrySport("Iraq");
 
+var findLocation = document.getElementById("findLocation");
+findLocation.addEventListener("click", function () {
+
+    window.location.href = "/Home/Map";
+})
+
+var findEvents = document.getElementById("findEvents");
+findEvents.addEventListener("click", function () {
+
+    window.location.href = "/Home/Events";
+})
 
 
-// 触发 id="defaultOpen" click 事件
-//document.getElementById("defaultOpen").click();
 
-//var compare = document.getElementById('compare');
-//compare.style.backgroundColor = "#CBA783"
-//compare.style.color = "#ffffff";
 

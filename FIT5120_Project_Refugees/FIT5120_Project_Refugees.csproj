@@ -236,7 +236,6 @@
     <Content Include="Images\analyticsSymbols\woman.png" />
     <Content Include="Images\analyticsSymbols\woman2.jpg" />
     <Content Include="Images\australia.png" />
-    <Content Include="Images\compareSwimming.jpg" />
     <Content Include="Images\compare\4dd7b40bcdeafbbb6c43008130a396f259425cd172d6277f55811e2ac4a8c703a3e29f57f7f42b5986deb8c04e2c5bbfe557b12a71325fb8b31bde_1280.jpg" />
     <Content Include="Images\compare\953d6cfac30ae940c311987c64191a9b8b2285bfef5d19eb506b35e80d4f593a9e7b0397fcc8760955f4a36ae9f5cbb2480c0b09dcd64fa950f4d3_1280.jpg" />
     <Content Include="Images\compare\afghanistan.png" />
@@ -268,6 +267,7 @@
     <Content Include="Images\coverImage.jpg" />
     <Content Include="Images\CoverImage2.jpg" />
     <Content Include="Images\CoverImageCropped.jpg" />
+    <Content Include="Images\download.jpg" />
     <Content Include="Images\Events\SportsEvents.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\logonew.jpg" />

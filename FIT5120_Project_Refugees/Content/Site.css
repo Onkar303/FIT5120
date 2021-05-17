@@ -185,6 +185,12 @@ body {
     background-repeat: no-repeat;
 }
 
+#weCareAtrributeImage {
+    background-image: url('../Images/download.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .circularImageContainer {
     border-radius: 50%;
     height: 300px;
