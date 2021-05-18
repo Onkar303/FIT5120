@@ -364,13 +364,13 @@ function countrySport(countryName) {
 
 countrySport("Iraq");
 
-var findLocation = document.getElementById("findLocation");
+var findLocation = document.getElementById("forLocation");
 findLocation.addEventListener("click", function () {
 
     window.location.href = "/Home/Map";
 })
 
-var findEvents = document.getElementById("findEvents");
+var findEvents = document.getElementById("forEvents");
 findEvents.addEventListener("click", function () {
 
     window.location.href = "/Home/Events";
