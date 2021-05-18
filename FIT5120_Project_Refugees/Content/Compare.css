@@ -1,3 +1,72 @@
+.header {
+    height: 50vh;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    /* background: linear-gradient( 90deg,#CBA783 0%, #f99468 100%);*/
+    background-image: url('../Images/compare/running-track-1201014_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color #CBA783;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.headertitle {
+    position: relative;
+    perspective: 400;
+    padding-left: 17px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 52px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+    .headertitle:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 6px;
+        background: #CBA783;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateX(-150px);
+        -webkit-animation: title-border-slide-in 0.35s ease-out forwards;
+        animation: title-border-slide-in 0.35s ease-out forwards;
+    }
+
+    .headertitle .title-word {
+        opacity: 0;
+        transform-origin: bottom center;
+        transform: rotateX(-90deg);
+    }
+
+        .headertitle .title-word:nth-child(1) {
+            -webkit-animation: roll-in 0.15s 0s ease-out forwards;
+            animation: roll-in 0.15s 0s ease-out forwards;
+        }
+
+        .headertitle .title-word:nth-child(2) {
+            -webkit-animation: roll-in 0.15s 0.175s ease-out forwards;
+            animation: roll-in 0.15s 0.175s ease-out forwards;
+        }
+
+        .headertitle .title-word:nth-child(3) {
+            -webkit-animation: roll-in 0.15s 0.35s ease-out forwards;
+            animation: roll-in 0.15s 0.35s ease-out forwards;
+        }
+
+        .headertitle .title-word:nth-child(4) {
+            -webkit-animation: roll-in 0.15s 0.525s ease-out forwards;
+            animation: roll-in 0.15s 0.525s ease-out forwards;
+        }
+
+
 .u-section-1 {
     background-image: url('../Images/compare/tyuuu.jpg');
     background-position: 50% 50%;
@@ -296,7 +365,7 @@
 
 .u-section-2 .u-image-3 {
     min-height: 293px;
-    background-image: url('../Images/compare/bottomCampare.jpg');
+    background-image: url('');
     background-position: 50% 50%;
 }
 
