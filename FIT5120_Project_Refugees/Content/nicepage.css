@@ -33846,18 +33846,7 @@ a.u-link.u-text-hover-grey-90:hover {
         margin-top: 20px;
         margin-bottom: 20px;
         }
-        a
-        {
-        font-family: Roboto,sans-serif;
-        letter-spacing: 1px;
-        line-height: 1.8;
-        text-decoration: underline;
-        font-weight: 400;
-        }
-        a:hover
-        {
-        text-decoration: underline;
-        }
+        
         /** common-rules **/
 
         /** publish-rules **/
