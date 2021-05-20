@@ -81,7 +81,7 @@ function countrySport(countryName) {
     
 
     switch (countryName) {
-        case "IRAP":
+        case "IRAQ":
             //Get all elements with class="auSport" and hide them
             var auSport = document.getElementsByClassName("auSport");
             for (var i = 0; i < auSport.length; i++) {
@@ -193,7 +193,7 @@ function countrySport(countryName) {
     }
 }
 
-countrySport("IRAP");
+countrySport("IRAQ");
 
 var findLocation = document.getElementById("forLocation");
 findLocation.addEventListener("click", function () {
