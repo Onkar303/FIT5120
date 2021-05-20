@@ -57,7 +57,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Compare</title>
-   
+
     <meta name="theme-color" content="#CBA783">
 </head>
 
@@ -105,9 +105,10 @@
                             <div class="u-layout-col">
                                 <div class="u-container-style u-layout-cell u-shape-rectangle u-size-60 u-layout-cell-1">
                                     <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                        <p class="u-align-center u-text u-text-1">Australia</p>
+                                        <p style="font-size:35.178px;text-align:center">Australia</p>
                                         <img src="~/Images/compare/australia.png" alt="" class="u-image u-image-circle u-image-1" data-image-width="1280" data-image-height="853">
-                                    </div>
+                                        <p></p>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -120,12 +121,12 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="u-container-style u-layout-cell u-radius-30 u-shape-round u-size-30 u-white u-layout-cell-3">
+                                <div class="u-container-style u-layout-cell u-radius-30 u-shape-round  u-white">
                                     <div class="u-border-10 u-border-custom-color-2 u-container-layout u-container-layout-3">
                                         <p class="u-align-center u-text u-text-2">
                                             <div style="        text-align: center;
         color: #CBA783;
-        font-size: 1.4rem;
+        font-size: 2.4rem;font-weight:bolder
 ">Common Sports</div>
                                             <div style="font-size: 1.8rem;">
                                                 <center>
@@ -146,21 +147,24 @@
                             <div class="u-layout-col">
                                 <div class="u-container-style u-layout-cell u-shape-rectangle u-size-60 u-layout-cell-4">
                                     <div class="u-container-layout u-valign-middle-xl u-container-layout-4">
+                                        <p id="country" style="font-size:35.178px;text-align:center;">
+                                            Country
+                                        </p>
                                         <center>
-                                            <div class="btn-group" role="group" aria-label="...">
-                                                <br />
-                                                <button type="button" class="btn btn-default" onclick="countrySport('Iraq')" value="Iraq"> Iraq </button>
-                                                <button type="button" class="btn btn-default" onclick="countrySport('Syria')" value="Syria"> Syria </button>
-                                                <button type="button" class="btn btn-default" onclick="countrySport('Myanmar')" value="Myanmar"> Myanmar </button>
-                                                <button type="button" class="btn btn-default" onclick="countrySport('Afghanistan')" value="Afghanistan"> Afghanistan </button>
-                                                <button type="button" class="btn btn-default" onclick="countrySport('DRC')" value="DRC"> Congo </button>
-                                                <br />
-                                                <br />
-                                                <img id="IraqImage" alt="" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/iraq.png" />
-                                                <img id="SyriaImage" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/syria.png" />
-                                                <img id="MyanmarImage" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/myanmar.png" />
-                                                <img id="AfghanistanImage" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/afghanistan.png" />
-                                                <img id="DRCImage" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/republic-of-the-congo.png" />
+                                            <img id="IRAPImage" alt="" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/iraq.png" />
+                                            <img id="SYRIAImage" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/syria.png" />
+                                            <img id="MYANMARImage" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/myanmar.png" />
+                                            <img id="AFGHImage" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/afghanistan.png" />
+                                            <img id="DRCImage" class="countryImage u-image u-image-circle u-image-2" data-image-width="1280" data-image-height="865" src="~/Images/compare/republic-of-the-congo.png" />
+                                            <div class="btn-group" role="group" aria-label="..." style="margin-top:10px">
+
+                                                <button type="button" class="btn btn-default" onclick="countrySport('IRAP')" value="IRAP"> IRAP </button>
+                                                <button type="button" class="btn btn-default" onclick="countrySport('SYRIA')" value="SYRIA"> SYRIA </button>
+                                                <button type="button" class="btn btn-default" onclick="countrySport('MYANMAR')" value="MYANMAR"> MYANMAR </button>
+                                                <button type="button" class="btn btn-default" onclick="countrySport('AFGH')" value="AFGH"> AFGH </button>
+                                                <button type="button" class="btn btn-default" onclick="countrySport('DRC')" value="DRC"> DRC </button>
+
+
 
                                             </div>
                                         </center>
@@ -177,7 +181,7 @@
                         <div class="u-container-style u-layout-cell u-radius-30 u-shape-round u-size-20 u-white u-layout-cell-5">
                             <div class="u-border-10 u-border-custom-color-2 u-container-layout u-valign-middle u-container-layout-5">
                                 <p class="u-align-center u-text u-text-4">
-                                    <div style="text-align:center; color:#CBA783;font-size: 1.4rem;">Australia Popular Sports</div>
+                                    @*<div style="text-align:center; color:#CBA783;font-size: 2.4rem;">Australia Popular Sports</div>*@
                                     <div style="font-size: 1.8rem;">
                                         <center>
                                             <div id="au0" class="auSport"><a href="/Home/SportsInformation/0" style="color:black">Swimming</a></div>
@@ -199,24 +203,25 @@
                         <div class="u-container-style u-layout-cell u-radius-30 u-shape-round u-size-20 u-white u-layout-cell-7">
                             <div class="u-border-10 u-border-custom-color-2 u-container-layout u-valign-middle u-container-layout-7">
                                 <p class="u-align-center u-text u-text-5">
-                                    <div style="text-align:center; color:#CBA783;font-size: 1.4rem;">Popular Sports</div>
+                                    @*<div style="text-align:center; color:#CBA783;font-size: 2.4rem;">Popular Sports</div>*@
+
                                     <div style="font-size: 1.8rem;">
                                         <center>
-                                            <div id="Iraq" class="countryContent">
+                                            <div id="IRAP" class="countryContent">
                                                 <div>
                                                     Kickboxing
                                                 </div>
                                                 <div>Weightlifting</div>
                                             </div>
 
-                                            <div id="Syria" class="countryContent">
+                                            <div id="SYRIA" class="countryContent">
 
                                                 <div><a href="/Home/SportsInformation/5" style="color:black">Tennis</a></div>
                                                 <div>Weightlifting</div>
 
                                             </div>
 
-                                            <div id="Myanmar" class="countryContent">
+                                            <div id="MYANMAR" class="countryContent">
 
                                                 <div>Rugby</div>
                                                 <div><a href="/Home/SportsInformation/10" style="color:black">Golf</a></div>
@@ -226,7 +231,7 @@
 
                                             </div>
 
-                                            <div id="Afghanistan" class="countryContent">
+                                            <div id="AFGH" class="countryContent">
 
                                                 <div>Rugby</div>
                                                 <div>Boxing</div>
