@@ -5539,11 +5539,8 @@ a {
 .u-form-select-wrapper select[size] ~ .u-caret {
   display: none;
 }
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+
+
 html {
   height: 100%;
   overflow-y: auto;
@@ -16638,10 +16635,6 @@ div.u-video,
 html {
   font-size: 16px;
 }
-.u-body {
-  font-size: 1rem;
-  line-height: 1.6;
-}
 .u-body h1,
 .u-body h2,
 .u-body h3,
@@ -19582,9 +19575,7 @@ a.u-button-style.u-border-20 {
   border-radius: 50px !important;
 }
 /*begin-variables font-family*/
-.u-body {
-  font-family: Roboto,sans-serif;
-}
+
 h1,
 h2,
 h3,
@@ -33769,14 +33760,7 @@ a.u-link.u-text-hover-grey-90:hover {
         line-height: 1.2;
         text-transform: uppercase;
         }
-        p:not(.u-text-variant)
-        {
-        font-family: Roboto,sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
-        margin-top: 25px;
-        margin-bottom: 24px;
-        }
+      
         .u-btn
         {
         font-family: Roboto,sans-serif;
