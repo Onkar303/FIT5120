@@ -1,8 +1,8 @@
-# FIT5120
+# Play With Refugees
 This a platForm is based on .Net Framework.
 
 # Background
-This is an assignment for the unit 5120 in monash university and it belongs only to the collaborator.
+This is a project for the unit 5120 in Monash University and it belongs only to the collaborator.
 
 Developer: Onkar Kalpavriksha
 
